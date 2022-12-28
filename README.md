@@ -1,4 +1,17 @@
-# git-wiki-skeleton
+# Das Wiki
+
+# Anoduck's Wiki Repository
+
+This is the repository for my online, open, github powered wiki. Please see below as to where you can get your own.
+
+------
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/anoduck/wiki)
+
+
+------
+
+# This repo uses: git-wiki-skeleton
 
 NOTE: it's fully supported by github platform, you don't need to install anything locally
 
