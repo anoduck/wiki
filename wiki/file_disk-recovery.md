@@ -1,11 +1,11 @@
 ## File and disk recovery tools
 
 * testdisk/photorec
-* ddrescue
+* ddrescue - Copies one disk to another, keeping only good files.
 * scalpel
-* gpart
+* gpart - "Magically" finds lost or deleted partitions.
 * ext4magic
-* recoverjpeg
-* extundelete
-* safecopy
-* magicrescue
+* recoverjpeg - Retrieves lost or damaged photos.
+* extundelete - Retrieves lost or damaged files.
+* safecopy - Safely copies device to image.
+* magicrescue - Retrieves lost or damaged files.
