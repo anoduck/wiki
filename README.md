@@ -10,7 +10,9 @@ Here you will find all things that are cool.
 
 <!-- This is me trying to be lazy and have jekyll generate a toc for me. -->
 
-{% include toc.html html=content %}
+## Site Index
+
+A means to automatically generate an index of all wiki pages needs to be found, and placed here.
 
 -----
 
