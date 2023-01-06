@@ -6,7 +6,11 @@ This is my online, open, and github powered wiki.
 
 Here you will find all things that are cool. 
 
+-----
 
+<!-- This is me trying to be lazy and have jekyll generate a toc for me. -->
+
+{% include toc.html html=content %}
 
 -----
 
