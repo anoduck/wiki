@@ -2,6 +2,8 @@
 
 # Anoduck's Wiki Repository
 
+[![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
+
 This is my online, open, and github powered wiki. 
 
 Here you will find all things that are cool. 
