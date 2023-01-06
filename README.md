@@ -16,6 +16,8 @@ Here you will find all things that are cool.
 
 A means to automatically generate an index of all wiki pages needs to be found, and placed here.
 
+{% include toc.html html=content %}
+
 -----
 
 Please look [Here](https://anoduck.github.io/wiki/git-wiki-skeleton "git-wiki-skeleton") to find out how to get your own.
