@@ -19,7 +19,7 @@ A means to automatically generate an index of all wiki pages needs to be found, 
 ### Test
 
 
-| [Font Config](Font Config) | [Does not support OpenBSD](unsupported_for_OpenBSD) | [Python Programming Language](python) |
+| [Font Config](font_config) | [Does not support OpenBSD](unsupported_for_OpenBSD) | [Python Programming Language](python) |
 | [File Managers](file_managers) | [File And Disk Recovery](file_disk-recovery) | [Working with datetime and time.time](datetime_and_time.time) |
 | [Web Development Tools](web_dev_tools) | [Topic: Programming](programming) | [Command Line Tools](command_line_tools) |
 
