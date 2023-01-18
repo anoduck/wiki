@@ -17,4 +17,5 @@ Below is the index for our site. It is painfully maintained by hand. So, I hope 
 | [Web Development Tools](web_dev_tools) | [Topic: Programming](programming) | [Command Line Tools](command_line_tools) |
 | [Git Wiki](git-wiki-skeleton) | [Alternative Web Browsers](web_browsers) | [Topic: Lua Programming](lua) |
 | [Oddities](oddities) | [General Links](links) | [Org Mode](orgmode) |
+| [Spreadsheets](spreadsheet) | ---- | ---- |
 
