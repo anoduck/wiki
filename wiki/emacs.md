@@ -32,3 +32,7 @@ Basically the below list represents packages I found on [awesome emacs](https://
 * [smex](https://github.com/nonsequitur/smex/)
 * [amex](https://github.com/DarwinAwardWinner/amx)
 * [consult](https://github.com/minad/consult)
+
+### Sections
+
+| [general](general) | [org-mode](org-mode) |

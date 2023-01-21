@@ -13,3 +13,7 @@ Here are discussions on this wiki that relate to programming:
 4. [Lua](https://anoduck.github.io/wiki/lua)
 
 5. [Shell](https://anoduck.github.io/wiki/shell)
+
+### Sections
+
+| [Topic: Python Programming Language](python) | [Topic: Lua Programming](lua) |
