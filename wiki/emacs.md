@@ -29,10 +29,8 @@ Basically the below list represents packages I found on [awesome emacs](https://
 * [org-html-themes](https://github.com/fniessen/org-html-themes)
 * [spray](https://gitlab.com/iankelling/spray)
 * [general](https://github.com/noctuid/general.el)
-* [smex](https://github.com/nonsequitur/smex/)
-* [amex](https://github.com/DarwinAwardWinner/amx)
 * [consult](https://github.com/minad/consult)
 
 ### Sections
 
-| [general](general) | [org-mode](org-mode) |
+| [general](general) | [org-mode](org-mode) | [emacs init](init) |
