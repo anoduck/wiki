@@ -10,6 +10,8 @@ remembering that you have it. Below is a list of recently discovered command lin
 5. [jrnl](https://jrnl.sh) - A personal journal for the command line.
 6. [Modern-Unix](https://github.com/ibraheemdev/modern-unix) - A list of modern programs with new features that can replace traditional
    unix commands.
+7. [nb](https://github.com/xwmx/nb) - Perhaps, the greatest full blown note management application, and it is
+   completely written in Bash.
 
 ### Sections
 
