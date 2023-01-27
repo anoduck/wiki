@@ -63,5 +63,6 @@ ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
 ```
 
-I have read forum and blog entries that suggest to use `127.0.0.1 myhost`or `127.0.0.1 myhost.newdomain.new
-myhost`, but upon later review, I believe these suggestions are erroneous. 
+The file was altered, but the error persisted. Again the man page was consulted to ensure proper syntax, and it
+stated that syntax should employ the ip, followed by the canonical name, and then finally an optional alias. 
+Which would look like this: `127.0.0.1 localhost ($ALIAS)`. 
