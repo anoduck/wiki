@@ -18,4 +18,4 @@ Below is the index for our site. It is painfully, and I do mean painfully, maint
 | [Git Wiki](git-wiki-skeleton) | [Alternative Web Browsers](web_browsers)            | [xprofile](xprofile)                                            |
 | [Org Mode](orgmode)           | [Emacs](emacs)                                      | [vnc-configuration](vnc)                                        |
 | [Public DNS Servers](dns)     | [UserAgents for Use](useragent)                     | [Firewall Systems](firewall)                                    |
-| [Shell](shell)                | ---                                                 | ---                                                             |
+| [Shell](shell)                | [User Service Managers](service_managers)           | ---                                                             |
