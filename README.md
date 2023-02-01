@@ -2,8 +2,6 @@
 
 # Anoduck's Wiki Repository
 
-[![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
-
 This is my online, open, and GitHub powered wiki. Here you will find, all things that are cool.
 
 -----
@@ -18,4 +16,8 @@ Below is the index for our site. It is painfully, and I do mean painfully, maint
 | [Git Wiki](git-wiki-skeleton) | [Alternative Web Browsers](web_browsers)            | [xprofile](xprofile)                                            |
 | [Org Mode](orgmode)           | [Emacs](emacs)                                      | [vnc-configuration](vnc)                                        |
 | [Public DNS Servers](dns)     | [UserAgents for Use](useragent)                     | [Firewall Systems](firewall)                                    |
-| [Shell](shell)                | [User Service Managers](service_managers)           | ---                                                             |
+| [Shell](shell)                | [User Service Managers](service_managers)           | [Color Tools](color_tools)                                      |
+
+------
+
+[![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)

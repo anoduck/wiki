@@ -48,3 +48,9 @@ EndSection
 1. Install the tigervnc-standalone package
 2. Install lightdm and the lightdm-autologin-greeter package.
 3. Open the lightdm configuration file at `/etc/lightdm/lightdm.conf`
+4. At the bottom of the configuration file you will find the settings for lightdm to run as a vnc server.
+5. Simply uncomment each applicable setting, close the file, and restart the server.
+
+### Using xinetd to setup tigerXvnc
+
+To be continued later.
