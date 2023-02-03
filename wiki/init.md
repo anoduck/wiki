@@ -50,3 +50,12 @@ In the following example, `$package` will be used to represent a desired package
 	 :defer t
 	 )
 ```
+
+### Giving Emacs a boost
+
+After reading an article on [emacswiki](https://emacswiki.com) I learned it was recommended to bump your
+single file memory limit to 1GB. So I added.
+
+```elisp
+(setq most-positive-fixnum 1073741824)
+```
