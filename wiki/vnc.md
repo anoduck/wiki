@@ -53,4 +53,40 @@ EndSection
 
 ### Using xinetd to setup tigerXvnc
 
-To be continued later.
+Probably not the reccommended way to setup a vnc server, but with this method, one is allowed to run vnc on a
+truly headless host.
+
+#### Xinetd Service
+
+We will use Xinetd to manage starting the xnvcserver, and so we will need to configure that service for
+xinetd.
+
+```config
+service xvncserver {
+	disable = no
+	protocol = tcp
+	socket_type = stream
+	wait = no
+	user = root
+	server = /usr/bin/Xtigervnc
+	server_args = -inetd -query localhost -once -geometry 1024x768 -depth 24 -fp /usr/share/X11/fonts/misc -securitytypes=none
+	}
+```
+
+#### Defining the service in `/etc/services`
+
+In order for xinetd to know which service it is to start, you will need to add it to the `/etc/services` file.
+Add it to the bottom of the file, where it notates `custom services`, or some reasonable facsimile thereof.
+
+```config
+xvncserver 	5950/tcp 	#for xvncserver
+```
+
+#### Configure xdm
+
+Both gdm and lightdm can be used for this as well, but gdm tends to be rather heavy and lightdm appears to
+require a head. So for this xdm was chosen.
+
+* In the file `/etc/X11/xdm/Xaccess` uncomment the line `*             #any host can get a login window`, this
+	will enable remote access
+* In the file `/etc/X11/xdm/xdm-config` comment the line `!DisplayManager.requestPort:    0` with a `!`.
