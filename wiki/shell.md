@@ -23,3 +23,10 @@ Here is my page to the wiki page for bash --> [bash](bash)
 Here is where I take a stab at explaining what ZSH is, and why zsh differs from bash.
 
 Here is my page on zsh --> [zsh](zsh)
+
+### The Best I have used to date:
+
+Clearly and unequaled, the best shell experience I have encountered is running zsh with the zi framework
+installed. Honestly, it is unparelleled.
+
+* [zi](https://github.com/z-shell/zi)

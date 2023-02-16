@@ -19,6 +19,7 @@ Below is the index for our site. It is painfully, and I do mean painfully, maint
 | [Shell](shell)                | [User Service Managers](service_managers)           | [Color Tools](color_tools)                                      |
 | [OpenBSD](openbsd)            | [Art](art)                                          | [Mounts and `/etc/fstab`](mount_fstab)                          |
 | [Linux](linux)                | [NeoVim](nvim)                                      | [code Repositories](repos)                                      |
+| [env-files](env-files)        | ----                                                | ----                                                            |
 
 ------
 
