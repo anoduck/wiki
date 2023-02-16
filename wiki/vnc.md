@@ -22,6 +22,9 @@ derivitive using tigervnc.
 2. Make sure the intended user is listed in the file `/etc/tigervnc/vncserver.users`.
 3. create a config file for vnc by editing/creating `~/.vnc/config` with the following syntax.
 
+*This was the eventually resolution chosen for setup. As it worked effortlessly, and allowed for good screen
+resolution and performance.*
+
 ```conf
 session=i3
 geometry=1920x1080
@@ -55,6 +58,8 @@ EndSection
 
 Probably not the reccommended way to setup a vnc server, but with this method, one is allowed to run vnc on a
 truly headless host.
+
+*This method was abandoned as it only opened a empty gray screen.*
 
 #### Xinetd Service
 

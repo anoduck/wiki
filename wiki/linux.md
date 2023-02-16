@@ -36,6 +36,7 @@ meant that anyone could create their own Operating System, and were not inhibite
 ### Debian
 
 * [Setting up a serial console in Debian](https://www.howtoforge.com/setting_up_a_serial_console)
+* [fixing apt errors](fix_apt)
 
 ### ArchLinux / Alpine Linux
 
