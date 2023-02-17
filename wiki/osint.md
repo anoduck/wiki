@@ -15,7 +15,7 @@ various projects and sites concerning Osint. Osint projects have a rather short 
 mind, that the contents of this page is probably already outdated upon creation.
 
 __ATTENTION:__ *Please be advised. The term "hacker" or "haxor" is ambiguious in meaning, and refers to many
-different things. More accurately, all it means to hack something is to use it in a way in which it was not
+things. More accurately, all it means to hack something is to use it in a way in which it was not
 intended. For example, hacking a spatula could be something as mundane as using a spatula to scrape ice from a
 windshield. There are hacking groups throughout the world, they primarily have nothing to do with hacking
 things in which hollywood would have you think. In fact, they are rather boring and mostly deal with reverse
@@ -31,6 +31,8 @@ engineering some product or software.*
 * [Photon](https://github.com/s0md3v/Photon)
 * [GHunt](https://github.com/mxrch/GHunt) && [GHunt Companion](https://addons.mozilla.org/en-US/firefox/addon/ghunt-companion/)
 * [httpx](https://github.com/projectdiscovery/httpx) = Pretty Cool
+* [sn0int](https://github.com/kpcyrd/sn0int)
+*
 
 ## Awesome Osint Lists
 
@@ -38,3 +40,5 @@ engineering some product or software.*
 * [Awesome Osint](https://github.com/jivoi/awesome-osint)
 * [Awesome Hacker Search Engines](https://github.com/edoardottt/awesome-hacker-search-engines)
 * [Hacking Resources](https://github.com/Lifka/hacking-resources)
+* [Ph055a's Osint Collection](https://github.com/Ph055a/OSINT_Collection)
+* [Awesome Intelligence](https://github.com/ARPSyndicate/awesome-intelligence)
