@@ -12,6 +12,8 @@ remembering that you have it. Below is a list of recently discovered command lin
    unix commands.
 7. [nb](https://github.com/xwmx/nb) - Perhaps, the greatest full blown note management application, and it is
    completely written in Bash.
+9. [wego](https://github.com/schachmat/wego) - Wego outputs weather forecasts in your terminal with nice ascii
+   art.
 
 ### Sections
 

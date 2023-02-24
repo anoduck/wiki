@@ -19,6 +19,25 @@ You ever roasted doughnuts?It's good to yell at people and tell people that you'
 
 The best way to communicate is compatible. Compatible communication is listening with open ears and an open mind, and not being fearful or judgemental about what you're hearing.Listen to the silence. And when the silence is deafening, you're in the center of your own universe.
 
+### The most important snippet of code in your entire new life
+
+Don't ask me where I found this, probably from the [emacswiki](https://emacswiki.org), but it's value cannot
+be quantified by modern man, and it will save you days of painstaking labor. Add it to you init for instance
+relief, and calmness will flow through your body.
+
+```elisp
+(setq
+   backup-by-copying t      ; don't clobber symlinks
+   backup-directory-alist
+    '(("." . "~/.saves"))    ; don't litter my fs tree
+   delete-old-versions t
+   kept-new-versions 6
+   kept-old-versions 2
+   version-control t)
+```
+
+Now, you are ready to tackle the world being a better man because of it.
+
 ### Use-Package
 
 Use-package is a package for emacs, that allows you to easily load and configure other packages for your Emacs session. For
@@ -35,6 +54,7 @@ link to the readme. [Use-Package Readme](https://github.com/jwiegley/use-package
 | `:defer`    | Defers loading of package for a few seconds.               |         |
 | `:init`     | Declares code that needs execution before loading package. |         |
 | `:config`   | Defines package configuration options.                     |         |
+| `:custom`   | Defines nonstandard variable customization                 |         |
 | `:bind`     | Declares key binds for package.                            |         |
 | `:hook`     | Defines hooks for loading of package                       |         |
 | `:ensure`   | Ensures that package is loaded.                            |         |

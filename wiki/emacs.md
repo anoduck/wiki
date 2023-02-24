@@ -32,7 +32,7 @@ Basically the below list represents packages I found on [awesome emacs](https://
 
 ### Sections
 
-| [general](general) | [org-mode](org-mode) | [emacs init](init) |
+| [general](general) | [org-mode](org-mode) | [emacs init](init) | [completion](emacs-complete) |
 
 
 ### Links
