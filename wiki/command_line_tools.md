@@ -17,4 +17,5 @@ remembering that you have it. Below is a list of recently discovered command lin
 
 ### Sections
 
-| [File Managers](file_managers) | [Spreadsheets](spreadsheet) |
+| [File Managers](file_managers) | [Spreadsheets](spreadsheet) | [Tmux](tmux) |
+| [Pistol](pistol) |
