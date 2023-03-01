@@ -1,4 +1,19 @@
-# Awesome Command Line Tools
+```text
+#   ____                                          _   _     _
+#  / ___|___  _ __ ___  _ __ ___   __ _ _ __   __| | | |   (_)_ __   ___
+# | |   / _ \| '_ ` _ \| '_ ` _ \ / _` | '_ \ / _` | | |   | | '_ \ / _ \
+# | |__| (_) | | | | | | | | | | | (_| | | | | (_| | | |___| | | | |  __/
+#  \____\___/|_| |_| |_|_| |_| |_|\__,_|_| |_|\__,_| |_____|_|_| |_|\___|
+#
+#  _____           _
+# |_   _|__   ___ | |___
+#   | |/ _ \ / _ \| / __|
+#   | | (_) | (_) | \__ \
+#   |_|\___/ \___/|_|___/
+#
+```
+
+## Awesome Command Line Tools
 
 One can never underestimate the power and shear awesomeness of a good command line tool. Once acquired, the hardest thing is
 remembering that you have it. Below is a list of recently discovered command line tools that are share worthy.
@@ -19,3 +34,13 @@ remembering that you have it. Below is a list of recently discovered command lin
 
 | [File Managers](file_managers) | [Spreadsheets](spreadsheet) | [Tmux](tmux) |
 | [Pistol](pistol) |
+
+### Tools
+
+#### entr
+
+Although not necessarily a command line tool, the execution of entr will take place in the terminal. Entr
+watches a file or set of files, and executes arbitrary commands when that file or files change. This is very
+useful. It can be installed with the typical build and install commands.
+
+* [entr](https://github.com/eradman/entr)
