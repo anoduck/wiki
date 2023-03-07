@@ -94,7 +94,8 @@ defaults:
       layout: "git-wiki-bs-lux"
  -
     scope:
-      path: blog
+      path: ""
+      type: "blog"
     values:
       layout: "git-wiki-bs-lux"
 sass:

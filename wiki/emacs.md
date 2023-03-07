@@ -22,17 +22,10 @@
     ~ Eric S. Raymond, The Art of UNIX Programming
 
 
-### Packages of interest for future implementation
-
-Basically the below list represents packages I found on [awesome emacs](https://github.com/emacs-tw/awesome-emacs) that I do not have time to implement at this moment.
-
-* [org-html-themes](https://github.com/fniessen/org-html-themes)
-* [spray](https://gitlab.com/iankelling/spray)
-* [consult](https://github.com/minad/consult)
-
 ### Sections
 
-| [general](general) | [org-mode](orgmode) | [emacs init](init) | [completion](emacs-complete) |
+| [general](general)   | [org-mode](orgmode) | [emacs init](init) | [completion](emacs-complete) |
+| [debug](emacs-debug) | ---                 | ---                | ---                          |
 
 
 ### Links

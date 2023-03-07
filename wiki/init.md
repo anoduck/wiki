@@ -19,6 +19,14 @@ You ever roasted doughnuts?It's good to yell at people and tell people that you'
 
 The best way to communicate is compatible. Compatible communication is listening with open ears and an open mind, and not being fearful or judgemental about what you're hearing.Listen to the silence. And when the silence is deafening, you're in the center of your own universe.
 
+### Good place to start
+
+Below are two links from the emacswiki. Both include snippets or oneliners that are convenient, commonly
+used, and encouraged to include in your init file.
+
+* [DotEmacsChallenge](https://www.emacswiki.org/emacs/DotEmacsChallenge)
+* [EmacsCrashCode](https://www.emacswiki.org/emacs/EmacsCrashCode)
+
 ### The most important snippet of code in your entire new life
 
 Don't ask me where I found this, probably from the [emacswiki](https://emacswiki.org), but it's value cannot
