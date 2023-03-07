@@ -21,6 +21,16 @@ Below is the index for our site. It is painfully, and I do mean painfully, maint
 | [Linux](linux)                | [NeoVim](nvim)                                      | [code Repositories](repos)                                      |
 | [env-files](env-files)        | [Osint](osint)                                      | [Jargon](jargon)                                                |
 
-------
+-----
+
+### TODO:
+
+- [ ] Fix the "Posts" page. Currently it is blank, it should be a list of posts.
+
+- [ ] Turn off default light page style, setup dark page style to constant on.
+
+- [ ] Turn off display of the "Edit" link for Posts.
+
+-----
 
 [![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
