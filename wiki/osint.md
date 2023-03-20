@@ -49,6 +49,7 @@ There are the ones that proved to be helpful, they are not in any particular ord
 * [Family Tree Now](https://www.familytreenow.com)
 * [That's Them](https://thatsthem.com)
 * [Advanced Background Checks](https://www.advancedbackgroundchecks.com)
+* [Fast People Search](https://www.fastpeoplesearch.com)
 
 So far in my experience, I have not found information on a pay-for site that was not also available for free
 on another site. So, I reccommend you don't pay for access to those sites.
