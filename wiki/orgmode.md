@@ -44,10 +44,11 @@ much to it at all.
 
 ```
 
-### Packages
+#### Links
 
-- [org-brain](https://github.com/Kungsgeten/org-brain)
-- [org-web](https://github.com/DanielDe/org-web)
+* [Sync Org with Unison](https://orgmode.org/worg/org-tutorials/unison-sync.html)
+* [Docs for Org Commands, Hooks, and Options](https://orgmode.org/worg/doc.html)
+* [Org Mode Hacks](https://orgmode.org/worg/org-hacks.html)
 
 ### Org-Export
 
