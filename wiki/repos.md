@@ -19,4 +19,5 @@ list of several of these alternative sites.
 * [Codeberg](https://codeberg.org): Sponsored by a nonprofit, allows private, attempting to be the primary
 	alternative.
 * [gitgud.io](https://gitgud.io): Sponsored repository by several private developers, allows private repos.
-* [sr.ht](https://sr.ht)
+* [sr.ht](https://sr.ht): A very popular repository hosting site, requires payment to actually host code. 😦
+* [mzte.de](https://mzte.de): Sponsored repository by private group, similar to gitgud.io

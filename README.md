@@ -20,7 +20,6 @@ Below is the index for our site. It is painfully, and I do mean painfully, maint
 | [OpenBSD](openbsd)            | [Art](art)                                          | [Mounts and `/etc/fstab`](mount_fstab)                          |
 | [Linux](linux)                | [NeoVim](nvim)                                      | [code Repositories](repos)                                      |
 | [env-files](env-files)        | [Osint](osint)                                      | [Jargon](jargon)                                                |
-| [gdb](gdb)                    | [Social Engineering](social-engineering)            | ---                                                             |
 
 
 ### TODO:
