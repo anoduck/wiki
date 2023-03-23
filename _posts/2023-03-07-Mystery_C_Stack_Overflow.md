@@ -141,3 +141,49 @@ Again, it appeared as if a solution had been reached, and again once it was assu
 rose again unexpectedly. Regardless, it appears most definitely the error emerging from the `xfaces.c` file,
 specifically the `resolve_face_name` function. This is a big step, as it confirms previous suspicions over
 this function, and aligns with previous data recieved from gdb.
+
+### A small update.
+
+After what appears to be two weeks I have struggled discovering the actual cause of the error. It seems that
+everytime it seems to be resolved, it returns from the blue. Attempts at using GDB have been abandoned, and my
+configuration files must have been rewritten once every two or three days.
+
+#### Isolation to `org-agenda-files`
+
+Now that my init file is spread out across seven different files, I finally isolated the error to my org
+initialization file. This took longer than one would expect, because not in a thousand years would I have
+suspected this file of containing any erros, and it was the last place I suspected to be problematic.
+Furthermore, it was the last place I wanted to look, since it was so critical for me to keep org together and
+running, but at last, I finally broke down and discovered it's betrayal. Then very slowly began to strip that
+file until the error disappeared. Then I was able to isolate the error to a single configuration statement
+that repeatedly reproduced the same error once added back into the init file. To my horror this setting was
+`(setq org-agenda-files $FILES)`. This one setting is at the core of org functionality, and it meant that
+until the error was resolved, org was broken.
+
+#### Finally, building a minimal example for reproduction
+
+Once the problematic variable was discovered, it was a matter of creating a init file that would reproduce the
+error using the minimal amount of code, settings, and packages to reproduce it. By doing this alone, I
+discovered the source of several other qwerks I have been concerned about.
+
+##### The `void variable ("C-c t")`
+
+Turns out this is related to centaur tabs, seeing how `C-c t` is centaur tab's prefix keymap. This conflicts
+with custom designated keymaps, and requires change.
+
+##### Potential cause
+
+I just recieved the following error:
+	`Corfu completion error: The connected server(s) does not support method textDocument/completion.`
+This might be the potential cause of the `C-stack` error. Appeared once enabling loading my misc package
+designation file.
+
+##### Invalid-face attribute `:foreground nil`
+
+This is a long time bug that has remained a part of my configuration. Because of the creation of a minimal
+init file, I now have tracked this error to my misc package designation file, which was once suspected.
+
+#### Appears I hit something
+
+Just recieved the `Re-entering top level after C stack overflow` error. This was after I enably my
+customization file loading. Once enabled, this file generated errors repeatedly.
