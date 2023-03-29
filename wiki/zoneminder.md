@@ -55,6 +55,14 @@ but doable if we reduce the number of cameras purchased.
 - [DS-2cd2043GO-I](https://www.amazon.com/HIKVISION-US-VERSION-DS-2CD2043G0-I-Communication/dp/B07VC8VR8K/) =
 	$115
 
+##### Other Brands & Models
+
+With the price of all available models of Hikvision compatible with zoneminder appearing to be over $100, while
+there were other brands for much less. It might be good to list a few other brands and their models.
+
+- [EZVIZ C3W Pro](https://www.amazon.com/EZVIZ-C3N-Detection-Waterproof-Customizable/dp/B09M3R3CMX/?th=1) =
+  $70
+
 #### Installation Options
 
 Zoneminder can be installed in one of numerous ways.
