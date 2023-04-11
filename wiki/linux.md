@@ -33,10 +33,11 @@ meant that anyone could create their own Operating System, and were not inhibite
 * [Linux Kernel: Serial Consoles](https://www.kernel.org/doc/html/latest/admin-guide/serial-console.html?highlight=serial+console)
 * [Void Linux: Enabling Services](https://docs.voidlinux.org/config/services/index.html#enabling-services)
 
-### Debian
+### Debian/Kali/Ubuntu
 
 * [Setting up a serial console in Debian](https://www.howtoforge.com/setting_up_a_serial_console)
 * [fixing apt errors](fix_apt)
+* [Installing AMDGPU Drivers in kali](amd-gpu-kali)
 
 ### ArchLinux / Alpine Linux
 

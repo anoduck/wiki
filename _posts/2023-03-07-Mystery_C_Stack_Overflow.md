@@ -111,19 +111,35 @@ xfaces.c
 5910:  Lisp_Object lface = lface_from_face_name (f, symbol, false);
 ```
 
-### Resolution discovered!
+### False positives on a cosmic scale.
 
-It was an incredibly tedious and time consuming process, but the two lines of code that were discovered to be
-the pinnacle variable to whether the error occurred or not were:
+Attempting to find the cause of the error was an incredibly tedious and time consuming process, and has continuously
+resulted in false positives. Again and agina, just as I would mentally assume I finally found the cause of the error,
+it would magically re-appear and reak havok on my emacs session. There was eveven a time spanning nearly a month, where
+I thought I had finally seen the last of it, then after hooking an already loaded command to a editor mode, it came back.
+The false positives are as follows:
 
-```bash
-(set-default 'indicate-empty-lines t) #<--- Almost certain this one setting was the cause of the issue.
-(set-default 'imenu-auto-rescan t)
-```
+1. The `indicate-empty-lines` farse.
+   ```bash
+   (set-default 'indicate-empty-lines t) #<--- Almost certain this one setting was the cause of the issue.
+   (set-default 'imenu-auto-rescan t)
+   ```
+2. The prank of `resolve_face_name` in `xfaces.c`.
+3. The charade of Org Agenda Files.
+4. Centaurian Lies
+5. In lou of a viable theme.
 
-In fact, since imenu is never used, the `indicate-empty-lines` variable is the most probable cause to this
-crippling error. Almost certain this variable can either be `nil` or a function defining the type of
-indication. This means that `t` would be an uncomputable answer, and thus resulted in the segmentation fault.
+Each of the above false flags mentioned above took days to isolate and attempt to provide a solution two.
+Overall the hunt for the elusive error has so far taken one month of breaking down and rebuilding my emacs init file piece by
+piece.
+
+### Make one move, lose out on your work.
+
+After a month of possessing a functional emacs configuration, I enabled one setting, and that was to hook
+org-recur-mode when org-mode loads. Then just like that I recieved an error stating too many files are open to
+load org-recur. Once the setting to resolve this `max-lisp-eval-depth` was modified, it all began to crash
+down all over again. The C stack overflow was back with a vengence, and now it does not seem to want to go
+away.
 
 #### Steps towards discovering the resultion.
 
@@ -135,55 +151,4 @@ indication. This means that `t` would be an uncomputable answer, and thus result
 3. In the end, using gdb was rather pointless, as it was elbow grease that allowed for the source of the error
 	 to be discovered.
 
-### Not so fast!
-
-Again, it appeared as if a solution had been reached, and again once it was assumed the problem was over, it
-rose again unexpectedly. Regardless, it appears most definitely the error emerging from the `xfaces.c` file,
-specifically the `resolve_face_name` function. This is a big step, as it confirms previous suspicions over
-this function, and aligns with previous data recieved from gdb.
-
-### A small update.
-
-After what appears to be two weeks I have struggled discovering the actual cause of the error. It seems that
-everytime it seems to be resolved, it returns from the blue. Attempts at using GDB have been abandoned, and my
-configuration files must have been rewritten once every two or three days.
-
-#### Isolation to `org-agenda-files`
-
-Now that my init file is spread out across seven different files, I finally isolated the error to my org
-initialization file. This took longer than one would expect, because not in a thousand years would I have
-suspected this file of containing any erros, and it was the last place I suspected to be problematic.
-Furthermore, it was the last place I wanted to look, since it was so critical for me to keep org together and
-running, but at last, I finally broke down and discovered it's betrayal. Then very slowly began to strip that
-file until the error disappeared. Then I was able to isolate the error to a single configuration statement
-that repeatedly reproduced the same error once added back into the init file. To my horror this setting was
-`(setq org-agenda-files $FILES)`. This one setting is at the core of org functionality, and it meant that
-until the error was resolved, org was broken.
-
-#### Finally, building a minimal example for reproduction
-
-Once the problematic variable was discovered, it was a matter of creating a init file that would reproduce the
-error using the minimal amount of code, settings, and packages to reproduce it. By doing this alone, I
-discovered the source of several other qwerks I have been concerned about.
-
-##### The `void variable ("C-c t")`
-
-Turns out this is related to centaur tabs, seeing how `C-c t` is centaur tab's prefix keymap. This conflicts
-with custom designated keymaps, and requires change.
-
-##### Potential cause
-
-I just recieved the following error:
-	`Corfu completion error: The connected server(s) does not support method textDocument/completion.`
-This might be the potential cause of the `C-stack` error. Appeared once enabling loading my misc package
-designation file.
-
-##### Invalid-face attribute `:foreground nil`
-
-This is a long time bug that has remained a part of my configuration. Because of the creation of a minimal
-init file, I now have tracked this error to my misc package designation file, which was once suspected.
-
-#### Appears I hit something
-
-Just recieved the `Re-entering top level after C stack overflow` error. This was after I enably my
-customization file loading. Once enabled, this file generated errors repeatedly.
+<!-- Why is nvim not allowing me to add an additional line? -->

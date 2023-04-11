@@ -62,7 +62,7 @@ link to the readme. [Use-Package Readme](https://github.com/jwiegley/use-package
 | `:defer`    | Defers loading of package for a few seconds.               |         |
 | `:init`     | Declares code that needs execution before loading package. |         |
 | `:config`   | Defines package configuration options.                     |         |
-| `:custom`   | Defines nonstandard variable customization                 |         |
+| `:custom`   | Defines customization of package custom variables          |         |
 | `:bind`     | Declares key binds for package.                            |         |
 | `:hook`     | Defines hooks for loading of package                       |         |
 | `:ensure`   | Ensures that package is loaded.                            |         |
