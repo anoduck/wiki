@@ -141,7 +141,23 @@ load org-recur. Once the setting to resolve this `max-lisp-eval-depth` was modif
 down all over again. The C stack overflow was back with a vengence, and now it does not seem to want to go
 away.
 
-#### Steps towards discovering the resultion.
+### Possible, but is it another false positive.
+
+While tinkering around with the two dangerous local variables `max-specpdl-size` and `max-lisp-eval-depth`, I
+discovered my settings were being ignored after load, and a package was setting these two numbers to a
+unusually high integer, 50000. While this might be acceptable for `max-specpdl-size`, it is way too large for
+`max-lisp-eval-depth`. If the number of the later is too low, then the amount of nested evaluations will be
+too low for processes to work correctly. If the number is too high for the later, then these evaluations will
+become too numerous in volume and will cause the C stack to "overflow" beyond it's control.
+
+Apparently setting this variable is not uncommon practice for emacs package maintainers, as a quick search
+discovered several packages installed raised this setting beyond the default value, but only one package set
+the value over ten thousand. After some review, I settled for eight thousand being a reasonable setting for
+these two variables, as it is what is used in the `use-package` package for testing.
+
+So far, it looks good, but we won't be sure if this is our culprit for quite some time.
+
+### Steps towards discovering the resultion.
 
 1. Most certainly the approach of starting from scratch until the error is reproduced, is a better strategy
 	 than removing code until the error stops.
