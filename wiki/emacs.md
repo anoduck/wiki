@@ -21,11 +21,12 @@
   Emacs is undoubtedly the most powerful programmer's editor in existence. It's a big, feature-laden program with a great deal of flexibility and customizability. … Emacs has an entire programming language inside it that can be used to write arbitrarily powerful editor functions.
     ~ Eric S. Raymond, The Art of UNIX Programming
 
+-----
 
 ### Sections
 
-| [general](general)   | [org-mode](orgmode) | [emacs init](init) | [completion](emacs-complete) |
-| [debug](emacs-debug) | ---                 | ---                | ---                          |
+| [general info](general) | [org-mode](orgmode) | [emacs init](init) | [completion](emacs-complete) |
+| [debug](emacs-debug)    | [keymaps](keymaps)  | ---                | ---                          |
 
 
 ### Links
