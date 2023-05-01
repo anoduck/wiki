@@ -38,6 +38,7 @@ meant that anyone could create their own Operating System, and were not inhibite
 * [Setting up a serial console in Debian](https://www.howtoforge.com/setting_up_a_serial_console)
 * [fixing apt errors](fix_apt)
 * [Installing AMDGPU Drivers in kali](amd-gpu-kali)
+* [connecting vnc to a Xdummy](vnc-xdummy)
 
 ### ArchLinux / Alpine Linux
 
