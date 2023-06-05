@@ -2,7 +2,7 @@
 
 # Anoduck's Wiki Repository
 
-This is my online, open, and GitHub powered wiki. Here you will find, all things that are cool.
+__This is my online, open, and GitHub powered wiki. Here you will find, all things that are cool.__
 
 -----
 
@@ -21,15 +21,22 @@ Below is the index for our site. It is painfully, and I do mean painfully, maint
 | [Linux](linux)                | [NeoVim](nvim)                                      | [code Repositories](repos)                                      |
 | [env-files](env-files)        | [Osint](osint)                                      | [Jargon](jargon)                                                |
 | [Version Control](versioning) | [Zoneminder](zoneminder)                            | [Make](make)                                                    |
-| [Coral](google-coral)         | ---                                                 | ---                                                             |
+| [Coral](google-coral)         | [Desktop Environments](Desktops)                    | [Wayland](wayland)                                              |
 
 ### TODO:
 
-- [ ] Fix the "Posts" page. Currently it is blank, it should be a list of posts.
-
+- [ ] Fix the "Posts" page. Which is blank, it should be a list of posts.
 - [ ] Turn off default light page style, setup dark page style to constant on.
-
 - [ ] Turn off display of the "Edit" link for Posts.
+- [ ] Merge with old vimwiki
+- [ ] Merge with old dokuwiki
+
+-----
+
+### To Visitors and Guests:
+
+Welcome. If you see that a page is incomplete or in horrendous disrepair, do not hesitate to inform me. You
+can reach me in the discussions of my profile repository. Cheers.
 
 -----
 
