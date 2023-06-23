@@ -18,10 +18,11 @@ Below is the index for our site. It is painfully, and I do mean painfully, maint
 | [Public DNS Servers](dns)     | [UserAgents for Use](useragent)                     | [Firewall Systems](firewall)                                    |
 | [Shell](shell)                | [User Service Managers](service_managers)           | [Color Tools](color_tools)                                      |
 | [OpenBSD](openbsd)            | [Art](art)                                          | [Mounts and `/etc/fstab`](mount_fstab)                          |
-| [Linux](linux)                | [NeoVim](nvim)                                      | [code Repositories](repos)                                      |
-| [env-files](env-files)        | [Osint](osint)                                      | [Jargon](jargon)                                                |
+| [Linux](linux)                | [env-files](env-files)                              | [code Repositories](repos)                                      |
+| [Unix](unix)                  | [Osint](osint)                                      | [Jargon](jargon)                                                |
 | [Version Control](versioning) | [Zoneminder](zoneminder)                            | [Make](make)                                                    |
 | [Coral](google-coral)         | [Desktop Environments](Desktops)                    | [Wayland](wayland)                                              |
+| [NeoVim](nvim)                | [rtl-sdr](rtl-sdr)                                  | [Pulse Audio](pulse)                                            |
 
 ### TODO:
 
