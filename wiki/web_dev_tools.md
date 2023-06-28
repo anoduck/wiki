@@ -62,7 +62,7 @@ If desired you can use a search query to generate images pertaining to something
 
 Website: [W3 Schools](https://www.w3schools.com)  
 
-Originally w3 schools specifically focused on providing information and reference material to educate others in order to allow them to
+Originally w3 schools specifically focused on providing information and reference material to educate others to allow them to
 build their won html webpages. Over the years the knowledge base has grown, and now includes numerous programming languages, web frameworks, and even
 database syntax. It may not be exactly what you want, but it is considered a standard.
 
@@ -78,4 +78,11 @@ engine. Allows the saving and modification of previous made themes.
 Website: [leonardocolor.io](https://leonardocolor.io)  
 
 Leonardo is a one of a kind tool for creating and managing color scheme systems for ui design, data visualization, and user
-interaction. It provides tools for color scheme creation, analysis, control, design, and management of colors. It was created by Adobe.
+interaction. It provides tools for color scheme creation, analysis, control, design and management of colors. Created by Adobe.
+
+### Ye Large List of Lipsum.
+
+* https://www.broipsum.com/
+* https://placehodler.shapelabs.co/
+* https://trumpipsum.net/
+* https://loremipsum.io/ultimate-list-of-lorem-ipsum-generators/
