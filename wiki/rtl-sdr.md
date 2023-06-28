@@ -52,3 +52,8 @@ age scare you in this endevour.
 ### RTL-SDR RFID
 
 - [Replay RF Signals](https://www.blackhillsinfosec.com/how-to-replay-rf-signals-using-sdr/)
+- [Sniffing and decoding NFC with a DVB-T stick rtl-sdr and GNURadio](http://blog.rona.fr/post/2017/10/15/Sniffing-and-decoding-NFC-with-a-DVB-T-stick-rtl-sdr-and-GNURadio?pub=0#pr)
+
+### RTL-SDR LTE
+
+- [OpenLTE](https://github.com/mgp25/OpenLTE#installing-gnuradio-with-uhd)
