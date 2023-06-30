@@ -23,6 +23,7 @@ Below is the index for our site. It is painfully, and I do mean painfully, maint
 | [Version Control](versioning) | [Zoneminder](zoneminder)                            | [Make](make)                                                    |
 | [Coral](google-coral)         | [Desktop Environments](Desktops)                    | [Wayland](wayland)                                              |
 | [NeoVim](nvim)                | [rtl-sdr](rtl-sdr)                                  | [Pulse Audio](pulse)                                            |
+| [OpenSSL](openssl)            | ---                                                 | ---                                                             |
 
 ### TODO:
 
