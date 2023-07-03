@@ -61,4 +61,4 @@ For our fucking fantastic table of Desktop Environments we will:
 | [i3](i3)           | none               | WM         | Medium Rare          | Sh, and config files              | Just Right         | light               | Minimal           | We use it, so there.         |
 | [bspwm](bspwm)     | Sausages? Where?   | WM         | Hard                 | Sh & Bash                         | Not really         | Ultra Light         | With effort       | Promising                    |
 | [xmonad](xmonad)   | What are Sausages? | WM         | Use at own risk!     | Familiar with programming Haskell | This WM hates you. | lite, but not light | There are rumors  | Not unless your a masochist. |
-| [awesome](awesome) | Not a trace        | WM         | Medium - Hard        | config file                       | Define Friendly?   | Super Dooper Light  | Minimal           | Could be fun for pros        |
+| AwesomeWM          | Not a trace        | WM         | Medium - Hard        | config file                       | Define Friendly?   | Super Dooper Light  | Minimal           | Could be fun for pros        |

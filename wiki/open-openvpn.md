@@ -52,11 +52,15 @@ sudo cp "$YOUR_CERTIFICATE".pem /etc/iked/pubkeys/ufqdn/"$USERNAME"@"$FQDN"
 
 ### Wireguard Configuration
 
-Configuring OpenBSD's native Wireguard support is rather odd if your acustomed to running an OpenBSD system.
-This because unlike Linux used to be, where configuration of interfaces took place with the `ifconfig` command
-(now `ip addr set`), OpenBSD relies on a file based configuration (i.e. `hostname.em0`). EXCEPT, when it comes
-to configuring Wireguard, OpenBSD allows the use of `ifconfig` to configure the interface. As not usual, see `man
-ifconfig` for detailed information for executing the following command.
+Configuring OpenBSD's native Wireguard support is rather odd, because it can be performed in any number of
+different ways, and all would be correct. It can be configured from the command line using the `ifconfig`
+command, in a `hostname.if` file as other interfaces are configured, on the command line using the `wg`
+command, and finally with a configuration file using the `wg-quick` command. 
+
+#### Ifconfig
+
+If you are curious about setting it up using ifconfig, then please see the man page for ifconfig for more
+instructions on how to do this.
 
 1. To set up a wireguard interface (`wg0`) with ifconfig, use the following command.
 
@@ -64,9 +68,55 @@ ifconfig` for detailed information for executing the following command.
 sudo ifconfig wg1 create wgkey "$YOUR_PRIVATE_KEY" wgport "$YOUR_DESIGNATED_PORT" wgpeer "$YOUR_PUBLIC_KEY" wgaip 0.0.0.0/0 wgendpoint "$ENDPOINT_IP" "$ENDPOINT_PORT" 
 ```
 
+#### hostname.if 
 
+You can break the above command down and create a hostname.if file like so. 
+
+```conf
+inet "$YOUR_CLIENT_IP" "$CLIENT_IP_SUBMASK" NONE
+wgkey "$YOUR_PRIVATE_KEY" \
+  wgport "$YOUR_DESIGNATED_PORT" 
+
+wgpeer "$YOUR_PUBLIC_KEY" \
+  wgaip 0.0.0.0/0 \
+  wgendpoint "$ENDPOINT_IP" "$ENDPOINT_PORT" 
+
+!route "$ROUTE rules here"
+```
+
+But there are far better ways to configure the interface.
+
+#### Hybrid configuration
+
+The best strategy is to perform a hybrid configuration, where a `hostname.if` file is created, and the `wg`
+command used to configure the interface.
+
+```bash
+[#] ifconfig wg0 create description wg-quick: wg0 
+[#] wg setconf wg0 /dev/fd/63 
+[#] ifconfig wg0 inet "$CLIENT_IP"/32 alias 
+[#] ifconfig wg0 mtu 1420 
+[#] ifconfig wg0 up 
+[+] resolvd is not running, DNS will not be configured 
+[#] route -q -n add -inet 0.0.0.0/1 -iface "$CLIENT_IP" 
+[#] route -q -n add -inet 128.0.0.0/1 -iface "$CLIENT_IP" 
+[#] route -q -n delete -inet "$ENDPOINT_IP" 
+[#] route -q -n add -inet "$ENDPOINT_IP" -gateway "$LOCAL_EXT_IP"
+```
+
+```bash
+inet "$CLIENT_IP" 255.255.255.255 alias
+mtu 1420
+up
+!wg setconf wg0 /etc/wireguard/wg0.conf
+!route -q -n add -inet 0.0.0.0/1 -iface "$CLIENT_IP" 
+!route -q -n add -inet 128.0.0.0/1 -iface "$CLIENT_IP" 
+!route -q -n delete -inet "$ENDPOINT_IP" 
+!route -q -n add -inet "$ENDPOINT_IP" -gateway "$LOCAL_EXT_IP"
+```
 
 ### Reference Links
 
 - [OpenVPN Client](https://astro-gr.org/openbsd-openvpn-client/)
 - [Clein OpenVPN](https://umgeher.org/posts/2022/09/openbsd-client-openvpn.html)
+- [OpenBSD Wireguard](https://marcocetica.com/posts/wireguard_openbsd/)

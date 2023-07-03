@@ -33,7 +33,8 @@ schwag groomer gnar stoked clipless OTB.
 Note, that software for rtl-sdr is not as fanatically maintained as software for other purposes, do not let
 age scare you in this endevour.
 
-| [SigDigger](https://github.com/BatchDrake/SigDigger) | [Coole Radar](https://github.com/wiseman/coole-radar) | [sdrpp](https://www.sdrpp.org/) | 
+| [SigDigger](https://github.com/BatchDrake/SigDigger) | [Coole Radar](https://github.com/wiseman/coole-radar) | [sdrpp](https://www.sdrpp.org/) |
+| CubicSDR                                             | GNURadio                                              |                                 |
 
 - [Big List of rtl-sdr software](https://www.rtl-sdr.com/big-list-rtl-sdr-supported-software/)
 - [RTL-SDR Known Apps](https://osmocom.org/projects/rtl-sdr/wiki/Rtl-sdr#Known-Apps)
@@ -57,3 +58,7 @@ age scare you in this endevour.
 ### RTL-SDR LTE
 
 - [OpenLTE](https://github.com/mgp25/OpenLTE#installing-gnuradio-with-uhd)
+
+### RFID
+
+
