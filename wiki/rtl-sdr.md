@@ -34,7 +34,7 @@ Note, that software for rtl-sdr is not as fanatically maintained as software for
 age scare you in this endevour.
 
 | [SigDigger](https://github.com/BatchDrake/SigDigger) | [Coole Radar](https://github.com/wiseman/coole-radar) | [sdrpp](https://www.sdrpp.org/) |
-| CubicSDR                                             | GNURadio                                              |                                 |
+| CubicSDR                                             | GNURadio                                              | [rtl-sdr App](rtlsdr-app)       |
 
 - [Big List of rtl-sdr software](https://www.rtl-sdr.com/big-list-rtl-sdr-supported-software/)
 - [RTL-SDR Known Apps](https://osmocom.org/projects/rtl-sdr/wiki/Rtl-sdr#Known-Apps)
@@ -61,4 +61,6 @@ age scare you in this endevour.
 
 ### RFID
 
+- [Code 300 32 sdr scanner](https://staffjd.weebly.com/blog/code-300-32-sdr-scanner)
+- [How to replay RF signals using sdr](https://www.blackhillsinfosec.com/how-to-replay-rf-signals-using-sdr/)
 
