@@ -33,8 +33,13 @@ schwag groomer gnar stoked clipless OTB.
 Note, that software for rtl-sdr is not as fanatically maintained as software for other purposes, do not let
 age scare you in this endevour.
 
-| [SigDigger](https://github.com/BatchDrake/SigDigger) | [Coole Radar](https://github.com/wiseman/coole-radar) | [sdrpp](https://www.sdrpp.org/) |
-| CubicSDR                                             | GNURadio                                              | [rtl-sdr App](rtlsdr-app)       |
+| [SigDigger](https://github.com/BatchDrake/SigDigger)                                                          | [Coole Radar](https://github.com/wiseman/coole-radar)              | [sdrpp](https://www.sdrpp.org/)                     |
+| CubicSDR                                                                                                      | GNURadio                                                           | [rtl-sdr App](rtlsdr-app)                           |
+| linrad                                                                                                        | natpos                                                             | gqrx                                                |
+| [sdrangelove](https://osmocom.org/projects/sdr/wiki/sdrangelove)                                              | Spektrum                                                           | uhv                                                 |
+| [rtl-power-fftw](https://github.com/AD-Vega/rtl-power-fftw)                                                   | [qspectrumanalyzer](https://github.com/xmikos/qspectrumanalyzer)   | [SoftFM](https://github.com/jorisvr/SoftFM)         |
+| [gns-sdr](https://gnss-sdr.org/docs/tutorials/gnss-sdr-operation-realtek-rtl2832u-usb-dongle-dvb-t-receiver/) | [RTLion](https://github.com/RTLion-Framework/RTLion)               | [inspectrum](https://github.com/miek/inspectrum)    |
+| [dspectrum](https://github.com/tresacton/dspectrumgui)                                                        | [qtradio](https://napan.ca/ghpsdr3/index.php/QtRadio_Installation) | [sdr-j-fm](https://github.com/JvanKatwijk/sdr-j-fm) |
 
 - [Big List of rtl-sdr software](https://www.rtl-sdr.com/big-list-rtl-sdr-supported-software/)
 - [RTL-SDR Known Apps](https://osmocom.org/projects/rtl-sdr/wiki/Rtl-sdr#Known-Apps)

@@ -159,3 +159,4 @@ More information concerning zoneminder can be found in the following links.
 
 - [The zoneminder manual](https://zoneminder.readthedocs.io/en/latest/)
 - [Zoneminder third party utilities](https://wiki.zoneminder.com/Utilities)
+- [Security Cameras](sec-cam)
