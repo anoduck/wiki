@@ -15,6 +15,10 @@ RTL = Realtek, a microchip manufacturer
 
 RTL-SDR = Realtek Software Defined Radio
 
+With the rise of new inexpensive processors and chipsets, SDR is relatively easy to get into, and is now
+the new thing in radio frequency technology. Now it is less costly to create a radio setup with SDR, than it is to
+use a hardware approach.
+
 Bro ipsum dolor sit amet mcTwist avie core shot huck chain suck ripper. Hardtail Whistler rigid, 
 nose afterbang Japan air line taco chillax hammerhead first tracks chowder. Huck bonk grip tape 
 heli back country bowl. Crunchy sucker hole park presta, poaching grind taco switch apres dust 
@@ -28,9 +32,11 @@ hole bear trap dirt. Face shots snake bite OTB, face plant skinny huck flow epic
 hellflip rig poaching Whistler taco glove spin wheelie drop bomb titanium. Bonk fully brain bucket, 
 schwag groomer gnar stoked clipless OTB.
 
+__[SDR Crash Course](sdr-crash)__
+
 ### Software for RTL-SDR
 
-Note, that software for rtl-sdr is not as fanatically maintained as software for other purposes, do not let
+Note, that software for rtl-sdr is not as fanatically maintained with the most bleeding edge libraries as other software might be, do not let
 age scare you in this endevour.
 
 | [SigDigger](https://github.com/BatchDrake/SigDigger)                                                          | [Coole Radar](https://github.com/wiseman/coole-radar)              | [sdrpp](https://www.sdrpp.org/)                     |
@@ -41,10 +47,12 @@ age scare you in this endevour.
 | [gns-sdr](https://gnss-sdr.org/docs/tutorials/gnss-sdr-operation-realtek-rtl2832u-usb-dongle-dvb-t-receiver/) | [RTLion](https://github.com/RTLion-Framework/RTLion)               | [inspectrum](https://github.com/miek/inspectrum)    |
 | [dspectrum](https://github.com/tresacton/dspectrumgui)                                                        | [qtradio](https://napan.ca/ghpsdr3/index.php/QtRadio_Installation) | [sdr-j-fm](https://github.com/JvanKatwijk/sdr-j-fm) |
 
+### SDR Software Lists
+
 - [Big List of rtl-sdr software](https://www.rtl-sdr.com/big-list-rtl-sdr-supported-software/)
 - [RTL-SDR Known Apps](https://osmocom.org/projects/rtl-sdr/wiki/Rtl-sdr#Known-Apps)
 
-### RTL-SDR Tutorials
+### Antenna Tutorials
 
 - [Eznec Tutorials](https://www.hamradiodeals.co.uk/forums/viewforum.php?f=46)
 - [Antenna Theory](https://www.antenna-theory.com/measurements/antenna.php#equipment)
@@ -69,3 +77,8 @@ age scare you in this endevour.
 - [Code 300 32 sdr scanner](https://staffjd.weebly.com/blog/code-300-32-sdr-scanner)
 - [How to replay RF signals using sdr](https://www.blackhillsinfosec.com/how-to-replay-rf-signals-using-sdr/)
 
+### Amplifiers
+
+- [2.4ghz Amplifier](https://www.qsl.net/n9zia/wireless/2.4amp.html)
+- [2.4ghz Bidirectional Amplifier](https://www.qsl.net/n9zia/wireless/appendixD.html)
+- [2.4ghz Spectrum Analyzer](https://www.qsl.net/va3iul/2.4GHz_Spectrum_Analyzer/2.4GHz_Spectrum_Analyzer.htm)

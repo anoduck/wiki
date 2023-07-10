@@ -1,35 +1,49 @@
 ```text
-#   ___                __     ______  _   _
-#  / _ \ _ __   ___ _ _\ \   / /  _ \| \ | |
-# | | | | '_ \ / _ \ '_ \ \ / /| |_) |  \| |
-# | |_| | |_) |  __/ | | \ V / |  __/| |\  |
-#  \___/| .__/ \___|_| |_|\_/  |_|   |_| \_|
-#       |_|
-#   ___                   ____ ____  ____
-#  / _ \ _ __   ___ _ __ | __ ) ___||  _ \
-# | | | | '_ \ / _ \ '_ \|  _ \___ \| | | |
-# | |_| | |_) |  __/ | | | |_) |__) | |_| |
-#  \___/| .__/ \___|_| |_|____/____/|____/
-#       |_|
+# __     ______  _   _    ___  _   _    ___                   ____ ____  ____
+# \ \   / /  _ \| \ | |  / _ \| \ | |  / _ \ _ __   ___ _ __ | __ ) ___||  _ \
+#  \ \ / /| |_) |  \| | | | | |  \| | | | | | '_ \ / _ \ '_ \|  _ \___ \| | | |
+#   \ V / |  __/| |\  | | |_| | |\  | | |_| | |_) |  __/ | | | |_) |__) | |_| |
+#    \_/  |_|   |_| \_|  \___/|_| \_|  \___/| .__/ \___|_| |_|____/____/|____/
+#                                           |_|
 #
 ```
 
 ## OpenBSD VPNs
 
-There are numerous implementations of VPNs in OpenBSD. OpenVPN was once the defacto in many linux based
+There are several available implementations of VPNs in OpenBSD. OpenVPN was once the defacto in many linux based
 operating systems, but in OpenBSD, IKEv2 is the reccommended implementation. Wireguard is also
 natively supported, and requires no external software to implement. Lastly, there is also tinc if one so
 chooses, but this option is rarely supported by a VPN provider. 
 
 For the following scenarios we will assume that you are using a VPN provider.
 
+### OpenVPN
+
+For implementing OpenVPN on OpenBSD with a VPN provider, one merely needs to download the appropriate OpenVPN
+configuration from the provider and execute the openvpn command on the command line, followed by the
+configuration file you downloaded. This will create a secure connection, and set up the appropriate
+routes needed to redirect traffic through the vpn. 
+
+The command to create a secure connection will look like:
+```bash
+sudo openvpn $YOUR_CLIENT_CONFIGURATION
+```
+
+There is a downside to this, and that is the OpenVPN connection is not daemonized, and dependent on the user
+remaining logged in to the system. 
+
 ### IKEv2
 
-Setting up IKEv2 can be rather confusing, due to the unfamiliar terminology used, but it is fairly straight
-forward in the command line.
+Setting up IKEv2 is confusing to those of us who are unfamiliar with it. After searching the web several
+times, I have yet to find a tutorial providing a detailed and thorough explanation of how this is performed.
+Sure, there are several that provide detailed instruction on how to create your own iked server, but none that
+explain how to set up a client for use with a vpn provider. For this is still a mystery, and a mystery we hope
+to unravel in this section. So, let us start with what we are sure of.
 
-1. To set up IKEv2, the certificate needs to be downloaded from your provider. This option is usually listed
-   available for macOS systems, and since BSD is akin to macOS, this is OK. 
+#### Converting your `*.der` to a `*.pem`, and where not to place it.
+
+1. To set up IKEv2, the certificate will need to be downloaded from your provider. This option is usually listed
+   available for macOS systems, and since BSD is akin to macOS, this is OK.
 2. Once downloaded, you will notice the certificate will come with a file extension `.der`. This file extension
    is always used with X.509 certificates, but to use it we will have to convert it to the `.pem`
    format.
@@ -38,14 +52,117 @@ forward in the command line.
 openssl x509 -in "$YOUR_CERTIFICATE".der -inform DER -out "$YOUR_CERTIFICATE".pem
 ```
 
-3. Next you will want to move this file to the configuration directory for IKEv2, but before you do, it is
-   important that you decide upon a naming scheme for this file. See `man iked` for more info about the
-   available name schemes and locations. For our file we have chosen the "UFQD", so we copy it to the
-   `/etc/iked/pubkeys/ufqdn` folder.
+1. Next you will want to move this file in to the ca folder of the configuration directory for IKEv2. So we copy it to
+   `/etc/iked/ca`.
 
 ```bash
-sudo cp "$YOUR_CERTIFICATE".pem /etc/iked/pubkeys/ufqdn/"$USERNAME"@"$FQDN"
+sudo cp "$YOUR_CERTIFICATE".pem /etc/iked/ca/
 ```
+
+Placing your certificate in `/etc/iked/ca` will allow iked to use it as a certificate authority for
+negotiating the connection.
+
+#### Iked.conf: The configuration file
+
+For OpenBSD an example of a `iked.conf` file can be found in `/etc/examples/iked.conf`, and this is where we
+will start. So copy the file into the `/etc/` directory. 
+
+```bash
+sudo cp /etc/examples/iked.conf /etc/iked.conf
+```
+
+We will assume that authentication will occur via username and password, this is inspite of the availability
+of x509 based authentication. This assumption is based on the ikev2 tutorial provided by the vpn provider.
+Which show the downloaded x509 certificate as used for the certificate authority, and not the
+authentication method. Saying that, we will need to add our username and password to the top of the
+file.
+
+```bash
+username "$USERNAME" "$PASSWORD"
+```
+
+As in most native OpenBSD configuration files, `iked.conf` allows the use of macros. Before continuing, we
+will create a few macros to make modifying the configuration a little easier if we ever need to. These macros
+will need to be placed above the username declaration we created above, so they are read first. Below are the
+macros, their values, and a description of each.
+
+```bash
+# To reinforce best practices, macros should be in all caps.
+GATEWAY = $YOUR_GATEWAY # This should be the ip address of your computer
+HOSTNAME = $YOUR_HOSTNAME # This is the FQDN of the server you are trying to connect to.
+POOL = $THE_NETWORK_ADDRESS_POOL # This is provided to you by your vpn provider, and will be different
+                                 # than your local network address pool. Often this is a 10.X.X.X ip pool.
+# Optionally
+DNS = $THE_DNS_SERVER # Also provided to you by your vpn provider. Not used in our implementation.
+```
+
+Following this, we will begin to enter in our client configuration in the area provided below the example configurations.
+We are assuming the appropriate configuration style is the "RoadWarrior" style. The other configuration styles are 
+"responder" and "initiator". What you label this configuration as does not matter, and for this example we
+will use the "vpn" label.
+
+```bash
+# From IRCNOW
+ikev2 "vpn" passive esp \ # Mode must be passive, and will not start in active mode.
+	from any to dynamic \ # A value of "from any to any" is also acceptable.
+	local $GATEWAY peer any \ # More rigid settings have been viewed here.
+    srcid $HOSTNAME \
+	eap "mschap-v2" \ # This line defines authorization will occur via username and password.
+	config address $POOL \ 
+	tag "ROADW" # This tag is important, so don't omit it. It will be used again in defining pf rules.
+```
+
+#### Set up your pf rules
+
+Ikev2 relies on the firewall to appropriately redirect and forward traffic to the connecting client, and the
+encrypted interface `enc0`. OpenBSD thankfully uses Packet Filter as the defacto firewall, so we will add our
+rules to the `pf.conf` file found in `/etc/`. As usual, we will set up macros to make life easier. These
+macros will go close to the top of the configuration file, so they are loaded first. Remembering that rules
+are loaded from top to bottom, giving priority to rules loaded first. Your rules will go at the
+bottom of your configuration file, as they are more than likely less important than your main configuration
+rules. 
+
+```pf
+# As stated above, first come creation of macros at the top of the file.
+
+# For best practices, these macros should be in all caps. But, in our implmentation we have not done so as of
+# yet. Ooops... Shame, Shame...
+
+## Macros
+
+# Interfaces
+ext_if = "$YOUR_EXTERNAL_INTERFACE"
+vpn_if = "enc0"
+
+# Networks
+extnet = $ext_if:network
+vpnnet = $vpn_if:network
+
+# >> ... Later on, at the bottom ... << #
+
+# Every guide recommended defining a vpn network macro. This is in addition to the "vpnnet" macro defined
+# above. Although, why it is recommended is unclear. As the macro is never used in the configuration, and will
+# remain a dangling unused variable in the file. But regardless, here it is.
+
+vpn = "$YOUR_VPN_SUBNET"
+
+## Ikev2 Rules
+pass in quick on $ext_if proto udp to port {isakmp, ipsec-nat-t} tag IKED
+pass in quick on $ext_if proto esp from any tag IKED
+pass on $vpn_if inet tagged ROADW    # Told you we would use the "ROADW" tag
+match out on $ext_if inet tagged ROADW nat-to $ext_if
+```
+
+Note, the creation of the `enc0` interface is automatic, and no `hostname.enc0` file for the
+interface will be in `/etc`.
+
+#### But, it doesn't work.
+
+From what we have read, this should provide us with a working vpn implemented with ikev2, but it doesn't.
+Making this even more irritating is no error is provided to inform us what went wrong. Which, this is where we
+now stand with our implementation. Quite a downer. 
+
+#### References
 
 - [client ikev2](https://www.openbsd.org/faq/faq17.html#clientikev2)
 - [macOS ikev2](https://protonvpn.com/support/macos-ikev2-vpn-setup/)
@@ -70,7 +187,7 @@ sudo ifconfig wg1 create wgkey "$YOUR_PRIVATE_KEY" wgport "$YOUR_DESIGNATED_PORT
 
 #### hostname.if 
 
-You can break the above command down and create a hostname.if file like so. 
+You can break the above command down and create a `hostname.if` file like so. 
 
 ```conf
 inet "$YOUR_CLIENT_IP" "$CLIENT_IP_SUBMASK" NONE
@@ -91,6 +208,9 @@ But there are far better ways to configure the interface.
 The best strategy is to perform a hybrid configuration, where a `hostname.if` file is created, and the `wg`
 command used to configure the interface.
 
+Below is the output of the wg-quick command, it was used in the creation of the `hostname.wg0` file below. But
+inevitably, this approach was discarded and failed to produce a successful result.
+
 ```bash
 [#] ifconfig wg0 create description wg-quick: wg0 
 [#] wg setconf wg0 /dev/fd/63 
@@ -103,6 +223,10 @@ command used to configure the interface.
 [#] route -q -n delete -inet "$ENDPOINT_IP" 
 [#] route -q -n add -inet "$ENDPOINT_IP" -gateway "$LOCAL_EXT_IP"
 ```
+
+Below is an example of a `hostname.wg0` file, which was used in an attempt to perform the same step
+automatically done by the `wg-quick` command. It did not produce the same result unfortunately, so it was
+discarded and abandoned.
 
 ```bash
 inet "$CLIENT_IP" 255.255.255.255 alias
