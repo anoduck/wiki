@@ -24,6 +24,7 @@ Below is the index for our site. It is painfully, and I do mean painfully, maint
 | [Coral](google-coral)         | [Desktop Environments](Desktops)                    | [Wayland](wayland)                                              |
 | [NeoVim](nvim)                | [rtl-sdr](rtl-sdr)                                  | [Pulse Audio](pulse)                                            |
 | [OpenSSL](openssl)            | [Awesome!](awesome)                                 | [OpenBSD VPN](open-openvpn)                                     |
+| [GPSD](gpsd)                  | ---                                                 | ---                                                             |
 
 ### TODO:
 
