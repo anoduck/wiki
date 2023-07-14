@@ -34,6 +34,9 @@ remaining logged in to the system.
 
 ### IKEv2
 
+- [client ikev2](https://www.openbsd.org/faq/faq17.html#clientikev2)
+- [macOS ikev2](https://protonvpn.com/support/macos-ikev2-vpn-setup/)
+
 Setting up IKEv2 is confusing to those of us who are unfamiliar with it. After searching the web several
 times, I have yet to find a tutorial providing a detailed and thorough explanation of how this is performed.
 Sure, there are several that provide detailed instruction on how to create your own iked server, but none that
@@ -160,12 +163,21 @@ interface will be in `/etc`.
 
 From what we have read, this should provide us with a working vpn implemented with ikev2, but it doesn't.
 Making this even more irritating is no error is provided to inform us what went wrong. Which, this is where we
-now stand with our implementation. Quite a downer. 
+now stand with our implementation.
 
-#### References
+##### Possible Issues
 
-- [client ikev2](https://www.openbsd.org/faq/faq17.html#clientikev2)
-- [macOS ikev2](https://protonvpn.com/support/macos-ikev2-vpn-setup/)
+Reviewing both the FAQ on VPN creation and the man page for `ikevd.conf`, there are several possible causes
+for this failure in our implementation. 
+
+1. The client should be set to "active", and not passive. In passive mode, no requests are made to the
+   upstream server, and not packets are sent. This issue with this is obvious.
+2. The client might need to facilitate the roles of both a "responder" and an "initiator", as both are needed
+   for successful establishment of a connection.
+3. The connection might need to be configured as a direct server to server tunnel. This would require setting
+   direct routes from the host to the client. 
+
+
 
 ### Wireguard Configuration
 
