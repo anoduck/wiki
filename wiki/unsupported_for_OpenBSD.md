@@ -9,6 +9,7 @@ vulnerabilities, and creates unnecessary hardships for certain users. Below is a
 This is a list of projects, for whatever reason, are known not to support OpenBSD.
 
 * Terminalizer
+* MitMProxy
 
 ### Special Cases
 

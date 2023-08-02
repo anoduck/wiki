@@ -34,7 +34,12 @@ As stated above, git is the most popular and widely used VCS in the world, and b
 in to it very often. The use of git is fairly straight forward, and easy to understand. You "clone"
 repositories, "add" your changes, "commit" those changes to a version, and "push" them back into the
 repository. Full disclosure, dealing with conflicts in versions is a pain in the ass, so try to avoid them. As
-time goes by, I will add some of the lesser known commands for git below.
+time goes by, I will add some lesser known commands for git below.
+
+### VC Pages
+
+- [git](git)
+- [cvs](cvs)
 
 #### Removing sensitive data from git repos.
 

@@ -18,15 +18,21 @@ Here is where I write a nice introduction about the Bourne again shell.
 
 Here is my page to the wiki page for bash --> [bash](bash)
 
+* [Basher](https://www.basher.it)
+* [bash-it](https://github.com/Bash-it/bash-it)
+
 ### ZSH
 
 Here is where I take a stab at explaining what ZSH is, and why zsh differs from bash.
 
 Here is my page on zsh --> [zsh](zsh)
 
-### The Best I have used to date:
-
-Clearly and unequaled, the best shell experience I have encountered is running zsh with the zi framework
-installed. Honestly, it is unparelleled.
-
 * [zi](https://github.com/z-shell/zi)
+
+### New Commands
+
+Recently a few new commands have been encountered, that have never been seen before. Unsure if they are new arrivals
+or if they are older commands which have a new found popularity. They listed below.
+
+- newgrp - Newgroup allows a user to initiate and finalize changes to group membership without having to log out and in again.
+- pushd - Allows a user to temporarily cd and then back again.

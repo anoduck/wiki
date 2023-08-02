@@ -33,7 +33,7 @@ create listening socket ([::1]:2947)`. As one can easily discern, this is an ipv
 was why is a failure to establish a socket on an ipv6 port causing GPSd to fail on a machine where all ipv6 is
 disabled at the kernel level?
 
-The simle answer was some maintainer decided to require gpsd to only run on ipv6 network ports. Which
+The simple answer was some maintainer decided to require gpsd to only run on ipv6 network ports. Which
 since all of ipv6 was disabled at the kernel level, this was not going to happen. So we needed to change this
 in the systemd `gpsd.socket` configuration file. 
 
@@ -61,3 +61,21 @@ WantedBy=sockets.target
 
 After making the needed changes as indicated in the comments, all that was needed was to restart gpsd. Which
 worked, as it should.
+
+### Building GPSD from src
+
+Something every system administrator should be able to do is build applications from source code. For an
+encountered issue launching GPSD, we are having to build GPSD from source for testing. All the
+required dependencies are in the repository `build.adoc` file. For our particular build, the dependecy
+missing from our system is asciidoctor.
+The main repository for GPSD is at: `https://gitlab.com/gpsd/gpsd.git`. 
+If you are a user of github, you should be able to login to gitlab with your github credentials.
+
+#### Building
+
+After reviewing the build documentation and installing all the required dependencies, you are ready to build.
+If you have not already cloned the repository, do so now with `git clone ...`.
+
+1. This project uses `scons` rather than the popular `make` command. So ensure you have that installed.
+2. Run `scons -c && scons && scons check && sudo scons install`
+

@@ -15,9 +15,7 @@ RTL = Realtek, a microchip manufacturer
 
 RTL-SDR = Realtek Software Defined Radio
 
-With the rise of new inexpensive processors and chipsets, SDR is relatively easy to get into, and is now
-the new thing in radio frequency technology. Now it is less costly to create a radio setup with SDR, than it is to
-use a hardware approach.
+With the rise of new inexpensive processors and chipsets, SDR is easier than ever to get into.
 
 Bro ipsum dolor sit amet mcTwist avie core shot huck chain suck ripper. Hardtail Whistler rigid, 
 nose afterbang Japan air line taco chillax hammerhead first tracks chowder. Huck bonk grip tape 
@@ -59,9 +57,17 @@ age scare you in this endevour.
 - [Arrl.org Antenna Modeling](https://www.arrl.org/antenna-modeling)
 - [5b4az.org](http://www.5b4az.org)
 
+### Antenna Builds
+
+- [Ultra-wideband Antenna](https://hexandflex.com/2017/12/03/making-an-ultrawideband-antenna-pt1/)
+- [Apollo-NG Antenna](https://apollo.open-resource.org/mission:log:2012:08:02:active-wideband-receiver-antenna-for-sdr)
+
 ### Miscellaneous RF
 
 - [SSTV Handbook](https://www.sstv-handbook.com/)
+- [Dipole Calculator](https://www.omnicalculator.com/physics/dipole)
+- [Microwaves 101](https://www.microwaves101.com)
+- [FCC ID](https://fccid.io/)
 
 ### RTL-SDR RFID
 

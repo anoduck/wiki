@@ -26,7 +26,7 @@ Having no background in engineering, electronics or radio technology; I can assu
 3. Analog Modulation
 4. Digital or phase Modulation
 
-Modulation occurs in two ways:
+__Modulation occurs in two ways:__
 1. Continuous Wave
 2. Pulse Wave
 
