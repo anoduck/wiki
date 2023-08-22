@@ -8,7 +8,7 @@ __This is my online, open, and GitHub powered wiki. Here you will find, all thin
 
 ## Index
 
-Below is the index for our site. It is painfully, and I do mean painfully, maintained by hand. So, I hope you enjoy it.
+Below is the index for our site. It is painfully, and I do mean painfully maintained by hand. So, I hope you enjoy it.
 
 | [Font Config](font_config)    | [Does not support OpenBSD](unsupported_for_OpenBSD) | [Programming](programming)                                      |
 | [Oddities](oddities)          | [File And Disk Recovery](file_disk-recovery)        | [Working with datetime and 'time.time'](datetime_and_time.time) |
@@ -24,7 +24,7 @@ Below is the index for our site. It is painfully, and I do mean painfully, maint
 | [Coral](google-coral)         | [Desktop Environments](Desktops)                    | [Wayland](wayland)                                              |
 | [NeoVim](nvim)                | [rtl-sdr](rtl-sdr)                                  | [Pulse Audio](pulse)                                            |
 | [OpenSSL](openssl)            | [Awesome!](awesome)                                 | [OpenBSD VPN](open-openvpn)                                     |
-| [GPSD](gpsd)                  | [WifiPumpkin3](wp3)                                 | ---                                                             |
+| [GPSD](gpsd)                  | [WifiPumpkin3](wp3)                                 | [Spreadsheets](spreadsheet)                                     |
 
 ### TODO:
 
@@ -32,7 +32,7 @@ Below is the index for our site. It is painfully, and I do mean painfully, maint
 - [ ] Turn off default light page style, setup dark page style to constant on.
 - [ ] Turn off display of the "Edit" link for Posts.
 - [ ] Merge with old vimwiki
-- [ ] Merge with old dokuwiki
+- [x] Merge with old dokuwiki
 
 -----
 

@@ -18,19 +18,20 @@ functionality. Unfortunately, it's keycodes are rather unique, and can be confus
 
 Below are some basic keycodes we have had difficulty remembering:
 
-| _Code_ | _Command_ |
-|++++++++|+++++++++++|
-| `^` | rename Column |
-| `_` | Adjust Column Width |
-| `za` | Add new Column |
-| `ga` | Add Rows | 
-| `e` | edit |
-| `q` | get out of trouble |
+| _Code_   | _Command_           |
+| -------- | -----------         |
+| `^`      | rename Column       |
+| `_`      | Adjust Column Width |
+| `za`     | Add new Column      |
+| `ga`     | Add Rows            |
+| `e`      | edit                |
+| `q`      | get out of trouble  |
 
+-----
 
 ### [sc-im](https://github.com/andmarti1424/sc-im)
 
-This is a long time favorite spreadsheet editor. It is based of the original `sc` spreadsheet editor, with a more convenient keycode
-configuration and more features. Unfortunately, you will need to change the color scheme before using it. 
+This is a long time favorite spreadsheet editor. It is based of the original `sc` spreadsheet editor, with a more convenient keymap
+configuration and more features. Unfortunately, you will need to change the color scheme before it is usable. 
 
 - [Customizing the color Scheme](https://github.com/andmarti1424/sc-im/wiki/Changing-colors#sc-im-colors-customization)
