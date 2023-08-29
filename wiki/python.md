@@ -11,6 +11,7 @@ commonly used programming languages.
 1. [Working with datetime and time.time in python.](https://anoduck.github.io/wiki/datetime_and_time.time)
 2. [Python package management 101](pip101)
 3. [Pandas](pandas)
+4. [argparse without "if then" operators](argparse-no-arg)
 
 ### Jupyter Lab
 

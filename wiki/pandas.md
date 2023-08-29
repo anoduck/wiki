@@ -36,3 +36,16 @@ __Add column headers to pre-existing dataframe__
 
 1. `$DATAFRAME_NAME.columns = ['$COLUMN_NAMES']`
 
+__Find the most common occurring value in a column__
+
+```python
+df = pd.DataFrame({'care': 98, 'robert': 43, 'shit': 100}, columns=['word', 'score'])
+grouped = df.groupby('word')
+word_rep = grouped['word'].agg(lambda x: x.mode().iloc[0])
+```
+
+__find the maximum value of a column__
+
+```python
+df.loc[df['score'].idxmax()]
+```
