@@ -261,8 +261,22 @@ three levels, and the other with four levels.
 
 ### The inefficient tutorial
 
-Every tutorial includes the same basic example on how to run WifiPumpkin3. It is the introduction to
-running pulp files, and running pulp commands from the terminal. It is boring, barely informative, and
-makes the same mistake regarding pulp files. This tutorial shows the use of comments in pulp files, where
-although not critical, these comments are echoed back into the terminal upon execution, and an error is
-registered in the standard output. 
+Every tutorial includes the same basic example on how to run WifiPumpkin3. It's the introduction to
+running pulp files, and running pulp commands from the terminal. It's boring, barely informative, and
+makes the same mistake with pulp files. This tutorial shows the use of comments in pulp files.
+are echoed back into the terminal upon execution, and an error is registered in the standard output. 
+
+```text
+# Set interface
+set interface wlan2
+# set name of AP
+set ssid Shifty_Susan
+# Set noproxy plugin
+set proxy noproxy
+# Ignore pydns log
+ignore pydns_server
+# Start that shit (Admittedly, I added 'that shit')
+start
+```
+
+
