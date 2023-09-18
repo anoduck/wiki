@@ -17,15 +17,29 @@ be built upon.
 
 ### Unikernel variations
 
-Unikernels come in several forms; language specific unikernels, Linux compatible unikernels, and Posix
-compliant unikernels. The later can be seen as generic unikernels. Only a handful of language specific unikernels are available for a few languages. Rust,
-Ocaml, Go, ErLang, Pascal, Java, C++, NodeJS and Haskell have unikernels specifically designed to support those languages. Java can be
-seen as the first example of a unikernel, due to it's JVM.
+Unikernels come in different forms; language specific unikernels, Linux compatible unikernels, and Posix
+compliant unikernels. The latter two are generic unikernels. A handful of language specific unikernels are available for programming languages. Rust,
+Ocaml, Go, ErLang, Pascal, Java, C++, NodeJS and Haskell have unikernels specifically designed to support those languages. Java's jvm is thought of as
+a unikernel.
+
+### Unikernels
+
+- [UniKraft](https://github.com/unikraft/unikraft) -- UniKraft has the appearance of being a popular generic
+  unikernel, although is not as documented as one would expect.
+- [Solo5](https://github.com/Solo5/solo5) -- A unikernel management and development framework for MirageOS
+  (Ocaml) and IncludeOS (C++), but allows for development generic unikernels. The importantance of this unikernel 
+  is its support of OpenBSD and flexibility.
+- [Nanos](https://github.com/nanovms/nanos) -- Is by far the best documented, and most production ready unikernel
+  on the market, which has an established marketplace for unikernel machines, [ops.city](https://ops.city).
+  More information is in the [GitHub repository](https://github.com/nanovms/ops).
+- [Eggos](https://github.com/icexin/eggos) -- A unikernel for the Go programming language that claims it can
+  convert any go project into a unikernel. Although, if you are unifamiliar with go project creation and
+  management this may not be the case.
+- [ClickOS](https://github.com/sysml/clickos) -- Is a unikernel specifically developed for [Click](https://github.com/kohler/click),
+  which is a modular packet processing and analysis router. In layman's terms, it's a unikernel specifically
+  designed to route network packages. Configuration and usage is done in its own configuration language. 
 
 ### Links
 
 - [Awesome MicroVMS](https://github.com/infracloudio/awesome-microvm)
 - [Awesome unikernels](https://github.com/uniqernel/awesome-unikernels)
-- [unikraft](https://github.com/unikraft/unikraft)
-- [nanos](https://github.com/nanovms/nanos)
-- [Solo5](https://github.com/Solo5/solo5)
