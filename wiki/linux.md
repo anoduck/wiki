@@ -27,6 +27,10 @@ meant that anyone could create their own Operating System, and were not inhibite
 
 -----
 
+### General
+
+* [iwd](iwd)
+
 ### Void Linux
 
 * [Setting up serial console in Void Linux](https://battlepenguin.com/tech/installing-void-linux-with-a-serial-terminal/)
