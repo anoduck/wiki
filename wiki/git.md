@@ -40,3 +40,16 @@ git add . && git commit -am 'removed lfs' && git push
 git status
 ```
 
+### Removing a submodule from a repository
+
+When it comes to removing a submodule from a repository, it is not as easy as simply removing the submodule's
+directory, not is it as easy as removing the modules entry from `.gitsubmodule`. There is a method to these
+things.
+
+1. Delete the relevant section from the `.gitmodules` file.
+2. Stage the changes to that file with `git add .gitmodules`.
+3. Delete relevant section from `.git/config`.
+4. Remove submodule from git cache. `git rm --cached .git/modules/$YOURMODULE`
+5. Commit these changes. `git commit -am 'removed module'`
+6. THEN remove the submodule directory.
+

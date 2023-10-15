@@ -12,6 +12,7 @@ commonly used programming languages.
 2. [Python package management 101](pip101)
 3. [Pandas](pandas)
 4. [argparse without "if then" operators](argparse-no-arg)
+5. [Working with scapy](scapy)
 
 ### Jupyter Lab
 

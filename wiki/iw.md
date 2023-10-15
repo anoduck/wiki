@@ -29,7 +29,12 @@ Below is a cheatsheet providing commonly used commands for iw.
 6. Station statistics -- `iw dev $DEVICE station dump`
 7. Stats against peer -- `iw dev $DEVICE station get $PEER`
 8. Link status -- `iw dev $DEVICE link`
-9. Set Channel -- ???
+9. Set Channel -- `iw dev $DEVICE switch $CHANNEL`
+10. Scan for devices -- `iw dev $DEVICE scan`
+11. Enable monitor mode on existing device -- `iw dev $DEVICE set type monitor`
+12. Configure monitor flag -- `iw dev $DEVICE set monitor $FLAG`
+13. Set ack timeout according to distance -- `iw phy $PHYNAME set distance <auto|$DISTANCE>`
+14. Set antenna bitmap -- `iw phy $PHYNAME antenna $BITMAP`
 
 #### Monitor flags
 
