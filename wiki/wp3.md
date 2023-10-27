@@ -9,26 +9,39 @@
 
 ## WifiPumpkin3: A more definitive guide
 
+To prove to you how little information is available regarding the configuration and deployment of Wifipumpkin,
+this unfinished and derelict wiki page ranks 4th in the duckduckgo search results. It isn't even finished, and
+was planned to be scraped entirely. Yet it made the top 5 search results. 
+
+### Intro
+
 Wifipumpkin is a wireless attack framework, that creates an rogue access point for enticing the target to connect
 to. This access point is then used to launch attacks from. It's the defacto program of choice to perform attacks of 
 this type.
+
+#### Documentation is left wanting...
 
 Although it does offer good documentation, this documentation is not nearly as explanative as one would hope, leaving 
 many critical topics and characteristics untouched. For instance, the documentation does not mention whether
 to treat this application as a turn-key solution, or whether it should be used to create a customized
 offensive framework. Even the creator admitted ninety nine percent of users are unable to get the
 application's internal dhcp server to work. It is in respects to this lack of definitey, WifiPumpkin3 is a
-solution for a problem with an unknown number of parts, arranged in an unknown configuration. 
+solution for a problem with an unknown number of parts, arranged in an unknown configuration. Not to mention
+the documentation does not fully embrace the gift of good grammar, and many sentences are broken. 
+
+#### Developer is not exactly jumping for joy over providing support.
+
+I had thought this project was dead after my interaction with its creator. Who possessed the temperment of
+someone who valued returning to a paused video game more than explaining the software he just created. To say
+the interaction was not informative, would be a massive understatement. The developer would neither clarify if
+what was encountered was in fact an problematic issue with the code, nor would he provide explanation as to properly 
+mitigate the encountered issue. To him, computer science was still alchemy, and he must speak in riddles to protect her secrets.
 
 The only way to provide definition to this enigma is to review the source code and break it down into it's
 individual parts.
 
 
 ### Source Code Structure
-
-<details>
-
-<summary> Repository Layout </summary> 
 
 Below is a tree of the contents of the WifiPumpkin3 src directory.
 
@@ -249,7 +262,6 @@ Below is a tree of the contents of the WifiPumpkin3 src directory.
 │       └── summary.py
 └── tree.txt
 ```
-</details>
 
 __Call Graphs__
 
@@ -261,10 +273,11 @@ three levels, and the other with four levels.
 
 ### The inefficient tutorial
 
-Every tutorial includes the same basic example on how to run WifiPumpkin3. It's the introduction to
-running pulp files, and running pulp commands from the terminal. It's boring, barely informative, and
-makes the same mistake with pulp files. This tutorial shows the use of comments in pulp files.
-are echoed back into the terminal upon execution, and an error is registered in the standard output. 
+Every tutorial includes the same basic example on how to run WifiPumpkin3. It is the introduction to
+running pulp files, and running pulp commands from the terminal. It is boring, barely informative, and
+makes the same mistake regarding pulp files. This tutorial shows the use of comments in pulp files, where
+although not critical, these comments are echoed back into the terminal upon execution, and an error is
+registered in the standard output.
 
 ```text
 # Set interface
@@ -279,4 +292,15 @@ ignore pydns_server
 start
 ```
 
+After trying to run this, you will see that all comments are echoed back into the terminal, and an error
+message is generated for them. So, it would be best to avoid using comments in pulp files all together.
 
+Since writing this, a few more pulp files have appeared in the repository, which can act in their own was a
+tutorials for new users.
+
+### A tutorial of much improvement
+
+As we all know, everything from India is really cool. Raj Chandel wrote the best tutorial I have seen to date.
+It can be found [here](https://www.hackingarticles.in/wireless-penetration-testing-wifipumpkin3/).
+
+Admittedly after reading Raj's tutorial myself, I am somewhat disappointed.

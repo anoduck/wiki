@@ -26,7 +26,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [OpenSSL](openssl)               | [Awesome!](awesome)                                 | [OpenBSD VPN](open-openvpn)                                     |
 | [GPSD](gpsd)                     | [WifiPumpkin3](wp3)                                 | [Spreadsheets](spreadsheet)                                     |
 | [Virtualization](virtualization) | [FreeBSD](freebsd)                                  | [Networking](networking)                                        |
-| [WifiPumpkin3](wp3)              | [unikernel](unikernel)                              | ---                                                             |
+| ---                              | [unikernel](unikernel)                              | [Firefox](firefox)                                              |
 
 ### TODO:
 
