@@ -303,4 +303,7 @@ tutorials for new users.
 As we all know, everything from India is really cool. Raj Chandel wrote the best tutorial I have seen to date.
 It can be found [here](https://www.hackingarticles.in/wireless-penetration-testing-wifipumpkin3/).
 
-Admittedly after reading Raj's tutorial myself, I am somewhat disappointed.
+Admittedly after reading Raj's tutorial myself, I am somewhat disappointed with WifiPumpkin3. I guess that I
+expected it to be more of a one-stop solution for performing a rogue AP attack. 
+
+Here is another good tutorial page from [kalitutorials.com](https://kalilinuxtutorials.com/wifipumpkin3/).
