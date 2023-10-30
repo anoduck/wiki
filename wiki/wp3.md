@@ -32,9 +32,9 @@ the documentation does not fully embrace the gift of good grammar, and many sent
 #### Developer is not exactly jumping for joy over providing support.
 
 I had thought this project was dead after my interaction with its creator. Who possessed the temperment of
-someone who valued returning to a paused video game more than explaining the software he just created. To say
+a college student who only wanted to return to his paused video game, and coul have cared less about explaining the software he just created. To say
 the interaction was not informative, would be a massive understatement. The developer would neither clarify if
-what was encountered was in fact an problematic issue with the code, nor would he provide explanation as to properly 
+what was being experienced was a commonly encountered issue with the software, nor would he provide any explanation as to 
 mitigate the encountered issue. To him, computer science was still alchemy, and he must speak in riddles to protect her secrets.
 
 The only way to provide definition to this enigma is to review the source code and break it down into it's
@@ -306,4 +306,17 @@ It can be found [here](https://www.hackingarticles.in/wireless-penetration-testi
 Admittedly after reading Raj's tutorial myself, I am somewhat disappointed with WifiPumpkin3. I guess that I
 expected it to be more of a one-stop solution for performing a rogue AP attack. 
 
-Here is another good tutorial page from [kalitutorials.com](https://kalilinuxtutorials.com/wifipumpkin3/).
+Here is another tutorial page from [kalitutorials.com](https://kalilinuxtutorials.com/wifipumpkin3/), but not
+nearly as good as the previous one.
+
+### My configuration
+
+For our purposes facilitating a captive portial would not be wise, as they tend to raise red flags for technologically savy individuals.
+So our method of implementation must be as cladestine as possible. For this we shall primarily be relying upon
+wifipumpkin's pumpkinproxy. 
+
+#### Dealing with the disconnect
+
+Immediately, we must deal with the issue of connectivity loss before preceding any further with wifipumpkin.
+Because we are running wifipumpkin on a remote host, starting it instantly disconnects us from the remote host
+and prohibits us from regaining connection. 
