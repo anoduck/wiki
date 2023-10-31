@@ -29,15 +29,7 @@ application's internal dhcp server to work. It is in respects to this lack of de
 solution for a problem with an unknown number of parts, arranged in an unknown configuration. Not to mention
 the documentation does not fully embrace the gift of good grammar, and many sentences are broken. 
 
-#### Developer is not exactly jumping for joy over providing support.
-
-I had thought this project was dead after my interaction with its creator. Who possessed the temperment of
-a college student who only wanted to return to his paused video game, and coul have cared less about explaining the software he just created. To say
-the interaction was not informative, would be a massive understatement. The developer would neither clarify if
-what was being experienced was a commonly encountered issue with the software, nor would he provide any explanation as to 
-mitigate the encountered issue. To him, computer science was still alchemy, and he must speak in riddles to protect her secrets.
-
-The only way to provide definition to this enigma is to review the source code and break it down into it's
+The way to provide definition to this enigma is to review the source code and break it down into it's
 individual parts.
 
 
@@ -320,3 +312,44 @@ wifipumpkin's pumpkinproxy.
 Immediately, we must deal with the issue of connectivity loss before preceding any further with wifipumpkin.
 Because we are running wifipumpkin on a remote host, starting it instantly disconnects us from the remote host
 and prohibits us from regaining connection. 
+
+In wp3's configuration file `~/.config/wifipumpkin/config/app/config.ini` there are several configuration
+settings that dictating how iptables is setup in order to correctly forward packets to and from the exterior interface and
+the wireless network interface. Within these settings there are two varables, `inet` and `wlan`. These
+variables are derived from the configuration settings, `interface` and `interface_net`, `interface` being the
+interface used for the wireless network and `interface_net` being the device used for wireless communications. Ensure 
+they are appropriately set. If desired, you may go ahead and replace the variables `inet` and `wlan` in the
+iptable settings with their equivocal values. Doing this should correct the disconnection issue.
+
+If you need some help correcting these iptable rules, please see [firewall](firewall).
+
+#### Dhcp not working
+
+For our configuration, using the builtin 'pydhcp_server' was never successful. The dhcp server never provided clients
+with a ip address and would cause the client to time out and disconnect from the network. To resolve this two
+things were done, the option to use the standardized isc-dhcp-server was enabled, and the network offered to
+clients was reconfigured. 
+
+Reconfiguring wp3 to offer a different network to clients than `10.0.0.0` was done brutally with two quick sed
+commands, `sed -i 's/10.0.0/192.168.0/g' config.ini` and `sed -i 's/255.0.0/255.255.255/g' config.ini`. This changed all network 
+configuration settings from `10.0.0.0` to `192.168.0.0` and all subnet settings from `255.0.0.0` to
+`255.255.255.0`. This was primarily done because there is no need to establish a network that can accomodate 
+16,777,214 clients, and there is not a moment in recollection where one can remember such a network being
+offered.
+
+Enabling wifipumpkin to use the isc-dhcp-server and disabling the 'pydhcp_server' is rather straightforward. The
+setting to do this is in the configuration file, and is listed under `[accesspoint]`. Simply change the
+setting `dhcpd_server=false` to `dhcpd_server=true` and `pydhcp_server=true` to `pydhcp_server=false`, and
+your done.
+
+#### No internet connection
+
+First off, there might be several reasons why this occurs in your instance of wifipumpkin, but in our case
+this was caused by a conflict in DNS server resolution. Our external interface was configured with a set of
+dns servers that differed from wifipumpkin's dns resolution configuration. This meant clients were not able to
+contact any dns servers, and as a result were not able to resolve any domain names. The resulting error was a
+'no internet access available' message. 
+
+Further research discovered the nameserver used to resolve domain names is google's `8.8.8.8` and `8.8.4.4`.
+Which is problematic since this does conflict with local dns settings. Some thought will need to be invested
+in order to mitigate this issue.

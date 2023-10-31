@@ -49,7 +49,8 @@ important to be familiar with a few basic commands.
 - P = (Policy) Set the policy for the chain. Only two choices, ACCEPT and DROP.
 - A = (Append) Appends the rule to the bottom of the chain.
 - t = (table) which table the command should apply to. There are five: filter, nat, mangle, raw, and security
-- i = (Interface) Designates interface the rule should apply to.
+- i = (in-interface) Designates the inward interface the rule should apply to.
+- o = (out-interface) Designates the outward interface the rule should apply to.
 - j = (jump) Designates the target of the rule.
 - m = (match) Condition used to match packet for a rule. 
 
