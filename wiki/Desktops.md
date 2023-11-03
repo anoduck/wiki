@@ -51,14 +51,29 @@ For our fucking fantastic table of Desktop Environments we will:
 * Graphics, referring to visual appeal
 * Whether we reccommend or not.
 
-| Name               | Sausages           | DE or WM   | Difficulty           | Skills Needed                     | Friendly           | Weight              | Graphics          | Reccommend                   |
-| ------             | ----------         | ---------- | ------------         | ---------------                   | ----------         | --------            | ----------        | ------------                 |
-| Gnome              | Too Many           | DE         | Easy                 | None                              | Very               | Heavy               | Kuddos            | It's alright                 |
-| KDE                | Rather Thick       | DE         | Harder than Gnome    | None                              | Very               | Heavy               | It's got some     | Usable                       |
-| XFCE               | Good Portioning    | DE         | Easy                 | None, besides it exists.          | Very               | Moderately          | less than 2 above | Sure.                        |
-| lxqt               | Sparse             | DE         | Should be no problem | None                              | Easy going         | Reasonable          | less is more      | Yeah                         |
-| Enlightenment      | Minimal            | DE         | Could be             | Experience                        | Cool Beans         | Moderately          | Shazam!           | Definitely                   |
-| [i3](i3)           | none               | WM         | Medium Rare          | Sh, and config files              | Just Right         | light               | Minimal           | We use it, so there.         |
-| [bspwm](bspwm)     | Sausages? Where?   | WM         | Hard                 | Sh & Bash                         | Not really         | Ultra Light         | With effort       | Promising                    |
-| [xmonad](xmonad)   | What are Sausages? | WM         | Use at own risk!     | Familiar with programming Haskell | This WM hates you. | lite, but not light | There are rumors  | Not unless your a masochist. |
-| AwesomeWM          | Not a trace        | WM         | Medium - Hard        | config file                       | Define Friendly?   | Super Dooper Light  | Minimal           | Could be fun for pros        |
+| Name             | Sausages           | DE or WM   | Difficulty           | Skills Needed                    | Friendly             | Weight              | Graphics            | Reccommend                   |
+| ------           | ----------         | ---------- | ------------         | ---------------                  | ----------           | --------            | ----------          | ------------                 |
+| Gnome            | Too Many           | DE         | Easy                 | None                             | Very                 | Heavy               | Kuddos              | It's alright                 |
+| KDE              | Abundant           | DE         | Harder than Gnome    | None                             | Very                 | Heavy               | It's got some       | Usable                       |
+| XFCE             | Good Portioning    | DE         | Easy                 | None, besides it exists.         | Very                 | Moderately          | less than 2 above   | Sure.                        |
+| lxqt             | Sparse             | DE         | Should be no problem | None                             | Easy going           | Reasonable          | less is more        | Yeah                         |
+| Enlightenment    | Minimal            | DE         | Not really           | Little                           | Cool Beans           | Moderately          | Hell, Yeah. Shazam! | Definitely                   |
+| [i3](i3)         | none               | WM         | Medium Rare          | Sh, and config files             | Just Right           | light               | Minimal             | We use it, so there.         |
+| [bspwm](bspwm)   | Sausages exist?    | WM         | Hard                 | Sh & Bash                        | Not really           | Lighter than air    | With effort         | Promising                    |
+| [xmonad](xmonad) | Does not compute   | WM         | Use at own risk!     | Ability to program Haskell well. | This WM hates you.   | lite, but not light | There are rumors    | Not unless your a masochist. |
+| AwesomeWM        | Not a trace        | WM         | Medium - Hard        | Create the config file           | Done it, didn't cry. | Reasonably Light    | Minimal             | Could be fun for pros        |
+
+### Xsettings Daemon
+
+Do not quote me on this, because I am no authority on the matter. After the occurrence of an issue with
+getting GTK settings to apply to the menu bar of Sublime Text I learned about the role of the X settings
+daemon. As it turns out, not all applications take their values directly from configuration files, some take
+their values from an intermediary daemon. As anyone can guess, this intermediary daemon is referred to as the
+"X Setting Daemon." Each of the major desktop environments possess their own flavor of the xsettings daemon,
+but all serve the same purpose of reading configuration varables from various files and providing those
+variables to the requesting program. It does need it's own configuration file available, `~/.xsettingsd`, but
+what that configuration file is actually used for, is currently a mystery. As our local copy is completely
+empty.
+
+If you are like me, and do not run one of the big name desktop environments. The universal xsettings daemon is
+"xsettingsd". Install it and create a blank configuration file, and your off to the races.

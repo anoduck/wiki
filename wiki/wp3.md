@@ -344,12 +344,9 @@ your done.
 
 #### No internet connection
 
-First off, there might be several reasons why this occurs in your instance of wifipumpkin, but in our case
-this was caused by a conflict in DNS server resolution. Our external interface was configured with a set of
-dns servers that differed from wifipumpkin's dns resolution configuration. This meant clients were not able to
-contact any dns servers, and as a result were not able to resolve any domain names. The resulting error was a
-'no internet access available' message. 
+There are several factors that can cause this issue. It is worth noting, the developer of
+wifipumpkin suggests dns resolution could be the cause of this error. In our case, unfortunately, this
+does not appear to be the situation, because no packets are being forwarded to and from our firewall. This is
+regardless of sysctl configuration settings and pre-existing iptable rules allowing forwarding. 
 
-Further research discovered the nameserver used to resolve domain names is google's `8.8.8.8` and `8.8.4.4`.
-Which is problematic since this does conflict with local dns settings. Some thought will need to be invested
-in order to mitigate this issue.
+It seems at every step, there is some issue with employing this framework.
