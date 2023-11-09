@@ -347,6 +347,13 @@ your done.
 There are several factors that can cause this issue. It is worth noting, the developer of
 wifipumpkin suggests dns resolution could be the cause of this error. In our case, unfortunately, this
 does not appear to be the situation, because no packets are being forwarded to and from our firewall. This is
-regardless of sysctl configuration settings and pre-existing iptable rules allowing forwarding. 
+regardless of sysctl configuration settings and pre-existing iptable rules allowing forwarding. It seems at every 
+step, there is some issue with employing this framework.
 
-It seems at every step, there is some issue with employing this framework.
+#### Assumption of Remote causality
+
+When it comes to running any of the numerous rogue access point solutions, in our experience there have
+consistently been one of two outcomes. Either A) the AP has no network access, or B) we are kicked off from
+our remote connection. The recurring theme here is us having a remote connection to access the machine, so 
+it can be assumed that this is the cause of our difficulties.  The reasons may still remain unclear, but such
+a difficulty should be overcome with the addition of a secondary network source.

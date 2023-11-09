@@ -6,6 +6,13 @@ __This is my online, open, and GitHub powered wiki. Here you will find, all thin
 
 -----
 
+### To Visitors and Guests:
+
+Welcome. If you see a page is incomplete, in horrendous disrepair, or have questions regarding a topic, do not hesitate to inform me. You
+can reach me in the [discussions of my GitHub profile repository.](https://github.com/anoduck) Cheers.
+
+-----
+
 ## Index
 
 Below is the index for our site. It is painfully, and I do mean painfully maintained by hand. So, I hope you enjoy it.
@@ -28,7 +35,17 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [Virtualization](virtualization) | [FreeBSD](freebsd)                                  | [Networking](networking)                                        |
 | [Hugo](hugo)                     | [unikernel](unikernel)                              | [Firefox](firefox)                                              |
 
-### TODO:
+[![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
+
+-----
+
+## Links
+
+I have begun to run out of room for links in my sidebar. So, I will add some here.
+
+-----
+
+## TODO:
 
 - [ ] Fix the "Posts" page. Which is blank, it should be a list of posts.
 - [ ] Turn off default light page style, setup dark page style to constant on.
@@ -36,13 +53,3 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 - [ ] Merge with old vimwiki
 - [x] Merge with old dokuwiki
 
------
-
-### To Visitors and Guests:
-
-Welcome. If you see that a page is incomplete or in horrendous disrepair, do not hesitate to inform me. You
-can reach me in the discussions of my profile repository. Cheers.
-
------
-
-[![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
