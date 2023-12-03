@@ -30,3 +30,7 @@ __Modulation occurs in two ways:__
 1. Continuous Wave
 2. Pulse Wave
 
+### Terms
+
+1. Trunked System - A form of radio communication that uses a control channel to designate the channel for
+   communications to take place on. 

@@ -88,3 +88,12 @@ age scare you in this endevour.
 - [2.4ghz Amplifier](https://www.qsl.net/n9zia/wireless/2.4amp.html)
 - [2.4ghz Bidirectional Amplifier](https://www.qsl.net/n9zia/wireless/appendixD.html)
 - [2.4ghz Spectrum Analyzer](https://www.qsl.net/va3iul/2.4GHz_Spectrum_Analyzer/2.4GHz_Spectrum_Analyzer.htm)
+
+### SDR Audio Streaming
+
+- [Using RTL_FM and FFMPEG to stream radio over network](https://www.nicklansley.com/post/using-rtl_fm-and-ffmpeg-to-stream-radio-audio-over-network)
+- [SDR streaming using RTMP](https://jekhokie.github.io/sdr/rtmp/2021/03/03/sdr-rtmp-pubsub.html)
+
+### Modulations / Varieties
+
+- [Trunked radio guide](https://www.andrewmohawk.com/2020/06/12/trunked-radio-a-guide/)

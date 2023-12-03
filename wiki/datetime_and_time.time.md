@@ -1,7 +1,7 @@
-## Working with datetime and time.time in python
+## Working with datetime and `time.time` in python
 
 
-### Converting time.time to datetime
+### Converting `time.time` to datetime
 
 ```python
 """x = datetime_obj"""

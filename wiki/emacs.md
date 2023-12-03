@@ -25,8 +25,8 @@
 
 ### Sections
 
-| [general info](general) | [org-mode](orgmode) | [emacs init](init) | [completion](emacs-complete) |
-| [debug](emacs-debug)    | [keymaps](keymaps)  | ---                | ---                          |
+| [general info](general) | [org-mode](orgmode) | [emacs init](init)         | [completion](emacs-complete) |
+| [debug](emacs-debug)    | [keymaps](keymaps)  | [snippets](emacs-snippets) | ---                          |
 
 
 ### Links

@@ -34,6 +34,9 @@ remaining logged in to the system.
 
 ### IKEv2
 
+__More than likely, you are actually looking for OpenBSD's ipsec implementation, which covers ikev1 and psk
+authentication. The implementation is discussed further below.__
+
 - [client ikev2](https://www.openbsd.org/faq/faq17.html#clientikev2)
 - [macOS ikev2](https://protonvpn.com/support/macos-ikev2-vpn-setup/)
 
@@ -200,6 +203,12 @@ __Corrections__
 
 - Definition of outgoing interface must be provided.
 
+##### Resolution discovery
+
+OpenBSD's ikev2 is not compatible with the psk authentication implementation, and only works strictly with
+ikev2. To correctly configure ike protocol on OpenBSD, one must configure and setup OpenBSD's ipsec
+implementation.
+
 ### Wireguard Configuration
 
 Configuring OpenBSD's native Wireguard support is rather odd, because it can be performed in any number of
@@ -272,6 +281,10 @@ up
 !route -q -n add -inet "$ENDPOINT_IP" -gateway "$LOCAL_EXT_IP"
 ```
 
+### OpenBSD's IpSec / Ikev1
+
+__This section is still in development__
+
 ### Reference Links
 
 - [OpenVPN Client](https://astro-gr.org/openbsd-openvpn-client/)
@@ -280,3 +293,7 @@ up
 - [OpenBSD gateway using IKEV2](https://xw.is/wiki/OpenBSD_VPN_gateway_using_IPSec/IKEv2)
 - [RoadWarrior styled vpn on OpenBSD with iked and openvpn](https://sukany.cz/blog/2022/04/roadwarrior-styled-vpn-on-openbsd-with-iked-and-openvpn/)
 - [Iked / Configuring OpenIKED](https://wiki.ircnow.org/index.php?n=Iked.Configure?from=Openbsd.Iked)
+- [Implementing IKE](https://www.semanticscholar.org/paper/Implementing-Internet-Key-Exchange-%28IKE%29-Hallqvist-Keromytis/3c89b7a845d4a5a63c84ac840b6851a260c21c40)
+- [IKEv2 Interop testing](https://libreswan.org/wiki/IKEv2_Interop_testing_with_OpenBSD)
+- [OpenBSD ike ipsec vpn](https://findelabs.com/post/openbsd-ike-ipsec-vpn/)
+- [ipsec.conf man](https://man.openbsd.org/ipsec.conf.5)
