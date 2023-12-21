@@ -34,7 +34,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [GPSD](gpsd)                     | [WifiPumpkin3](wp3)                                 | [Spreadsheets](spreadsheet)                                     |
 | [Virtualization](virtualization) | [FreeBSD](freebsd)                                  | [Networking](networking)                                        |
 | [Hugo](hugo)                     | [unikernel](unikernel)                              | [Firefox](firefox)                                              |
-| [ffmpeg](ffmpeg)                 | ----                                                | ----                                                            |
+| [ffmpeg](ffmpeg)                 | [bibtex](bibtex)                                   | ----                                                            |
 
 [![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 
@@ -43,6 +43,9 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 ## Links
 
 I have begun to run out of room for links in my sidebar. I will need to add some here.
+
+- [Semantic Versioning](https://semver.org)
+- [Conventional Commits](https://www.conventionalcommits.org/)
 
 -----
 

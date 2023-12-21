@@ -18,14 +18,17 @@ functionality. Unfortunately, it's keycodes are rather unique, and can be confus
 
 Below are some basic keycodes we have had difficulty remembering:
 
-| _Code_   | _Command_           |
-| -------- | -----------         |
-| `^`      | rename Column       |
-| `_`      | Adjust Column Width |
-| `za`     | Add new Column      |
-| `ga`     | Add Rows            |
-| `e`      | edit                |
-| `q`      | get out of trouble  |
+| _Code_           | _Command_                      |
+| ---------------- | ------------------------------ |
+| `^`              | rename Column                  |
+| `_`              | Adjust Column Width            |
+| `za`             | Add new Column                 |
+| `gza + N`        | Create Columns N times         |
+| `ga + N`         | Add Rows N times               |
+| `gi`             | Fill columns with num range    |
+| `e`              | edit                           |
+| `Shift + Arrow`  | Accept edit and move           |
+| `q`              | get out of trouble             |
 
 -----
 
