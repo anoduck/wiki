@@ -34,7 +34,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [GPSD](gpsd)                     | [WifiPumpkin3](wp3)                                 | [Spreadsheets](spreadsheet)                                     |
 | [Virtualization](virtualization) | [FreeBSD](freebsd)                                  | [Networking](networking)                                        |
 | [Hugo](hugo)                     | [unikernel](unikernel)                              | [Firefox](firefox)                                              |
-| [ffmpeg](ffmpeg)                 | [bibtex](bibtex)                                   | ----                                                            |
+| [ffmpeg](ffmpeg)                 | [bibtex](bibtex)                                    | [melt](melt)                                                    |
 
 [![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 

@@ -124,31 +124,6 @@ xz -d FreeBSD(...).qcow2.xz
    ```
 2. Now you can start your virtual macine instance in a graphical environment. Personally, because of the
    loftiness of the command, I always create a one line script to make it easier to execute in the future.
-   ```bash
-   #!/usr/bin/env bash
-   sudo qemu-system-x86_64 -m 2048 \
-   -hda "$NEW_FILE".qcow2 -enable_kvm \
-   -netdev user,id=mynet0,hostfwd=tcp:0.0.0.0:7722-:22 \
-   -device e1000,netdev=mynet0
-   ```
-3. You should have your fresh installation running. The first thing to do is to enable sshd and configure it,
-   so you no longer need the graphical environment to access the machine. This is done by adding a few lines
-   to `/etc/rc.conf` listed below, and enabling root login for the root user.
-   ```bash
-   # open vi with
-   vi /etc/rc.conf
-   # next add these two lines
-   sshd_enable="YES"
-   ifconfig_em0="DHCP"
-   # save the file and exist with:
-   :wq
-   # Then allow root login in sshd by opening /etc/ssh/sshd_config in vi.
-   vi /etc/ssh/sshd_config
-   #look for the line below and uncomment it.
-   PermitRootLogin prohibit-password
-   # This tells ssh to allow root login as long as a password is used.
-   ```
-4. Then restart system services
 ```bash
 service netif restart
 service sshd start

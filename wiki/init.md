@@ -13,11 +13,19 @@ One does not simply install Emacs. Creating an Emacs configuration file is a pro
 of your remaining life, and you still will have not completed it. Instead of set and done, think of it as a
 process of continual maintenance.
 
-Busey ipsum dolor sit amet. Go with the feeling of the nature. Take it easy. Know why you're here. And remember to balance your internal energy with the environment.You ever roasted doughnuts?Have you urinated? Have you drained your bladder? Are you free? Because if you haven't it will only come out later. I'm giving you some information that your bodily fluids may penetrate your clothing fibre's without warning.
+Busey ipsum dolor sit amet. Go with the feeling of the nature. Take it easy. Know why you're here. And remember
+to balance your internal energy with the environment.You ever roasted doughnuts?Have you urinated? Have you 
+drained your bladder? Are you free? Because if you haven't it will only come out later. I'm giving you some
+information that your bodily fluids may penetrate your clothing fibre's without warning.
 
-You ever roasted doughnuts?It's good to yell at people and tell people that you're from Tennesee, so that way you'll be safe.I wrestled a bear once. A 750lbs black bear.Have you urinated? Have you drained your bladder? Are you free? Because if you haven't it will only come out later. I'm giving you some information that your bodily fluids may penetrate your clothing fibre's without warning.
+You ever roasted doughnuts?It's good to yell at people and tell people that you're from Tennesee, so that way 
+you'll be safe.I wrestled a bear once. A 750lbs black bear.Have you urinated? Have you drained your bladder?
+Are you free? Because if you haven't it will only come out later. I'm giving you some information that your 
+bodily fluids may penetrate your clothing fibre's without warning.
 
-The best way to communicate is compatible. Compatible communication is listening with open ears and an open mind, and not being fearful or judgemental about what you're hearing.Listen to the silence. And when the silence is deafening, you're in the center of your own universe.
+The best way to communicate is compatible. Compatible communication is listening with open ears and an open mind,
+and not being fearful or judgemental about what you're hearing.Listen to the silence. And when the silence is 
+deafening, you're in the center of your own universe.
 
 ### Good place to start
 
@@ -56,19 +64,40 @@ link to the readme. [Use-Package Readme](https://github.com/jwiegley/use-package
 
 #### Most Commonly used Keywords.
 
-| Keyword     | Definition                                                 | example |
-| ---         | ---                                                        | ---     |
-| `:requires` | Declares dependencies both required and optional.          |         |
-| `:defer`    | Defers loading of package for a few seconds.               |         |
-| `:init`     | Declares code that needs execution before loading package. |         |
-| `:config`   | Defines package configuration options.                     |         |
-| `:custom`   | Defines customization of package custom variables          |         |
-| `:bind`     | Declares key binds for package.                            |         |
-| `:hook`     | Defines hooks for loading of package                       |         |
-| `:ensure`   | Ensures that package is loaded.                            |         |
-| `:if`       | Conditional loading keyword.                               |         |
+| Keyword     | Definition                                                 | example                        |
+| ----------- | ---------------------------------------------------------- | -------                        |
+| `:requires` | Declares dependencies both required and optional.          |                                |
+| `:defer`    | Defers loading of package for a few seconds.               |                                |
+| `:init`     | Declares code that needs execution before loading package. |                                |
+| `:config`   | Defines package configuration options.                     |                                |
+| `:custom`   | Defines customization of package custom variables          |                                |
+| ~`:bind`~   | ~Declares key binds for package.~                          | N/A                            |
+| `:general`  | We use `general.el` for keymap definitions.                | <a href="#General">General</a> |
+| `:hook`     | Defines hooks for loading of package                       |                                |
+| `:ensure`   | Ensures that package is loaded.                            |                                |
+| `:if`       | Conditional loading keyword.                               |                                |
 
-#### syntactical format
+##### Examples
+
+###### General
+
+General uses two methods for setting keymaps. 
+1. Global
+2. Per Mode
+
+```elisp
+;; Global
+:general
+("C-x f" 'find-file)
+
+;; Keymap by mode
+:general
+(:keymap org-mode-map
+  ("C-c a" org-agenda))
+```
+
+
+##### syntactical format
 
 In the following example, `$package` will be used to represent a desired package.
 
@@ -81,8 +110,8 @@ In the following example, `$package` will be used to represent a desired package
 
 ### Giving Emacs a boost
 
-After reading an article on [emacswiki](https://emacswiki.com) I learned it was recommended to bump your
-single file memory limit to 1GB. So I added.
+After reading an article on [emacswiki](https://emacswiki.com) I learned it is recommended to bump your
+single file memory limit to 1GB. Therefore, I added.
 
 ```elisp
 (setq most-positive-fixnum 1073741824)

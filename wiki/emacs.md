@@ -18,7 +18,9 @@
   An infinite number of monkeys typing into GNU Emacs would never make a good program.
     ~ Linus Torvalds, Linux 1.3.53 CodingStyle documentation
 
-  Emacs is undoubtedly the most powerful programmer's editor in existence. It's a big, feature-laden program with a great deal of flexibility and customizability. … Emacs has an entire programming language inside it that can be used to write arbitrarily powerful editor functions.
+  Emacs is undoubtedly the most powerful programmer's editor in existence. It's a big, feature-laden program 
+  with a great deal of flexibility and customizability. … Emacs has an entire programming language inside it
+  that can be used to write arbitrarily powerful editor functions.
     ~ Eric S. Raymond, The Art of UNIX Programming
 
 -----
