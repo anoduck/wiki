@@ -17,6 +17,12 @@ won't have a clue in the world to what your actually doing. In fact, right below
 cheap vidcard on their server, this isn't quite an option. So, please forgive me as I try to make sense of
 this gawd forsaken framework.
 
+### FFMPEG, Seriously
+
+It might behove anyone reading this page to consider using [ffmpeg](ffmpeg) than the melt framework. Sure, [ffmpeg](ffmpeg)
+may not have the complex framework to perform highly advanced video editing sequences, but if you don't need
+that stuff, it is a hell of a lot easier to work with. Just saying... [The page to ffmpeg is here.](ffmpeg)
+
 ### Concepts
 
 No lie, I almost always skip over any section that attempts to explain abstract concepts, but this time it is
@@ -105,7 +111,7 @@ First, to play a file using melt no option is needed. Just use `melt file.mp4`.
 - `-hide-*`: Allows you to hide things, such as audio, video or tracks.
 - `-mixer`: Allow you to create swanky transitions.
 - `-blank` and `-track`: Are completely out of the scale of this wiki page. So, see the [melt docs](https://www.mltframework.org/docs/melt/) for more information.
-- `-consumer`: is the damn flag you use to fucking finally write everything to file. The example provided is
+- `-consumer`: is the damn flag you use to finally write everything to file. The example provided is
   more of a pain in the ass than I would want to use, `-consumer avformat:output.avi acodec=libmp3lame vcodec=libx264`, so we are just going to assume `-consumer myfile.mp4` works just as well.
 
 ### Melt Help Output
