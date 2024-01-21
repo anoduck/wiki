@@ -18,7 +18,7 @@ can reach me in the [discussions of my GitHub profile repository.](https://githu
 Below is the index for our site. It is painfully, and I do mean painfully maintained by hand. So, I hope you enjoy it.
 
 | [Font Config](font_config)       | [Does not support OpenBSD](unsupported_for_OpenBSD) | [Programming](programming)                                      |
-| [Oddities](oddities)             | [File And Disk Recovery](file_disk-recovery)        | [Working with datetime and 'time.time'](datetime_and_time.time) |
+| [Oddities](oddities)             | [File And Disk Recovery](file_disk-recovery)        | [Working with datetime and 'time.time'](datetime_timetime) |
 | [General Links](links)           | [Web Development Tools](web_dev_tools)              | [Command Line Tools](command_line_tools)                        |
 | [Git Wiki](git-wiki-skeleton)    | [Alternative Web Browsers](web_browsers)            | [xprofile](xprofile)                                            |
 | [Org Mode](orgmode)              | [Emacs](emacs)                                      | [vnc-configuration](vnc)                                        |

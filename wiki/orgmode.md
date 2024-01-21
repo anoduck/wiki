@@ -44,6 +44,13 @@ much to it at all.
 
 ```
 
+### Why you should not be like me
+
+A long rambling paragraph was planned for this section, but instead just a few simple words of advice. Yeah,
+org comes with a whole shit load of really cool addon or "extra" packages that enable additional
+functionality, but avoid the temptation to install a bunch of packages you may only use maybe once or twice a
+month. Stick with the basics, and it will make org flow more smoothly.
+
 #### Links
 
 * [Sync Org with Unison](https://orgmode.org/worg/org-tutorials/unison-sync.html)

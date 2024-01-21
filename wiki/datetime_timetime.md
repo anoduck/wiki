@@ -1,25 +1,46 @@
-## Working with datetime and `time.time` in python
+```text
+#  ____        _       _   _
+# |  _ \  __ _| |_ ___| |_(_)_ __ ___   ___
+# | | | |/ _` | __/ _ \ __| | '_ ` _ \ / _ \
+# | |_| | (_| | ||  __/ |_| | | | | | |  __/
+# |____/ \__,_|\__\___|\__|_|_| |_| |_|\___|
+#
+#     _    _   _ ____
+#    / \  | \ | |  _ \
+#   / _ \ |  \| | | | |
+#  / ___ \| |\  | |_| |
+# /_/   \_\_| \_|____/
+#
+#  _____ _                 _   _
+# |_   _(_)_ __ ___   ___ | |_(_)_ __ ___   ___
+#   | | | | '_ ` _ \ / _ \| __| | '_ ` _ \ / _ \
+#   | | | | | | | | |  __/| |_| | | | | | |  __/
+#   |_| |_|_| |_| |_|\___(_)__|_|_| |_| |_|\___|
+#
+```
 
+# Working with datetime and `time.time` in python
 
-### Converting `time.time` to datetime
+Working with time functions in python really sucks.
+
+## Converting `time.time` to datetime
 
 ```python
 """x = datetime_obj"""
 time_obj = time.mktime(x.timetuple()) + x.microsecond / 1E6
 ```
 
-### Working with time objects and `timedelta()`
-
+## Working with time objects and `timedelta()`
 
 (AND then for some reason prose does not want me to paste entries.)
 
-#### Getting setup for work
+### Getting setup for work
 
 ```python
 import re
 import time
 from datetime import date, datetime, timedelta
-
+# Admittedly, I cannot remember why scheduler was imported.
 from scheduler import Scheduler
 
 today = datetime.today()
@@ -27,7 +48,7 @@ schedule = Scheduler()
 format = '%m/%d/%Y %I:%M %p'
 ```
 
-#### The Code
+### The Code
 
 ```python
 # Lets turn this lovely forumula into a function now
@@ -36,12 +57,10 @@ def convert_to_timetime(dt):
     return time_obj
 ```
 
-
 ```python
 #Acquire the current time as time.time obj
 current_time = time.localtime(time.time())
 ```
-
 
 ```python
 import re
@@ -60,7 +79,6 @@ def get_dt_now(datetime_obj):
         sec = 0
     return datetime(yr, mnt, day, hr, mnu, sec)
 ```
-
 
 ```python
 def get_atime(dt):
@@ -93,3 +111,9 @@ new_future = convert_to_timetime(future_time)
 difference = int(new_future) - int(time_now)
 print('Seconds: ' + difference)
 ```
+
+#### Perhaps the most important - strfttime
+
+- __[strfttime](https://strftime.org/)__
+
+
