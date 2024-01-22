@@ -56,6 +56,24 @@ done
 ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
 ```
 
+### Frame Averaging with tmix
+
+The video processing technique of overlapping successive video frames and averaging values across them.
+(definition could be beter.) [Docs](https://ffmpeg.org//ffmpeg-filters.html#tmix)
+
+```bash
+ffmpeg -i $VIDEO.mp4 -vf tmix=frames=5:weights="1 1 1 1 1",select='not(mod(n\,5))' $OUTPUT.mp4
+```
+
+The following command blends each frame with 4 following frames, then only keeps the first out of every five
+frames.
+
+#### Other Examples
+
+- Average 7 successive frames: `tmix=frames=7:weights="1 1 1 1 1 1 1"`
+- Simple temporal convolution: `tmix=frames=3:weights="-1 3 -1"`
+- Similar as above but only showing temporal differences: `tmix=frames=3:weights="-1 2 -1":scale=1`
+
 ### Filters (That we have tried)
 
 - Cropping
