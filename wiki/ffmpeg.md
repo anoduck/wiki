@@ -61,11 +61,21 @@ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
 The video processing technique of overlapping successive video frames and averaging values across them.
 (definition could be beter.) [Docs](https://ffmpeg.org//ffmpeg-filters.html#tmix)
 
+__If you desire to drop 4 out of 5 frames__
+
 ```bash
 ffmpeg -i $VIDEO.mp4 -vf tmix=frames=5:weights="1 1 1 1 1",select='not(mod(n\,5))' $OUTPUT.mp4
 ```
 
-The following command blends each frame with 4 following frames, then only keeps the first out of every five
+__If, like me, you desire not to drop any frames.__
+
+Then remove the added select filter, as below
+
+```bash
+ffmpeg -i $VIDEO.mp4 -vf tmix=frames=5:weights="1 1 1 1 1" $OUTPUT.mp4
+```
+
+The above command blends each frame with 4 following frames, then only keeps the first out of every five
 frames.
 
 #### Other Examples

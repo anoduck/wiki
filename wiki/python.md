@@ -16,6 +16,7 @@ commonly used programming languages.
 7. [argparse without "if then" operators](argparse-no-arg)
 8. [Working with scapy](scapy)
 9. [Writing modules](py-modules)
+10. [Creating Daemons](create_daemons)
 
 ### Jupyter Lab
 
@@ -29,3 +30,4 @@ benefits that other development environments do not provide that would interest 
 * [Awesome Jupyter](https://github.com/markusschanta/awesome-jupyter)
 * [Best of Jupyter](https://github.com/ml-tooling/best-of-jupyter)
 * [Awesome JupyterLab Extension](https://github.com/Yogayu/awesome-jupyterlab-extension)
+
