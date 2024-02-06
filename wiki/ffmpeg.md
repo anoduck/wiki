@@ -39,6 +39,7 @@ with `-c:a copy`. This can significantly reduce error messages for uncooperative
 5. Rewrapping to an MOV file, keeping source codecs and formats: `ffmpeg -i (input file) -c:v copy -c:a copy (output).mov`
 6. Rewrapping video, and re-encoding audio: `ffmpeg -i (input file) -c:v copy -c:a pcm_s16le (output).mov`
 7. Encoding H.264 using NVENC using Constant Quality Rate Factor 18, High Profile: `ffmpeg -i (input file) -c:v h264_nvenc -cq 18 -profile:v high -c:a aac -b:a 128k (output).mp4`
+8. Encoding H.265 using HEVC using Constant Quality Rate Factor 28, Medium Profile: `ffmpeg -i (input file) -c:v h265_hevc -cq 28 -profile:v medium -c:a copy (output).mp4`
 
 ### Batch merge of files in folder
 
@@ -56,9 +57,9 @@ done
 ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
 ```
 
-### Frame Averaging with tmix
+### ~~Frame Averaging with tmix~~
 
-The video processing technique of overlapping successive video frames and averaging values across them.
+~~The video processing technique of overlapping successive video frames and averaging values across them.
 (definition could be beter.) [Docs](https://ffmpeg.org//ffmpeg-filters.html#tmix)
 
 __If you desire to drop 4 out of 5 frames__
@@ -76,15 +77,17 @@ ffmpeg -i $VIDEO.mp4 -vf tmix=frames=5:weights="1 1 1 1 1" $OUTPUT.mp4
 ```
 
 The above command blends each frame with 4 following frames, then only keeps the first out of every five
-frames.
+frames.~~
 
-#### Other Examples
+#### ~~Other Examples
 
-- Average 7 successive frames: `tmix=frames=7:weights="1 1 1 1 1 1 1"`
+- ~~Average 7 successive frames: `tmix=frames=7:weights="1 1 1 1 1 1 1"`
 - Simple temporal convolution: `tmix=frames=3:weights="-1 3 -1"`
-- Similar as above but only showing temporal differences: `tmix=frames=3:weights="-1 2 -1":scale=1`
+- Similar as above but only showing temporal differences: `tmix=frames=3:weights="-1 2 -1":scale=1`~~
 
 ### Filters (That we have tried)
+
+It is important to mention the [ffmpeg filter guide](https://trac.ffmpeg.org/wiki/FilteringGuide).
 
 - Cropping
 - deblocking

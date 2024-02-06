@@ -64,18 +64,23 @@ link to the readme. [Use-Package Readme](https://github.com/jwiegley/use-package
 
 #### Most Commonly used Keywords.
 
-| Keyword     | Definition                                                 | example                        |
-| ----------- | ---------------------------------------------------------- | -------                        |
-| `:requires` | Declares dependencies both required and optional.          |                                |
-| `:defer`    | Defers loading of package for a few seconds.               |                                |
-| `:init`     | Declares code that needs execution before loading package. |                                |
-| `:config`   | Defines package configuration options.                     |                                |
-| `:custom`   | Defines customization of package custom variables          |                                |
-| ~`:bind`~   | ~Declares key binds for package.~                          | N/A                            |
-| `:general`  | We use `general.el` for keymap definitions.                | <a href="#General">General</a> |
-| `:hook`     | Defines hooks for loading of package                       |                                |
-| `:ensure`   | Ensures that package is loaded.                            |                                |
-| `:if`       | Conditional loading keyword.                               |                                |
+| Keyword        | Definition                                                       | Load Time | example                              |
+| -----------    | ----------------------------------------------------------       | ------    | -------                              |
+| `:requires`    | Declares dependencies both required and optional.                | Before    | `:require org`                       |
+| `:after`       | Ensures a package loads AFTER another package.                   | After     | `:after which-key`                   |
+| `:defer`       | Defers loading of package a) until needed or b) after N seconds. | Lazy Load | `:defer t`                           |
+| `:init`        | Declares code that needs execution before loading package.       | Before    | `:init (setq variable (definition))` |
+| `:config`      | Defines package configuration options.                           | After     | `:config (setq variable thing)`      |
+| `:custom`      | Declares custom variables for variables found within the package | After     | Rarely needed                        |
+| ~`:bind`~      | ~Declares key binds for package.~                                |           | N/A                                  |
+| `:general`     | We use `general.el` for keymap definitions.                      |           | <a href="#General">General</a>       |
+| `:hook`        | Defines hooks for loading of package   *Implies Deferred*        | Lazy Load |                                      |
+| `:mode`        | sets auto-mode-alist binding        *Implies Deferred*           | Lazy Load |                                      |
+| `:interpreter` | sets interpreter-mode-alist binding   *Implies Deferred*         | Lazy Load |                                      |
+| `:command`     | Triggers the loading of a package when used.  *Implies Deferred* | Lazy Load |                                      |
+| `:magic`       | lower priority file association  *Implies Deferred*              | Lazy Load |                                      |
+| `:ensure`      | Ensures that package is loaded.                                  | During    |                                      |
+| `:if`          | Conditional loading keyword.                                     | Lazy Load |                                      |
 
 ##### Examples
 

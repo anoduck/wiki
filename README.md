@@ -17,24 +17,25 @@ can reach me in the [discussions of my GitHub profile repository.](https://githu
 
 Below is the index for our site. It is painfully, and I do mean painfully maintained by hand. So, I hope you enjoy it.
 
-| [Font Config](font_config)       | [Does not support OpenBSD](unsupported_for_OpenBSD) | [Programming](programming)                                      |
+| [Font Config](font_config)       | [Does not support OpenBSD](unsupported_for_OpenBSD) | [Programming](programming)                                 |
 | [Oddities](oddities)             | [File And Disk Recovery](file_disk-recovery)        | [Working with datetime and 'time.time'](datetime_timetime) |
-| [General Links](links)           | [Web Development Tools](web_dev_tools)              | [Command Line Tools](command_line_tools)                        |
-| [Git Wiki](git-wiki-skeleton)    | [Alternative Web Browsers](web_browsers)            | [xprofile](xprofile)                                            |
-| [Org Mode](orgmode)              | [Emacs](emacs)                                      | [vnc-configuration](vnc)                                        |
-| [Public DNS Servers](dns)        | [UserAgents for Use](useragent)                     | [Firewall Systems](firewall)                                    |
-| [Shell](shell)                   | [User Service Managers](service_managers)           | [Color Tools](color_tools)                                      |
-| [OpenBSD](openbsd)               | [Art](art)                                          | [Mounts and `/etc/fstab`](mount_fstab)                          |
-| [Linux](linux)                   | [env-files](env-files)                              | [code Repositories](repos)                                      |
-| [Unix](unix)                     | [Osint](osint)                                      | [Jargon](jargon)                                                |
-| [Version Control](versioning)    | [Zoneminder](zoneminder)                            | [Make](make)                                                    |
-| [Coral](google-coral)            | [Desktop Environments](Desktops)                    | [Wayland](wayland)                                              |
-| [NeoVim](nvim)                   | [rtl-sdr](rtl-sdr)                                  | [Pulse Audio](pulse)                                            |
-| [OpenSSL](openssl)               | [Awesome!](awesome)                                 | [OpenBSD VPN](open-openvpn)                                     |
-| [GPSD](gpsd)                     | [WifiPumpkin3](wp3)                                 | [Spreadsheets](spreadsheet)                                     |
-| [Virtualization](virtualization) | [FreeBSD](freebsd)                                  | [Networking](networking)                                        |
-| [Hugo](hugo)                     | [unikernel](unikernel)                              | [Firefox](firefox)                                              |
-| [ffmpeg](ffmpeg)                 | [bibtex](bibtex)                                    | [melt](melt)                                                    |
+| [General Links](links)           | [Web Development Tools](web_dev_tools)              | [Command Line Tools](command_line_tools)                   |
+| [Git Wiki](git-wiki-skeleton)    | [Alternative Web Browsers](web_browsers)            | [xprofile](xprofile)                                       |
+| [Org Mode](orgmode)              | [Emacs](emacs)                                      | [vnc-configuration](vnc)                                   |
+| [Public DNS Servers](dns)        | [UserAgents for Use](useragent)                     | [Firewall Systems](firewall)                               |
+| [Shell](shell)                   | [User Service Managers](service_managers)           | [Color Tools](color_tools)                                 |
+| [OpenBSD](openbsd)               | [Art](art)                                          | [Mounts and `/etc/fstab`](mount_fstab)                     |
+| [Linux](linux)                   | [env-files](env-files)                              | [code Repositories](repos)                                 |
+| [Unix](unix)                     | [Osint](osint)                                      | [Jargon](jargon)                                           |
+| [Version Control](versioning)    | [Zoneminder](zoneminder)                            | [Make](make)                                               |
+| [Coral](google-coral)            | [Desktop Environments](Desktops)                    | [Wayland](wayland)                                         |
+| [NeoVim](nvim)                   | [rtl-sdr](rtl-sdr)                                  | [Pulse Audio](pulse)                                       |
+| [OpenSSL](openssl)               | [Awesome!](awesome)                                 | [OpenBSD VPN](open-openvpn)                                |
+| [GPSD](gpsd)                     | [WifiPumpkin3](wp3)                                 | [Spreadsheets](spreadsheet)                                |
+| [Virtualization](virtualization) | [FreeBSD](freebsd)                                  | [Networking](networking)                                   |
+| [Hugo](hugo)                     | [unikernel](unikernel)                              | [Firefox](firefox)                                         |
+| [ffmpeg](ffmpeg)                 | [bibtex](bibtex)                                    | [melt](melt)                                               |
+| [Project Management](projman)    |                                                     |                                                            |
 
 [![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 
