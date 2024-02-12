@@ -35,7 +35,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [Virtualization](virtualization) | [FreeBSD](freebsd)                                  | [Networking](networking)                                   |
 | [Hugo](hugo)                     | [unikernel](unikernel)                              | [Firefox](firefox)                                         |
 | [ffmpeg](ffmpeg)                 | [bibtex](bibtex)                                    | [melt](melt)                                               |
-| [Project Management](projman)    |                                                     |                                                            |
+| [Project Management](projman)    | [Plantuml](plantuml)                                |                                                            |
 
 [![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 
