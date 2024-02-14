@@ -1,4 +1,18 @@
 ```text
+#  ____  _____
+# |  _ \|  ___|
+# | |_) | |_
+# |  _ <|  _|
+# |_| \_\_|
+#
+# ==========================================
+#                  _
+#   __ _ _ __   __| |
+#  / _` | '_ \ / _` |
+# | (_| | | | | (_| |
+#  \__,_|_| |_|\__,_|
+#
+# ==========================================
 #  ____ _____ _         ____  ____  ____
 # |  _ \_   _| |       / ___||  _ \|  _ \
 # | |_) || | | |   ____\___ \| | | | |_) |
@@ -7,7 +21,11 @@
 #
 ```
 
-## Software defined radio with RTL-SDR
+## Radio Frequency
+
+All that concerns Radio waves and other cool shit like that!
+
+### Software defined radio with RTL-SDR
 
 SDR = Software Defined Radio
 
@@ -44,6 +62,11 @@ age scare you in this endevour.
 | [rtl-power-fftw](https://github.com/AD-Vega/rtl-power-fftw)                                                   | [qspectrumanalyzer](https://github.com/xmikos/qspectrumanalyzer)   | [SoftFM](https://github.com/jorisvr/SoftFM)         |
 | [gns-sdr](https://gnss-sdr.org/docs/tutorials/gnss-sdr-operation-realtek-rtl2832u-usb-dongle-dvb-t-receiver/) | [RTLion](https://github.com/RTLion-Framework/RTLion)               | [inspectrum](https://github.com/miek/inspectrum)    |
 | [dspectrum](https://github.com/tresacton/dspectrumgui)                                                        | [qtradio](https://napan.ca/ghpsdr3/index.php/QtRadio_Installation) | [sdr-j-fm](https://github.com/JvanKatwijk/sdr-j-fm) |
+
+### Hardware
+
+- [hackrf](https://hackrf.readthedocs.io/en/latest/index.html)
+- [hackrf Schematics](https://hackrf.readthedocs.io/en/latest/hardware_components.html)
 
 ### SDR Software Lists
 

@@ -50,9 +50,10 @@ list them all, it is not nearly such a fantastic task as to hit some favorites a
 
 #### General
 
-* [iwd](iwd)
-* [iw](iw)
-* [Entware: The Ultimate Repo for embedded devices](https://entware.net)
+- [iwd](iwd)
+- [iw](iw)
+- [Entware: The Ultimate Repo for embedded devices](https://entware.net)
+- [System Service Managers](service-managers)
 
 #### Void Linux
 

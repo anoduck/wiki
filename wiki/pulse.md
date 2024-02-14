@@ -17,6 +17,17 @@ users to create a configuration that best suits their needs.
 It is easy to confuse Alsa and PulseAudio, and the two appear intertangled in our minds as well. It is
 best to come to an understanding that pulse does what pulse does, and alsa does what alsa does. (Whatever than means..)
 
+## SunSetting Pulse
+
+Pipewire Audio Server was specifically written to replace both PulseAudio and Jack (another audio server). It
+is stable, and quickly has become the new default. As a result, this unfinished disgrace for a wiki page will
+be merged at some point in the future, or deleted altogether. So, it is advised you visit the
+[Pipewire](pipewire) page instead.
+
+
+(It should be interesting what this horizontal line becomes below.)
+
+# --------------------------------------------------------------------------------------------------------
 
 ## Configuring Pulse as a network sound server.
 
