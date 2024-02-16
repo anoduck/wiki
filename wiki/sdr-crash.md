@@ -21,10 +21,19 @@ Having no background in engineering, electronics or radio technology; I can assu
 
 ### Modulation
 
-1. Amplitude Modulation
-2. Frequency Modulation
-3. Analog Modulation
-4. Digital or phase Modulation
+These definitions and explanations are written in layman's terms without the use of any jargon what-so-ever.
+They are not precise, but are meant to be understood by someone who has no experience or knowledge in radio
+technology. That, and it is late. I am tired, so deal with it. 
+
+1. WaveForm - the shape of an electronic signal when graphed as a function of time.
+2. Carrier Signal - Is a fancier word for the waveform of an electronic signal.
+3. Modulation - is the process of variating the waveform.
+4. Amplitude Modulation - variating the waveform by amplitude.
+5. Frequency Modulation - variating the waveform by frequency (i.e. Pitch for musically minded)
+6. Angle Modulation - is based on varying the frequency of a waveform. Angle Modulation is comprised of both
+   FM and Phase Modulation.
+7. Phase Modulation - is where a modulated waveform is modulated againy by overlayering a secondary modulation on top of
+   it. So basically a doubly modulated waveform.
 
 __Modulation occurs in two ways:__
 1. Continuous Wave

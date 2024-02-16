@@ -35,6 +35,8 @@ RTL-SDR = Realtek Software Defined Radio
 
 With the rise of new inexpensive processors and chipsets, SDR is easier than ever to get into.
 
+I really should finish writing my introduction to this section sometime in the near future.
+
 Bro ipsum dolor sit amet mcTwist avie core shot huck chain suck ripper. Hardtail Whistler rigid, 
 nose afterbang Japan air line taco chillax hammerhead first tracks chowder. Huck bonk grip tape 
 heli back country bowl. Crunchy sucker hole park presta, poaching grind taco switch apres dust 
@@ -48,20 +50,28 @@ hole bear trap dirt. Face shots snake bite OTB, face plant skinny huck flow epic
 hellflip rig poaching Whistler taco glove spin wheelie drop bomb titanium. Bonk fully brain bucket, 
 schwag groomer gnar stoked clipless OTB.
 
-__[SDR Crash Course](sdr-crash)__
+| [SDR Crash Course](sdr-crash) | [Cellular](cellular) | [Rtl Sdr App](rtlsdr-app) |
+| ---                           | ---                  | ---                       |
 
 ### Software for RTL-SDR
 
 Note, that software for rtl-sdr is not as fanatically maintained with the most bleeding edge libraries as other software might be, do not let
 age scare you in this endevour.
 
-| [SigDigger](https://github.com/BatchDrake/SigDigger)                                                          | [Coole Radar](https://github.com/wiseman/coole-radar)              | [sdrpp](https://www.sdrpp.org/)                     |
-| CubicSDR                                                                                                      | GNURadio                                                           | [rtl-sdr App](rtlsdr-app)                           |
-| linrad                                                                                                        | natpos                                                             | gqrx                                                |
-| [sdrangelove](https://osmocom.org/projects/sdr/wiki/sdrangelove)                                              | Spektrum                                                           | uhv                                                 |
-| [rtl-power-fftw](https://github.com/AD-Vega/rtl-power-fftw)                                                   | [qspectrumanalyzer](https://github.com/xmikos/qspectrumanalyzer)   | [SoftFM](https://github.com/jorisvr/SoftFM)         |
-| [gns-sdr](https://gnss-sdr.org/docs/tutorials/gnss-sdr-operation-realtek-rtl2832u-usb-dongle-dvb-t-receiver/) | [RTLion](https://github.com/RTLion-Framework/RTLion)               | [inspectrum](https://github.com/miek/inspectrum)    |
-| [dspectrum](https://github.com/tresacton/dspectrumgui)                                                        | [qtradio](https://napan.ca/ghpsdr3/index.php/QtRadio_Installation) | [sdr-j-fm](https://github.com/JvanKatwijk/sdr-j-fm) |
+- [SigDigger](https://github.com/BatchDrake/SigDigger)
+- [Coole Radar](https://github.com/wiseman/coole-radar)
+- [sdrpp](https://www.sdrpp.org/)
+- [CubicSDR](https://github.com/cjcliffe/CubicSDR)
+- [sdrangelove](https://osmocom.org/projects/sdr/wiki/sdrangelove)
+- [rtl-power-fftw](https://github.com/AD-Vega/rtl-power-fftw)
+- [qspectrumanalyzer](https://github.com/xmikos/qspectrumanalyzer)
+- [SoftFM](https://github.com/jorisvr/SoftFM)
+- [gns-sdr](https://gnss-sdr.org/docs/tutorials/gnss-sdr-operation-realtek-rtl2832u-usb-dongle-dvb-t-receiver/)
+- [RTLion](https://github.com/RTLion-Framework/RTLion)
+- [inspectrum](https://github.com/miek/inspectrum)
+- [dspectrum](https://github.com/tresacton/dspectrumgui)
+- [qtradio](https://napan.ca/ghpsdr3/index.php/QtRadio_Installation)
+- [sdr-j-fm](https://github.com/JvanKatwijk/sdr-j-fm)
 
 ### Hardware
 
@@ -100,6 +110,8 @@ age scare you in this endevour.
 ### RTL-SDR LTE
 
 - [OpenLTE](https://github.com/mgp25/OpenLTE#installing-gnuradio-with-uhd)
+- [Awesome Cellular Hacking](https://github.com/W00t3k/Awesome-Cellular-Hacking)
+- [LTE-Sniffer](https://github.com/SysSec-KAIST/LTESniffer)
 
 ### RFID
 
