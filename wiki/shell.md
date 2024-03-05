@@ -6,11 +6,15 @@
 # |____/|_| |_|\___|_|_|
 #
 ```
+<a href>Dude</a>
+
 
 ## The comforts of shell
 
 Here is a nice introduction to shell. It explains what they are, what differentiates them from the command
 line, and the different varieties of shell available.
+
+* [Terminal Colors](https://github.com/termstandard/colors)
 
 ### Bash
 

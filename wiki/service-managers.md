@@ -43,10 +43,24 @@ distrobutions who have to be different from everyone else, which is the case of 
 
 #### SystemD
 
-An interesting feature of SystemD is that it allows users to run services on the system level, the simplifies
-the process for those occasions when you have to configure the same setup manually. Doint so is quite easy.
-The user just needs to execute `systemctl` with the `--user` flag.
+##### User Level Services
+
+An interesting feature of SystemD is that it allows users level services. This is a rather convenient feature,
+as it allows services to be managed on a per user basis, allowing services to run without requiring
+superuser permissions, which in turn makes these services more secure.
+
+Enabling this feature is quite easy, as the user just needs to execute `systemctl` with the `--user` flag, and
+if the service needs to be run immediately, the `--now` flag can be added.
 
 ```bash
 systemctl --user --now enable pipewire
+```
+
+##### Masking Services
+
+Additionally allows "masking" services. To mask a service, means to link the service process to `/dev/null`.
+Here is a quick example:
+
+```bash
+systemctl --user mask pipewire.service
 ```

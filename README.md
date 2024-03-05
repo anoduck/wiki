@@ -36,6 +36,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [Hugo](hugo)                     | [unikernel](unikernel)                              | [Firefox](firefox)                                         |
 | [ffmpeg](ffmpeg)                 | [bibtex](bibtex)                                    | [melt](melt)                                               |
 | [Project Management](projman)    | [Plantuml](plantuml)                                | [Pipewire](pipewire)                                       |
+| [Term](shell)                    | [GnuPlot](gnuplot)                                  | ---                                                        |
 
 [![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 
