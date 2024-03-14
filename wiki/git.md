@@ -9,9 +9,26 @@
 
 ## Git
 
-Lorem ipsum viverra elit praesent rhoncus aliquet praesent tempus, adipiscing dictumst sagittis ultricies tincidunt libero arcu nostra, varius sagittis suspendisse eleifend ad nunc aliquam. Viverra ligula luctus pharetra ad nam sed aliquet platea, cras ante diam velit cursus primis scelerisque erat pretium, himenaeos at aliquet nisi ut porta conubia. Sit erat volutpat augue vel enim senectus maecenas tincidunt curae, metus cras arcu leo sagittis odio at risus varius, elementum ligula posuere faucibus eros dolor accumsan libero.
+First and foremost git is a version control system, and it is the most popular version control
+system in use today. Git can do a lot of things for you, and has an intuitive command structure to
+allow this. Git would not be as popular as it is today, if it were not for the site Github. Which
+allows anyone to host and share software source code for free. 
 
-Commodo justo consequat enim orci ut varius aliquam tempus, proin auctor viverra aptent placerat venenatis orci, libero habitant tortor amet nisl sapien est. Torquent praesent lacinia pretium per enim nisi sed suspendisse urna, suscipit donec vestibulum convallis nulla adipiscing tempor quis dui duis, inceptos lorem enim faucibus curabitur sem molestie fermentum. Potenti aenean sit sapien pharetra massa proin ut, id pretium enim rutrum fringilla urna rutrum, consectetur elementum sollicitudin proin volutpat metus.
+Below are a few examples on how to use git that are not often encountered. 
+
+### Basic guide to making a pull request
+
+A pull request is how another user can contribute code to a repository they are not the creator
+of. This proceess can be performed completely remotely from the command line, but for our purposes
+will be performed using both the command line and a browser with Github.
+
+1. The repository needs to be forked from the original repository. This portion must be done with a
+   browser and user account on Gihub.
+2. The newly forked repository must be cloned locally. 
+3. Once cloned, changes then can be made to the source code. `git clone https://github.com/USERNAME/REPOSITORY`
+4. Those changes need to be committed. `git add . && git commit -am 'some message about the commit'`
+5. Then return back to the forked repository on Github. Select the "Pull requests" tab.
+6. Then click "New pull request" and your done.
 
 ### Removing sensitive data from git repos.
 

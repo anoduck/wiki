@@ -1,0 +1,81 @@
+@startuml
+title 802.11 Frame Types
+!theme sketchy-outline
+<style>
+document {
+	BackgroundColor grey
+}
+</style>
+== Management ==
+loop Beacon
+	AP -> Station: Beacon
+end
+group Association
+	AP <- Station: Association Request
+	AP -> Station: Association Response
+end
+group Reassociation
+	AP <- Station: Reassociation Request
+	AP -> Station: Reassociation Response
+end
+group Probe
+	AP <- Station: Probe Request
+	AP -> Station: Probe Response
+end
+group Authentication
+	Station -> AP: Authentication Request
+	AP -> Station: Authentication Response
+end
+group Disassociation
+	Station -> AP: Disassociation Frame
+	AP -> Station: Disassociation Frame
+end
+group Deauthentication
+	AP -> Station: Deauthentication
+	AP -> Station: Disassociation Frame
+end
+group Action
+	AP <-> Station: Action Frame
+end
+== control ==
+group RTS & CTS
+	Station -> AP: Request to Send
+	AP -> Station: Clear to Send
+end
+group Acknowledgement
+	group AP Initiated
+		AP -> Station: Data Frame
+		Station -> AP: ACK Frame
+	end
+	group Station Initiated
+		Station -> AP: Data Frame
+		AP -> Station: ACK Frame
+	end
+end
+group Block ACK
+	Station -> AP ++ : QOS Data Frame
+	Station -> AP: QOS Data Frame
+	Station -> AP: Block ACK Request (BAR)
+	AP -> Station -- : Block ACK
+end
+group Beamforming Report Poll
+	AP -> Station ** : Beamforming Report Poll
+	Station -> Station1: Beamforming Report Poll
+	Station1 -> AP !! : Beamforming Report Poll
+end
+group NDP Announcement
+	AP -> Station: Sounding Frame Request
+	Station -> AP: NDP Announcement
+	Station -> AP: NDP Sounding Frame
+end
+== Data ==
+group Data
+	Station ->]: Data Frame
+end
+group QOS Data
+	Station -> Station1: QOS Data
+end
+group Null Data
+	Station ->]: QOS Null Data
+end
+@enduml
