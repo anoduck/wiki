@@ -93,6 +93,35 @@ relationship.
 
 For more info go to the [plantuml website](https://plantuml.com/deployment-diagram) for a better demonstrations.
 
+#### Class Diagrams
+
+Plantuml's class diagram schema is intended to be intuitive and multilingual, and incorporates features any
+programmer would be comfortable with. Yet, from the perspective of someone who did not go the traditional
+route and learn Java or C++ in a formal setting, many of these features are not familiar at all, and possess
+either obscure or ambiguious meaning. So for this reason, some jargon needs to be sorted.
+
+##### Class Types
+
+When reading the Plantuml documentation on class diagrams, the first thing one might scratch their head at is
+the need to distinguish different class types. From personal experience this was encountered first learning
+Zig, but let's not digress.
+
+| Keyword        | Description                                                |
+| -------        | -----------                                                |
+| abstract class | A class that is purely virtual in existence?               |
+| static class   | A fuzzy class that does not render clearly on the monitor? |
+
+``` plantuml
+@startuml example diagram
+class Example Class {
+    +{static} int something
+    -{abstract} void method()
+    ~void packagePrivateMethod()
+    #{abstract} char protectedMethod(int param)
+    }
+@enduml
+```
+
 ### Themes
 
 Plantuml provides several "themes" that bring color, style, and overall pazazz to the diagram. To find the
@@ -105,3 +134,5 @@ html file, plantuml uses the flags `<style>` and `</style>` to define the beginn
 configurations. The target characteristic is followed by a pair of squigly brackets, and contained within is
 the designation of style parameters. Styling differs according to diagram type and preselected theme. So,
 please checkout the plantuml site on how to do this properly.
+
+

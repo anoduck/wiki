@@ -51,7 +51,7 @@ hellflip rig poaching Whistler taco glove spin wheelie drop bomb titanium. Bonk 
 schwag groomer gnar stoked clipless OTB.
 
 | [SDR Crash Course](sdr-crash) | [Cellular](cellular) | [Rtl Sdr App](rtlsdr-app) |
-| ---                           | ---                  | ---                       |
+| [rtl_433](rtl_433)            | ---                  | ---                       |
 
 ### Software for RTL-SDR
 

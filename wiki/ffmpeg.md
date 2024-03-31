@@ -18,14 +18,14 @@ do just about anything with video media that needs to be done.
 Stating this, I have started this page to keep track of commands I have encountered using ffmpeg. For a full
 understanding of all that ffmpeg can do, either seek help within the man pages or phone a friend.
 
-1. Repairing a corrupt TS file: `ffmpeg –i corrupted_input.ts –map –ignore_unknown/-copy_unknown –c copy fixed.ts`
+1. Repairing a corrupt TS file: `ffmpeg –i corrupted_input.ts –map –ignore_unknown/-copy_unknown –c copy fixed.ts` (incorrect)
 2. Repairing a corrupt mp4 file: `ffmpeg -i input.mp4 -c copy output.mp4`
 3. Concatenate several files: `ffmpeg -i input1.mp4 -i input2.mp4 -i input3.mp4 output.mp4`
 4. Convert video format: `ffmpeg -i input.mp4 output.avi`
 5. Extract sound stream: `ffmpeg -i video1.avi -vn -ar 44100 -ac 2 -ab 192 -f mp3 audio3.mp3`
 6. Check video corruption: `ffmpeg –v error –i corrupted_input.ts -f null – &> corruptions.log`
 7. Convert video to images: `ffmpeg -i Video_36.wmv -an -f image2 filename%03d.jpg`
-8. Perform post processing: `ffmpeg -i Video_of_something.mp4 -vf fspp=4:10 -c copy output.mp4`
+8. Perform post-processing: `ffmpeg -i Video_of_something.mp4 -vf fspp=4:10 -c copy output.mp4`
 
 ### Converting files to more editing friendly codecs
 
@@ -59,31 +59,19 @@ ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
 
 ### ~~Frame Averaging with tmix~~
 
-~~The video processing technique of overlapping successive video frames and averaging values across them.
-(definition could be beter.) [Docs](https://ffmpeg.org//ffmpeg-filters.html#tmix)
+**To Be Worked out**
 
-__If you desire to drop 4 out of 5 frames__
+#### Working with ffmpegs bitstream filter
 
-```bash
-ffmpeg -i $VIDEO.mp4 -vf tmix=frames=5:weights="1 1 1 1 1",select='not(mod(n\,5))' $OUTPUT.mp4
-```
+Normally one would use the bitstream filter to convert video files to streaming formats, but what we
+want to do is the exact opposite. We want to remove all the additional metadata that is added to a
+bitstream file.
 
-__If, like me, you desire not to drop any frames.__
+#### Other Examples
 
-Then remove the added select filter, as below
-
-```bash
-ffmpeg -i $VIDEO.mp4 -vf tmix=frames=5:weights="1 1 1 1 1" $OUTPUT.mp4
-```
-
-The above command blends each frame with 4 following frames, then only keeps the first out of every five
-frames.~~
-
-#### ~~Other Examples
-
-- ~~Average 7 successive frames: `tmix=frames=7:weights="1 1 1 1 1 1 1"`
+- Average 7 successive frames: `tmix=frames=7:weights="1 1 1 1 1 1 1"`
 - Simple temporal convolution: `tmix=frames=3:weights="-1 3 -1"`
-- Similar as above but only showing temporal differences: `tmix=frames=3:weights="-1 2 -1":scale=1`~~
+- Similar as above but only showing temporal differences: `tmix=frames=3:weights="-1 2 -1":scale=1`
 
 ### Filters (That we have tried)
 

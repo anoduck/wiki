@@ -8,15 +8,16 @@ commonly used programming languages.
 
 ### Programming Method Topics
 
-1. [Working with datetime and time.time in python.](https://anoduck.github.io/wiki/datetime_and_time.time)
-2. [Python package management 101](pip101)
-3. [Pandas](pandas)
-4. [Regex](py-regex)
-5. [OpenCV](opencv)
-7. [argparse without "if then" operators](argparse-no-arg)
-8. [Working with scapy](scapy)
-9. [Writing modules](py-modules)
-10. [Creating Daemons](create_daemons)
+1. [Working with datetime and time.time in python.](datetime_timetime)
+3. [Python package management 101](pip101)
+4. [Pandas](pandas)
+5. [Regex](py-regex)
+6. [OpenCV](opencv)
+8. [argparse without "if then" operators](argparse-no-arg)
+9. [Working with scapy](scapy)
+10. [Writing modules](py-modules)
+11. [Creating Daemons](create_daemons)
+12. [Special Method Names](special_names)
 
 ### Jupyter Lab
 
