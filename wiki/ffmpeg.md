@@ -57,21 +57,42 @@ done
 ffmpeg -f concat -safe 0 -i mylist.txt -c copy output.mp4
 ```
 
-### ~~Frame Averaging with tmix~~
-
-**To Be Worked out**
-
-#### Working with ffmpegs bitstream filter
+### Working with ffmpegs bitstream filter
 
 Normally one would use the bitstream filter to convert video files to streaming formats, but what we
 want to do is the exact opposite. We want to remove all the additional metadata that is added to a
-bitstream file.
+bitstream file, and the best means to accomplish this is to run ffmpeg straight without a flag, as you would
+to convert a file between different codecs. 
 
-#### Other Examples
+### Slowdown, crop, zoom, and minterpolate for smoothing.
 
-- Average 7 successive frames: `tmix=frames=7:weights="1 1 1 1 1 1 1"`
-- Simple temporal convolution: `tmix=frames=3:weights="-1 3 -1"`
-- Similar as above but only showing temporal differences: `tmix=frames=3:weights="-1 2 -1":scale=1`
+Recently there was the need to slow down the speed of a video, as the video only lasted fourteen mere seconds.
+The video picture also needed to be cropped, since only 25% of the picture showed content that was important,
+the other 75% of the picture was grass. So here is what was done.
+
+1. Video at half speed: `ffmpeg -i $INPUT.VIDEO -filter:v "setpts=2.0*PTS" $OUTPUT.VIDEO`
+2. Crop and Zoom video picture: `ffmpeg -i $INPUT.VIDEO -vf "scale=2*iw:-1, crop=in_w:in_h/2:0:0" $OUTPUT.VIDEO`
+3. Minterpolate video to smooth image: `ffmpeg -i $INPUT.VIDEO -filter:v "minterpolate='mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=60'" $OUTPUT.VIDEO`
+
+Of all of these, the crop and zoom has the highest potential of generating the most confusion, so let's take a
+moment to review it. First off, `-vf` and `-filter:v` are equivocal, just one is long hand and the other is short.
+Next, note `iw` and `in_w` both stand for input width, as `ih` and `in_h` stands for input height, and both
+inputs, width and height, can be multiplied and divided within the filter designations as you see above. Using
+`-1` for a value will make ffmpeg compute the value automatically for you. 
+
+The scale filter takes two parameters `WIDTH:HEIGHT`, where the crop filter is more complex and takes four
+parameters `WIDTH:HEIGHT:LEFT:RIGHT`. The parameters of the crop filter are read from the top left corner of
+the picture. From left to right, and from top to bottom. Thus is why in the provided example, you will see the
+designated height of the picture is one half of the original height, and ffmpeg was told to crop from the zero
+position. Which meant the bottom half of the image is to be cut out. If you wanted to cut out the top half of
+the image you could use `in_w:in_h/2:0:in_h/2`. If you wanted to cut the width in half to only show the
+bottom right corner, you would use `in_w/2:in_h/2:in_w/2:in_h/2`. 
+
+One final word about the commands above, the example referrenced for minterpolate used a frames per second
+rate of 120. For the sake of time needed to process and upload time, this was cut in half to 60. 120 just felt
+too high for a short video lasting only a few seconds.
+
+I guess that about covers it.
 
 ### Filters (That we have tried)
 
