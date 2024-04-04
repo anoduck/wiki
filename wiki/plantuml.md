@@ -100,6 +100,20 @@ programmer would be comfortable with. Yet, from the perspective of someone who d
 route and learn Java or C++ in a formal setting, many of these features are not familiar at all, and possess
 either obscure or ambiguious meaning. So for this reason, some jargon needs to be sorted.
 
+__Element Types__
+
+| abstract | annotation | circle    | class     | diamond   |
+| entity   | enum       | exception | interface | metaclass |
+| protocol | stereotype | struct    | ---       | ---       |
+
+__Relationships__
+
+| Type        | Symbol  |
+| -----       | ------- |
+| extension   | <|--    |
+| composition | *--     |
+| aggregation | o--     |
+
 ##### Class Types
 
 When reading the Plantuml documentation on class diagrams, the first thing one might scratch their head at is
