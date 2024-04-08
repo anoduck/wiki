@@ -4,54 +4,48 @@
 # | |_) | |_
 # |  _ <|  _|
 # |_| \_\_|
-#
 # ==========================================
 #                  _
 #   __ _ _ __   __| |
 #  / _` | '_ \ / _` |
 # | (_| | | | | (_| |
 #  \__,_|_| |_|\__,_|
-#
 # ==========================================
-#  ____ _____ _         ____  ____  ____
-# |  _ \_   _| |       / ___||  _ \|  _ \
-# | |_) || | | |   ____\___ \| | | | |_) |
-# |  _ < | | | |__|_____|__) | |_| |  _ <
-# |_| \_\|_| |_____|   |____/|____/|_| \_\
+#  ____  ____  ____
+# / ___||  _ \|  _ \
+# \___ \| | | | |_) |
+#  ___) | |_| |  _ <
+# |____/|____/|_| \_\
 #
 ```
 
-## Radio Frequency
+Radio Frequency
+================
 
-All that concerns Radio waves and other cool shit like that!
-
-### Software defined radio with RTL-SDR
+All that concerns the unseen range of the light spectrum, and that includes a butt load of stuff.
 
 SDR = Software Defined Radio
-
-RTL = Realtek, a microchip manufacturer
-
-RTL-SDR = Realtek Software Defined Radio
+-----------------------------
 
 With the rise of new inexpensive processors and chipsets, SDR is easier than ever to get into.
 
-I really should finish writing my introduction to this section sometime in the near future.
+### Basic Definitions
 
-Bro ipsum dolor sit amet mcTwist avie core shot huck chain suck ripper. Hardtail Whistler rigid, 
-nose afterbang Japan air line taco chillax hammerhead first tracks chowder. Huck bonk grip tape 
-heli back country bowl. Crunchy sucker hole park presta, poaching grind taco switch apres dust 
-on crust euro dope. Punter brain bucket gondy caballerial rigid schwag, frontside afterbang line
-death cookies granny gear snake bite. Clipless dirtbag rig gaper, bonk moguls gear jammer face
-plant flow death cookies hero method avie scream skid lid. Huck gnar hardtail, spin nose press 
-gapers gear jammer method stoked lid first tracks hellflip rail.
+SDR = Software Defined Radio
 
-Face plant switch taco rigid huck bunny slope, Whistler derailleur snake bite. Rig bail epic bomb
-hole bear trap dirt. Face shots snake bite OTB, face plant skinny huck flow epic park McTwist. Ripper
-hellflip rig poaching Whistler taco glove spin wheelie drop bomb titanium. Bonk fully brain bucket, 
-schwag groomer gnar stoked clipless OTB.
+RTL = Represents a series of microchips manufactured by Realtek that enable software defined radio.
 
+### Local Pages
+
+| Here are some                 | local pages on       | the subject               |
+| -------------                 | --------------       | -----------               |
 | [SDR Crash Course](sdr-crash) | [Cellular](cellular) | [Rtl Sdr App](rtlsdr-app) |
 | [rtl_433](rtl_433)            | ---                  | ---                       |
+
+Links
+------
+
+Here is an aggregation of sdr related links
 
 ### Software for RTL-SDR
 

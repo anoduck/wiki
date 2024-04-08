@@ -29,12 +29,12 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [Unix](unix)                     | [Osint](osint)                                      | [Jargon](jargon)                                           |
 | [Version Control](versioning)    | [Zoneminder](zoneminder)                            | [Make](make)                                               |
 | [Coral](google-coral)            | [Desktop Environments](Desktops)                    | [Wayland](wayland)                                         |
-| [NeoVim](nvim)                   | [rtl-sdr](rtl-sdr)                                  | [Pulse Audio](pulse)                                       |
+| [NeoVim](nvim)                   | [sdr](sdr)                                          | [Pulse Audio](pulse)                                       |
 | [OpenSSL](openssl)               | [Awesome!](awesome)                                 | [OpenBSD VPN](open-openvpn)                                |
 | [GPSD](gpsd)                     | [WifiPumpkin3](wp3)                                 | [Spreadsheets](spreadsheet)                                |
 | [Virtualization](virtualization) | [FreeBSD](freebsd)                                  | [Networking](networking)                                   |
 | [Hugo](hugo)                     | [unikernel](unikernel)                              | [Firefox](firefox)                                         |
-| [ffmpeg](ffmpeg)                 | [bibtex](bibtex)                                    | [melt](melt)                                               |
+| [ffmpeg](ffmpeg)                 | [bibtex](biblatex)                                  | [melt](melt)                                               |
 | [Project Management](projman)    | [Plantuml](plantuml)                                | [Pipewire](pipewire)                                       |
 | [Term](shell)                    | [GnuPlot](gnuplot)                                  | [Biblatex](biblatex)                                       |
 
