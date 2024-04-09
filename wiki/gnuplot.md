@@ -174,11 +174,13 @@ set size 1,1
 #                       {<color0> <color1> <color2> ...}
 
 #     set terminal png
-#             {{no}transparent} {{no}interlace}
+#             {transparent} {notransparent}
+#             {interlace} {nointerlace}
 #             {tiny | small | medium | large | giant}
 #             {font <face> {<pointsize>}}
-#             {size <x>,<y>} {{no}crop}
-#             {{no}enhanced}
+#             {size <x>,<y>} 
+#             {crop} {nocrop}
+#             {enhanced} {noenhanced}
 #             {<color0> <color1> <color2> ...}
 ```
 
