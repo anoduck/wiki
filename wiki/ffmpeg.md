@@ -40,6 +40,7 @@ with `-c:a copy`. This can significantly reduce error messages for uncooperative
 6. Rewrapping video, and re-encoding audio: `ffmpeg -i (input file) -c:v copy -c:a pcm_s16le (output).mov`
 7. Encoding H.264 using NVENC using Constant Quality Rate Factor 18, High Profile: `ffmpeg -i (input file) -c:v h264_nvenc -cq 18 -profile:v high -c:a aac -b:a 128k (output).mp4`
 8. Encoding H.265 using HEVC using Constant Quality Rate Factor 28, Medium Profile: `ffmpeg -i (input file) -c:v h265_hevc -cq 28 -profile:v medium -c:a copy (output).mp4`
+9. Prefered encoding with x265 using Constant Quality Rate Factor 28, and psy-rd 1: `ffmpeg -i input -c:v libx265 -x265-params crf=26:psy-rd=1 output.mp4` 
 
 ### Batch merge of files in folder
 
