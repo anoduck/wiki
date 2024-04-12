@@ -34,7 +34,13 @@ Conditional operators are used in "if" statements and allow testing for many dif
 
 -----
 
+### Anoduck Approved CheatSheet
+
+- [Bash Scripting CheatSheat](https://devhints.io/bash)
+
 ### Bash Tutorials
+
+[Bash Hackers](https://web.archive.org/web/20230406205817/https://wiki.bash-hackers.org/)
 
 [Bash Academy](https://github.com/lhunath/guide.bash.academy)
 

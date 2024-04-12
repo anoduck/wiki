@@ -25,6 +25,7 @@ Here are awesome repositories that list other awesome lists.
 
 ### Our Awesome list of Awesome lists
 
+- [Awesome Operating Systems](https://github.com/jubalh/awesome-os)
 - [Awesome Social Engineering](https://github.com/giuliacassara/awesome-social-engineering) 
 - [Awesome Remote Jobs](https://github.com/lukasz-madon/awesome-remote-job)
 - [Awesome Hacking](https://github.com/The-Art-of-Hacking/h4cker)

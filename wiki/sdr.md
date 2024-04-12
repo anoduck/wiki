@@ -40,7 +40,7 @@ RTL = Represents a series of microchips manufactured by Realtek that enable soft
 | Here are some                 | local pages on       | the subject               |
 | -------------                 | --------------       | -----------               |
 | [SDR Crash Course](sdr-crash) | [Cellular](cellular) | [Rtl Sdr App](rtlsdr-app) |
-| [rtl_433](rtl_433)            | ---                  | ---                       |
+| [rtl_433](rtl_433)            | [Cabling](cables)    | ---                       |
 
 Links
 ------
