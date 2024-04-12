@@ -43,6 +43,7 @@ familiarity with, and these may or may not be the more popular varieties.
 | RG188     | 50db       | 10ghz     | 1.33           | PTFE       | N/A      | 0.118          | High Temp Op |
 | RG6       | 75db       | 2.5ghz    | 1.48           | Poly       | 0.90     | 0.33           | Impedence    |
 | RG8       | 50db       | 4ghz      | 0.215          | Poly       | 4.00     | 0.403          | Low Loss     |
+| RG58      | 50db       | 1ghz      | 0.60           | PVC        | 0.98     | 0.195          | Overall Perf |
 
 Connectors
 ----------
