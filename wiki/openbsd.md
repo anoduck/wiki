@@ -8,7 +8,8 @@
 #
 ```
 
-## OpenBSD Specific Topics
+OpenBSD Specific Topics
+-----------------------
 
 These are Topics that are specific to the OpenBSD operating system.
 
@@ -16,3 +17,8 @@ These are Topics that are specific to the OpenBSD operating system.
 | [Working with ISOs](openbsd-iso)                | [restoring ldconfig](ldconfig)      |
 | [OpenVPN on OpenBSD](open-openvpn)              | [Common Build Issues](build-issues) |
 | [Networking on OpenBSD](openbsd-net)            | ---                                 |
+
+### Links
+
+- [OpenBSD Handbook](https://www.openbsdhandbook.com/)
+- [OpenBSD FAW](https://openbsd.org/faq)

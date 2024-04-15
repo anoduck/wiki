@@ -14,8 +14,6 @@ Here are discussions on this wiki that relate to programming:
 
 1. [Python](python)
 
-2. [Javascript](javascript)
-
 3. [Elisp](elisp)
 
 4. [Lua](lua)
@@ -25,8 +23,6 @@ Here are discussions on this wiki that relate to programming:
 6. [Zig](zig)
 
 7. [Awk](awk)
-
-8. [Tcl](tcl)
 
 ### Sections
 

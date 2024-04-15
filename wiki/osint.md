@@ -54,6 +54,21 @@ There are the ones that proved to be helpful, they are not in any particular ord
 So far in my experience, I have not found information on a pay-for site that was not also available for free
 on another site. So, I reccommend you don't pay for access to those sites.
 
+### Satellite Imagery
+
+Recently for a case I am working on, I have had to work with satellite imagery pver the previous three
+decades. I did not expect to discover google is surprisingly slow at updating the imagery available to users,
+and several other popular imagery mapping services were quite faster updating there imagery. Now that this
+entire paragraph is slowly turning into a rambling heap of tossed word salad, I better stop before I make too
+big of a mess of the thing.
+
+Basically, up to date high definition satellite imagery can be hard to find. Often it is at least a year old,
+sometimes even much older. It took Google four years to finally update the imagery of a location I was
+investigating. This slowness to update imagery can cripple an investigation, because important details are
+left out, and exposed features can be recovered. Yada, yada, yada...
+
+- [Find the most recent satellite imagery](https://www.azavea.com/blog/2020/01/02/how-to-find-the-most-recent-satellite-imagery/)
+
 ### Awesome Osint Lists
 
 * [Awesome Social Engineering](https://github.com/giuliacassara/awesome-social-engineering)
