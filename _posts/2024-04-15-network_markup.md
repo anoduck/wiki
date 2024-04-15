@@ -1,3 +1,8 @@
+
+---
+published: true
+---
+
 Towards a better network diagramming solution
 ==============================================
 
@@ -18,3 +23,4 @@ whole new markup language, but to simply take advantage of one already available
 yaml, or even toml. Then all is required is the code to interpret the selected markup into a logically
 coherent graphical representation. As ascii art is superior in to other forms of artistic expression, the
 generation of graphical representation should, by nature, be in ascii. 
+
