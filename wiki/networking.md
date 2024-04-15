@@ -47,4 +47,4 @@ ip address del $ADDR dev eth0
 
 ### Wi-fi Networking Frames
 
-![Types of Wifi Frames](../assets/img/802.11.png)
+![Types of Wifi Frames](https://anoduck.github.io/wiki/assets/img/802.11.png)

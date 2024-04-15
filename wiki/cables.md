@@ -50,11 +50,11 @@ Connectors
 
 Below is a hand diagram showing some of the most popular rf connectors.
 
-![Rf Connectors](/assets/img/rf_conn.png)
+![Rf Connectors](https://anoduck.github.io/wiki/assets/img/rf_conn.png)
 
 It is important to remember each connector has a different frequency range in which it can operate.
 
-![Connector Range](/assets/img/conn_range.png)
+![Connector Range](https://anoduck.github.io/wiki/assets/img/conn_range.png)
 
 ### Installation
 
@@ -62,4 +62,4 @@ Below is a graphic that explains the process of connector installation. The impo
 needs to be conductive with the outer portion of the connector, and the core wire with the inner core of the
 connector. 
 
-![Connector Installation](/assets/img/con_install.gif)
+![Connector Installation](https://anoduck.github.io/wiki/assets/img/con_install.gif)

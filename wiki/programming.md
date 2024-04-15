@@ -8,7 +8,7 @@
 
 ## Topic: Programming
 
-![I am self taught.](/assets/img/code_quality.png)
+![I am self taught.](https://anoduck.github.io/wiki/assets/img/code_quality.png)
 
 Here are discussions on this wiki that relate to programming:
 
