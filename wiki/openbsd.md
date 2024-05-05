@@ -16,7 +16,8 @@ These are Topics that are specific to the OpenBSD operating system.
 | [Partitioning in OpenBSD](OpenBSD_Partitioning) | [Virtualization in OpenBSD](vmm)    |
 | [Working with ISOs](openbsd-iso)                | [restoring ldconfig](ldconfig)      |
 | [OpenVPN on OpenBSD](open-openvpn)              | [Common Build Issues](build-issues) |
-| [Networking on OpenBSD](openbsd-net)            | ---                                 |
+| [Networking on OpenBSD](openbsd-net)            | [Configuring pfstatd](pfstatd)      |
+| [Wireguard on OpenBSD](openbsd-wireguard)       | [OpenBSD net routes](openbsd-route) |
 
 ### Links
 

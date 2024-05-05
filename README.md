@@ -42,6 +42,12 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 
 -----
 
+## Save a life!
+
+Just made the mistake of pushing personal information to your public repository? Forgot to remove your own
+credentials before making a commit? [**Never fear The BFG Repo Cleaner is
+here!**](https://rtyley.github.io/bfg-repo-cleaner)
+
 ## Links
 
 I have begun to run out of room for links in my sidebar. I will need to add some here.
