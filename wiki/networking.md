@@ -48,3 +48,7 @@ ip address del $ADDR dev eth0
 ### Wi-fi Networking Frames
 
 ![Types of Wifi Frames](https://anoduck.github.io/wiki/assets/img/802.11.png)
+
+### References
+
+- [The excellent documentation of the pi-pwnbox-rogueAP](https://github.com/koutto/pi-pwnbox-rogueap/wiki)

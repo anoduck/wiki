@@ -11,7 +11,10 @@
 
 To prove to you how little information is available regarding the configuration and deployment of Wifipumpkin,
 this unfinished and derelict wiki page ranks 4th in the duckduckgo search results. It isn't even finished, and
-was planned to be scraped entirely. Yet it made the top 5 search results. 
+was planned to be scraped entirely. Yet it made the top 4 search results. 
+
+__ATTENTION:__ WifiPumpkin3 is not being maintained, and the user should consider migrating to a different
+solution.
 
 ### Intro
 
@@ -313,15 +316,12 @@ Immediately, we must deal with the issue of connectivity loss before preceding a
 Because we are running wifipumpkin on a remote host, starting it instantly disconnects us from the remote host
 and prohibits us from regaining connection. 
 
-In wp3's configuration file `~/.config/wifipumpkin/config/app/config.ini` there are several configuration
-settings that dictating how iptables is setup in order to correctly forward packets to and from the exterior interface and
-the wireless network interface. Within these settings there are two varables, `inet` and `wlan`. These
-variables are derived from the configuration settings, `interface` and `interface_net`, `interface` being the
-interface used for the wireless network and `interface_net` being the device used for wireless communications. Ensure 
-they are appropriately set. If desired, you may go ahead and replace the variables `inet` and `wlan` in the
-iptable settings with their equivocal values. Doing this should correct the disconnection issue.
+Sometimes, things that should be most obvious completely slip past our awareness of them. 
 
-If you need some help correcting these iptable rules, please see [firewall](firewall).
+This disconnect is caused by a routing error. Upon launching the tool wifipumpkin reconfigures the routing
+table for the host system, if the user is logged in via ssh, this reconfiguration will knock the user off and
+cause the user to obtain physical access to the system in order to correct the issue or simply reboot. This
+can be prevented by adding a custom route to the routing table defining a route to the remote system used to login to the host. 
 
 #### Dhcp not working
 

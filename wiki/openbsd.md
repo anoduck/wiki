@@ -23,3 +23,4 @@ These are Topics that are specific to the OpenBSD operating system.
 
 - [OpenBSD Handbook](https://www.openbsdhandbook.com/)
 - [OpenBSD FAW](https://openbsd.org/faq)
+- [Great tutorial on pf configuration](https://www.digitalocean.com/community/tutorials/how-to-configure-packet-filter-pf-on-freebsd-12-1)

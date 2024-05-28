@@ -20,24 +20,29 @@ Wireguard on OpenBSD
 Like a fist full of badass security-ness
 ------------------------------------------
 
-Here are the references you want for the moment.
+~~Here are the references you want for the moment.
 
 - https://kalilinuxtutorials.com/openbsd/
-- https://github.com/emdnaia/OpenOCD
+- https://github.com/emdnaia/OpenOCD~~
 
-I did not write this, just copy and pasted it for easier reading. @Emdnaia wrote this, and it is pretty
-impressive.
-
+This was originally taken from @Emdnaia's OpenOCD, but there were several aspects of that implementation that
+were either unsuitable or deprecated, so it has been altered since. 
 
 # OpenOCD
 
 This project gets you:
 
-- OpenBSD: Static filtering of static IPs for SSH
-- OpenBSD: Dynamic filtering of dynamic IPs for VPN (Wireguard)
-- Linux: Dynamic filtering of dynamic IPs for VPN (Wireguard)
-- OpenBSD: Encrypted DNS via ODoH / DoT via Unbound + DNScrypt
-- OpenBSD: Adblocker skript to pull adlists for Unbound
+- ~~OpenBSD: Static filtering of static IPs for SSH~~ = Uncertain whether the OpenOCD actually does perform
+  this claim.
+- ~~OpenBSD: Dynamic filtering of dynamic IPs for VPN (Wireguard)~~ = Only available with server
+  implementation, which is unnecessary.
+- ~~Linux: Dynamic filtering of dynamic IPs for VPN (Wireguard)~~ = We are not concerned with implementing a
+  linux client, because several other options are available for linux clients that are superior. Such as
+  [Edgevpn](https://github.com/mundler/edgevpn).
+- ~~OpenBSD: Encrypted DNS via ODoH / DoT via Unbound + DNScrypt~~ = ODoH currently involves quite a
+  significant amount of latency, which leads to connections timing out. This is unacceptable.
+- ~~OpenBSD: Adblocker skript to pull adlists for Unbound~~ = Redundant as both unbound and dnscrypt-proxy
+  does this for the user.
 
 ### Some steps
 
@@ -60,6 +65,9 @@ This project gets you:
 - **Ad Blocker Script**: Instructions and script for setting up ad blocking on OpenBSD using Unbound.
 
 #### Some OpenBSD Cronjobs right away
+
+From experience, you should not attempt to run `pkg_add -u` or `` as a cron task. This would be a newb mistake. 
+
 -  add via `crontab -e`  
 ```
 @reboot /bin/sleep 30 && /usr/local/bin/wg-quick up wg0
@@ -74,7 +82,7 @@ This project gets you:
 ```
 ### Firewall: OpenBSD PF rules for static & dynamic ips
 
-- You edit the pf rules on ` /etc/pf.conf ` and check via  `pfctl -nf /etc/pf.conf` and  load them via  `pfctl -f  /etc/pf.conf`
+- ~~You edit the pf rules on ` /etc/pf.conf ` and check via  `pfctl -nf /etc/pf.conf` and  load them via  `pfctl -f  /etc/pf.conf`~~
 
 ```
 # $OpenBSD: pf.conf,v 1.55 2017/12/03 20:40:04 sthen Exp $

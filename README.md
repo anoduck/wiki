@@ -37,7 +37,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [ffmpeg](ffmpeg)                 | [bibtex](biblatex)                                  | [melt](melt)                                       |
 | [Project Management](projman)    | [Plantuml](plantuml)                                | [Pipewire](pipewire)                               |
 | [Term](shell)                    | [GnuPlot](gnuplot)                                  | [Biblatex](biblatex)                               |
-| [Mermaid](mermaid)               | [Databases](databases)                              |  ---                                               |
+| [Mermaid](mermaid)               | [Databases](databases)                              | [OpenBSD Wireguard](openbsd-wireguard)             |
 
 [![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 
