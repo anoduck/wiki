@@ -9,6 +9,36 @@
 
 ## Virtualization
 
+### Podman
+
+#### Podman Toolbox
+
+Podman toolbox is a really neat tool that allows users to create rootless containers to run terminal
+applications inside. 
+
+#### Podman Machine 
+
+If your running linux, podman can be used as more than just a substitute for docker, it can be used to manage
+qemu containers as well. The benefit one recieves from using podman in this manner is access to peripheral
+devices that are not normally accessible to docker images. The default image used for doing this is
+fedora-core, but podman can be configured to use other OCI images. 
+
+To use this feature, simply initialize a new podman machine with:
+
+```bash
+podman machine init
+```
+
+Do not use sudo for this, as podman machines are not intended to be run as root ever. If you would like to
+add a USB device along with this new image you can use:
+
+```bash
+podman machine set --use vendor=XXX,product=XXX
+```
+
+Using bus and id are also accepted for these values, although they will change if the device is moved to a
+different usb port or another usb is removed.
+
 ### FreeBSD as guest in Virtualbox
 
 #### Vbox Additions Installation Options
