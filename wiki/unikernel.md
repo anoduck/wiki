@@ -12,17 +12,31 @@
 Up until the rise of virtualization to popularity, the concept of running a kernel for a solitary process was
 counterproductive and highly problematic, but now things have changed. As technology moves closer to isolating
 all processes in self contained virtualized environments, the unikernel is an essentially part of this
-developmental progression, because it provides the foundation for which truly self contained environments can
+developmental progression, as it provides the foundation for which truly self contained environments can
 be built upon.
 
 ### Unikernel variations
 
 Unikernels come in different forms; language specific unikernels, Linux compatible unikernels, and Posix
 compliant unikernels. The latter two are generic unikernels. A handful of language specific unikernels are available for programming languages. Rust,
-Ocaml, Go, ErLang, Pascal, Java, C++, NodeJS and Haskell have unikernels specifically designed to support those languages. Java's jvm is thought of as
-a unikernel.
+Ocaml, Go, ErLang, Pascal, Java, C++, NodeJS and Haskell have unikernels specifically designed to support those languages.
 
 ### Unikernels
+
+A table representation of available unikernel technologies as of Summer 2024. 
+
+| Name      | Supported Langs       | Runtime Envs                  | Features                 | Active | Supported Systems    |
+| --------- | --------------------- | ----------------------------- | ------------------------ | ------ | -------------------- |
+| Kontain   | Any / All             | Docker                        | Uses Docker Build system | Yes    | Not Kali :(          |
+| UniKraft  | Most                  | KVM Xen Linux                 | Kraft orchestration      | Yes    | Linux                |
+| Nanos/Ops | Any / All             | Qemu Xen, Amzn, ggle, hyper V | Ops Orchestration        | Yes    | A whole buttload     |
+| MirageOS  | OCaml only            | KVM or Xen                    | N/A                      | Yes    | Does it even matter? |
+| OSv       | Most                  | Vbox ESXi Amzn ggle           | Cloud and IoT            | Yes    | Linux                |
+| IncludeOS | Mostly for C++        | KVM Vbox VMware ggle          | Mothership orchestration | Yes    | Linux                |
+|           |                       |                               |                          |        |                      |
+
+
+Below are unikernels that may or may not be included in the above table.
 
 - [UniKraft](https://github.com/unikraft/unikraft) -- UniKraft has the appearance of being a popular generic
   unikernel, although is not as documented as one would expect.
@@ -43,3 +57,9 @@ a unikernel.
 
 - [Awesome MicroVMS](https://github.com/infracloudio/awesome-microvm)
 - [Awesome unikernels](https://github.com/uniqernel/awesome-unikernels)
+
+### References
+
+- [seeker89/unikernels](https://github.com/seeker89/unikernels)
+- [cetic/unikernels](https://github.com/cetic/unikernels)
+- [unikernel.org](https://unikernel.org)
