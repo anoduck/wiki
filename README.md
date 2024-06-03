@@ -38,6 +38,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [Project Management](projman)    | [Plantuml](plantuml)                                | [Pipewire](pipewire)                               |
 | [Term](shell)                    | [GnuPlot](gnuplot)                                  | [Biblatex](biblatex)                               |
 | [Mermaid](mermaid)               | [Databases](databases)                              | [OpenBSD Wireguard](openbsd-wireguard)             |
+| [Hardware](hardware)             |                                                     |                                                    |
 
 [![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 

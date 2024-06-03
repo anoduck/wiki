@@ -64,6 +64,7 @@ list them all, it is not nearly such a fantastic task as to hit some favorites a
 #### Debian/Kali/Ubuntu
 
 * [Setting up a serial console in Debian](https://www.howtoforge.com/setting_up_a_serial_console)
+* [Building Custom Kali Image](custom_kali)
 * [fixing apt errors](fix_apt)
 * [Installing AMDGPU Drivers in kali](amd-gpu-kali)
 * [connecting vnc to a Xdummy](vnc-xdummy)
