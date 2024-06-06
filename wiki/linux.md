@@ -43,17 +43,18 @@ list them all, it is not nearly such a fantastic task as to hit some favorites a
 * Alpine: Pretty Kickass.
 * Devian: Like Debian, without system-d.
 * Voidlinux: "Qwerky little bastard" distro.
+* Kali: Because I must.
 
 -----
 
 ### Topic Pages
 
+| [iwd](iwd)                                | [iw](iw)                                    | [Service Managers](service-managers) | [Building Custom Kali Image](custom_kali) | [Fixing Apt Errors](fix_apt) |
+| [Installing AMDGPU Drivers](amd-gpu-kali) | [Connecting to VNC to a Xdummy](vnc-xdummy) | [Network Config Kali](kali-net-conf) |                                           |                              |
+
 #### General
 
-- [iwd](iwd)
-- [iw](iw)
 - [Entware: The Ultimate Repo for embedded devices](https://entware.net)
-- [System Service Managers](service-managers)
 
 #### Void Linux
 
@@ -64,10 +65,6 @@ list them all, it is not nearly such a fantastic task as to hit some favorites a
 #### Debian/Kali/Ubuntu
 
 * [Setting up a serial console in Debian](https://www.howtoforge.com/setting_up_a_serial_console)
-* [Building Custom Kali Image](custom_kali)
-* [fixing apt errors](fix_apt)
-* [Installing AMDGPU Drivers in kali](amd-gpu-kali)
-* [connecting vnc to a Xdummy](vnc-xdummy)
 
 #### ArchLinux / Alpine Linux
 
