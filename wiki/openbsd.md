@@ -18,7 +18,7 @@ These are Topics that are specific to the OpenBSD operating system.
 | [OpenVPN on OpenBSD](open-openvpn)              | [Common Build Issues](build-issues) |
 | [Networking on OpenBSD](openbsd-net)            | [Configuring pfstatd](pfstatd)      |
 | [Wireguard on OpenBSD](openbsd-wireguard)       | [OpenBSD net routes](openbsd-route) |
-| [OpenBSD HTTPD](openbsd-httpd)                  |                                     |
+| [OpenBSD HTTPD](openbsd-httpd)                  | [PF](pf)                            |
 
 ### Links
 

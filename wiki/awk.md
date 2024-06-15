@@ -63,6 +63,19 @@ Using shell variables in AWK can be accomplished like so:
 awk -v var="$variable" '{print var}'
 ```
 
+### Minify a configuration file
+
+A standard configuration file for hostapd that possesses all the available options measures over 2000 lines of
+code in length. The overwhelming majority of these configuration options are not used for a valid basic
+configuration. It is the only situation where reduction of unused options would greatly benefit usability.
+Since hostapd's configuration file indicates commented lines with the standard `#` has mark, we can use this
+to our advantage along with a little awk to reduce the file down to only the options that are not commented
+out.
+
+```awk
+awk -F '=' '!/#/ {if (NF != 0) print $0}' $CONFIG_FILE
+```
+
 Links
 -----
 

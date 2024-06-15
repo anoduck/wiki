@@ -30,7 +30,7 @@ To start whatever the hell you want as a service you only need to: `pm2 start wh
 To start a service that requires a flag, or a service that has mandatory options. Encase the command and
 options in double quotations. Like so:
 
-`pm2 start "whatever-the-hell --option arg1 --option arg2" --name whatever-the-hell`
+`pm2 start "whatever-the-hell --option arg1 --option arg2" --name whatever-the-hell -- other args for command`
 
 Doing so prevents word splitting and contains the service command with options together for pm2 to run as a whole
 command. Notice the additional flag outside the double quotes, it is directed at pm2, and not the command

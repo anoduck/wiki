@@ -56,16 +56,19 @@ important to be familiar with a few basic commands.
 
 ##### Commands
 
-| command                                                                                       | description                                         |
-| --------------------------------------------------------------------------------------------  | --------------------------------------------------- |
-| `iptables-save -f /etc/iptables/iptables.rules`                                               |                                                     |
-| `iptables-restore /etc/iptables/iptables.rules`                                               |                                                     |
-| `iptables -A INPUT -i eth0 -p tcp --dport 902 -j REJECT --reject-with icmp-port-unreachable`  |                                                     |
-| `iptables -L INPUT --line-numbers`                                                            |                                                     |
-| `iptables -D INPUT 2`                                                                         |                                                     |
-| `-w -P FORWARD ACCEPT`                                                                        | Accept forwards                                     |
-| `w -t nat -A POSTROUTING --out-interface $inet -j MASQUERADE`                                 | nat masquerade as inet                              |
-| `-w -A FORWARD -i $inet --out-interface $wlan -j ACCEPT -m state --state RELATED,ESTABLISHED` | forward inet out to wlan if related or established  |
-| `-w -A FORWARD -i $wlan --out-interface $inet -j ACCEPT`                                      | forward wlan out to inet.                           |
-| `-w -A OUTPUT --out-interface $inet -j ACCEPT`                                                | accept out traffic                                  |
-| `-w -A INPUT --in-interface $wlan -j ACCEPT`                                                  | accept in traffic                                   |
+| command                                                                                                  | description                                         |
+| --------------------------------------------------------------------------------------------             | --------------------------------------------------- |
+| `iptables-save -f /etc/iptables/iptables.rules`                                                          |                                                     |
+| `iptables-restore /etc/iptables/iptables.rules`                                                          |                                                     |
+| `iptables -A INPUT -i eth0 -p tcp --dport 902 -j REJECT --reject-with icmp-port-unreachable`             |                                                     |
+| `iptables -L INPUT --line-numbers`                                                                       |                                                     |
+| `iptables -D INPUT 2`                                                                                    |                                                     |
+| `-w -P FORWARD ACCEPT`                                                                                   | Accept forwards                                     |
+| `w -t nat -A POSTROUTING --out-interface $inet -j MASQUERADE`                                            | nat masquerade as inet                              |
+| `-w -A FORWARD -i $inet --out-interface $wlan -j ACCEPT -m state --state RELATED,ESTABLISHED`            | forward inet out to wlan if related or established  |
+| `-w -A FORWARD -i $wlan --out-interface $inet -j ACCEPT`                                                 | forward wlan out to inet.                           |
+| `-w -A OUTPUT --out-interface $inet -j ACCEPT`                                                           | accept out traffic                                  |
+| `-w -A INPUT --in-interface $wlan -j ACCEPT`                                                             | accept in traffic                                   |
+| `iptables -A INPUT -p tcp -s 203.0.113.0/24 --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j ACCEPT` | Allow ssh from specific address                     |
+| `iptables -A OUTPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT`                      | Allow outgoing ssh (only if OUTPUT != ACCEPT)       |
+

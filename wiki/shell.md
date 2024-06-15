@@ -33,10 +33,19 @@ Here is my page on zsh --> [zsh](zsh)
 
 * [zi](https://github.com/z-shell/zi)
 
-### New Commands
+### New Command
 
 Recently a few new commands have been encountered, that have never been seen before. Unsure if they are new arrivals
 or if they are older commands which have a new found popularity. They listed below.
 
-- newgrp - Newgroup allows a user to initiate and finalize changes to group membership without having to log out and in again.
-- pushd - Allows a user to temporarily cd and then back again.
+#### newgrp
+
+Newgroup allows a user to initiate and finalize changes to group membership without having to log out and in again.
+This feature becomes handy when the user does not need to lose any established environment variables.
+
+#### Pushd
+
+Pushd comes from perl, and appears to be part of the standard perl package. The best way to describe the
+functionality of pushd is to think of it as a temporary change directory command. As it allows the user to designate a
+directory to change into, and when ready, executing the command again without any arguements then will return the
+user back to the directory he started out in. 
