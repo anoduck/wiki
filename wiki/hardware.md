@@ -39,4 +39,4 @@ the system will boot without the case.
 
 ### Your handy troubleshooting chart.
 
-![Troubleshooting Flowchart](/assets/img/hardware_troubleshoot.png)
+![Troubleshooting Flowchart](https://anoduck.github.io/wiki/assets/img/hardware_troubleshoot.png)
