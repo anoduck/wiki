@@ -145,3 +145,41 @@ ip netns exec cheryl ip link set dev veth1 up
 
 If you wanted to add a physical device to a namespace, you can simply do so with `ip link set dev
 <$YOUR_DEVICE> netns cheryl`, and with that you will have a physical device on the namespace as well.
+
+### Working with physical networks, physical network interfaces, and virtual ethernet interfaces
+
+Basically, to summarize the process. If you have an extra ethernet interface on your machine, and want to
+connect that to a virtual network namespace, there is nothing to prevent you from doing so. Just add it as
+defined above, and you should be fine. Although, if you do not possess an additional physical ethernet interface,
+and instead you want to connect a virtual ethernet interface to a physical network, and there is already a physical device
+connected to that network, then you will need to create a network bridge first, and then add your virtual ethernet interface to the bridge. 
+
+### Assigning and isolating wireless interfaces in virtual namespaces
+
+Take the scenario into consideration: If you create a network namespace named "wifi", `ip netns add wifi`, and 
+having not configured the wireless interface at all, attempt to assign that wireless interface to the newly
+created namespace, `ip link set dev wlan0 netns wifi`, the response you will recieve is `RTNETLINK answers:
+Invalid arguement`. This is because iproute2 and the iw framework both are designed to work on the processes
+created by interface, and not the interface itself. 
+
+One way to skirt around this limitation, is not to assign the wireless interface to the netns itself, but by
+creating a process that runs on the netns, and the assign the wireless interface to that process's ID. The
+following shows how to do exactly that.
+
+```bash
+ip netns exec wifi bash  # This should start a new bash process on the namespace
+echo $BASHPID  # This will give you the process id for the above process
+ip link set dev wlan0 netns $(echo BASHPID)  # Now attach the interface to the above process id.
+```
+
+What you should notice is the above worked and now the wireless interface is attached to the interface and
+isolated.
+
+
+
+### References
+
+- https://www.suse.com/c/creating-virtual-wlan-interfaces/
+- https://wiki.debian.org/BridgeNetworkConnections
+- https://developers.redhat.com/blog/2019/05/17/an-introduction-to-linux-virtual-interfaces-tunnels
+- https://developers.redhat.com/blog/2018/10/22/introduction-to-linux-interfaces-for-virtual-networking
