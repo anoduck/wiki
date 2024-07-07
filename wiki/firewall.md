@@ -31,7 +31,5 @@ those who strongly disagree, as PF provides a network environment that possesses
 that is nearly impossible to spoof. Regardless, familiarity of the two is a skill every system administrator
 should possess.
 
-| -------------------- | -------- | ---------- | ---------------------- |
-| [iptables](iptables) | [pf](pf) | [ufw](ufw) | [shorewall](shorewall) |
-| -------------------- | -------- | ---------- | ---------------------- |
+| [iptables](iptables) | [pf](pf) | [ufw](ufw) | [shorewall](shorewall) | [firehol](firehol) |
 
