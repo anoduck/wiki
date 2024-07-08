@@ -22,6 +22,12 @@ mind, that the contents of this page is probably already outdated upon creation.
 
 Sets of OSINt Friendly Links
 
+#### Misc Links
+
+I don't know where else to put this, it isn't quite OSINT, more like just regular IT security. But here:
+
+- [OWASPS list of vulnerable applications](https://owasp.org/www-project-vulnerable-web-applications-directory/)
+
 #### Osint Sites
 
 * [blackbird](https://blackbird-osint.herokuapp.com/)
