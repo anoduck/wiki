@@ -9,6 +9,8 @@
 
 ## Firehol: Now, that's something different
 
+THIS PAGE IS A WIP!
+
 If you have ever taken a survey of firewall technologies for linux, you will find a great abundance of
 software intended to make configuration and setup of firewalls easier. Not being the biggest fan of iptables,
 we can understand this. It is not that configuring iptables is complicated or difficult, but it is that
@@ -24,8 +26,9 @@ netdata. It shares many of the same "no hassle" magical traits that you find in 
 also takes on a different approach to building firewalls that one might dare to say is more reflective of the
 real structure of networking firewalls. 
 
-Firehol is also only one part of the firehol technology, as it is accompanied by fireqos, which is a traffic
-shaping system.
+__IMPORTANT_NOTE:__ Firehol is way more complex than originally assumed when this tutorial was first written.
+Although ample documentation is provided, it is rather lean in our honest opinion, and could use further
+expansion to grant clarity.
 
 Being pressed for time, we shall only provide a tiny dabble into how to use firehol.
 
@@ -79,3 +82,99 @@ have a working configuration file, it will then prompt you to load the rules and
 pressing the enter key.
 
 Then your done.
+
+### Firehol configuration: A deeper dive
+
+Firehol is an entire suite of tools provided to work with modern linux systems. When we say "modern linux
+systems", we are referring to the current effort of linux developers to embrace virtualization and virtualized
+solutions. Although vague in definition, the result of this effort is linux's virtual namespaced networking
+stack. Such tools created for and currently being adopted to implement are iproute2, iw, and numerous
+virtualized networking protocol to name a few. 
+
+To help manage this stack, Firehol provides the following tools: iprange, firehol, fireqos, update-ipsets, and
+vnetbuild. Although the Firehol team does not maintain or develop the ipsets toolset it does implement many
+features to work alongside ipsets. Ipsets, being self exlanative, is a tool to define sets of ip addresses
+that can be used in network configurations and firewall configurations.
+
+Firehol configuration files are an oddity as far as configuration files are concerned, because they allow the
+user to define their own variables and do accept some basic forms of shell scripting language. How firehol is
+able to distinguish between user defined variables and it's own syntax is not really known, but it works.
+
+#### Configuration file structure
+
+The structure of your firehol configuration is very important, as firehol will match rules and directives in a
+first come first serve policy, it will also not parse a configuration file if it is not structured correctly.
+Although not stated in the firehol configuration tutorial, firehol configuration files consist of the
+following sections:
+
+1. Versioning definition
+2. Service Definitions
+3. Shell Variables
+4. Helper Directives
+5. Interface Definitions
+6. Router Definitions
+
+We will take each of these one at a time and see if we can make sense of them.
+
+##### Versioning definition
+
+Firehol allows users to create versioning labeling for their configurations. See docs on how to do this.
+
+##### Service Definitions
+
+The firehol documentation states that you can create service definitions in one of two locations, you can
+place them in the top of your configuration file (which did not work for us) or place them in their own file
+within the `/etc/firehol/services` directory (which we did not care to try) with a `.conf` file extension.
+Service definitions have a required labeling structure, that defines a) whether it is a client or server, b) the
+name of the service, and c) followed by `_ports`. So for our attempt at adding definitions for the tinc vpn
+service, our custom definitions looked like so.
+
+```conf
+server_tinc_ports="tcp/9933 udp/9933"
+client_tinc_ports="tcp/9933 udp/9933"
+```
+
+The examples provided in the firehol documentation employ the use of the keywork "default", what actually that
+is or what it does is not defined.
+
+If you do decide to add your own service definitions to the `/etc/firehol/services` directory, it needs to be
+noted that each file must begin with `#FHVER: 1:213`. More information about this can be found on the [firehol
+service definition page](https://firehol.org/guides/adding-services/)
+
+##### Shell variables
+
+Shell variables should be self explanatory at this point. When incorporated into your configuration file, the
+only difference is that the variables must be encased in a pair of curly brackets preceded by a `$` sign. So
+for example, a variable defining you local lan network would look something like this `"${lan_net}`. 
+
+```bash
+LAN_NET="192.168.0.0/24"
+
+interface eth0 lan src "${LAN_NET}" dst 192.168.0.211
+    server http accept
+    client all accept
+```
+
+##### Helper Directives
+
+Helper directives are dependent on which of the many directives you try to use.
+
+##### Interface Definitions
+
+Interface definitions have nothing to do with anything else accept the actual interfaces on the firewall. They
+exist to protect the firewall.
+
+##### Router Definitions
+
+At least three times in the firehol tutorial, it mentions that router definitions can get confusing, and no truer
+words have been spoken before in technical literature. Confusing indeed. 
+
+Router definitions define the routes packets travel through the host system of the firewall to their eventual
+destination. You only need be concerned with requests, firehol will handle the replies automatically for you.
+
+### References
+
+- [Required reading: Intro to firehol](https://firehol.org/guides/firehol-welcome)
+- [The only full example of firehol.conf provided in the repo](https://github.com/firehol/firehol/blob/master/examples/lan-gateway.conf)
+- [A script to scrape adblock urls](https://github.com/firehol/firehol/blob/master/examples/adblock.sh)
+- [An example of fireqos from the repo](https://github.com/firehol/firehol/blob/master/examples/fireqos.conf)
