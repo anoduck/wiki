@@ -17,6 +17,7 @@ mind, that the contents of this page is probably already outdated upon creation.
 ### Sections
 
 | [crackersVShackers](crackersVSHackers) | [Satellite Imagery](satimgs) | [cellular data](osintcell) |
+| [dorks](dorks)                         | [botnet](botnets)            | ---                        |
 
 ### Links
 

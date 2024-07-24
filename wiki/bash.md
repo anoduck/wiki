@@ -37,6 +37,7 @@ Conditional operators are used in "if" statements and allow testing for many dif
 ### Anoduck Approved CheatSheet
 
 - [Bash Scripting CheatSheat](https://devhints.io/bash)
+- [A Complete Guide to Bash Arrays](https://shell-tips.com/bash/arrays/#gsc.tab=0)
 
 ### Bash Tutorials
 

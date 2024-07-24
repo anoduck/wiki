@@ -49,8 +49,8 @@ list them all, it is not nearly such a fantastic task as to hit some favorites a
 
 ### Topic Pages
 
-| [iwd](iwd)                                | [iw](iw)                                    | [Service Managers](service-managers) | [Building Custom Kali Image](custom_kali) | [Fixing Apt Errors](fix_apt) |
-| [Installing AMDGPU Drivers](amd-gpu-kali) | [Connecting to VNC to a Xdummy](vnc-xdummy) | [Network Config Kali](kali-net-conf) | [Iptables](firewall)                      |                              |
+| [iwd](iwd)                                | [iw](iw)                                    | [Service Managers](service-managers) | [Building Custom Kali Image](custom_kali) | [Fixing Apt Errors](fix_apt)     |
+| [Installing AMDGPU Drivers](amd-gpu-kali) | [Connecting to VNC to a Xdummy](vnc-xdummy) | [Network Config Kali](kali-net-conf) | [Iptables](firewall)                      | [wpa_supplicant](wpa_supplicant) |
 
 #### General
 

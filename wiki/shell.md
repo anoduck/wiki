@@ -33,10 +33,10 @@ Here is my page on zsh --> [zsh](zsh)
 
 * [zi](https://github.com/z-shell/zi)
 
-### New Command
+### New Commands
 
 Recently a few new commands have been encountered, that have never been seen before. Unsure if they are new arrivals
-or if they are older commands which have a new found popularity. They listed below.
+or if they are older commands which were unknown of. Either way, they listed below.
 
 #### newgrp
 
