@@ -29,28 +29,31 @@ licensing barriers.
 There are enough variating distributions of linux to fill an entire wiki on it's own. Some come into
 existence like a flash of light; brilliant, bright, but short lived. While other distros exist like
 a vintage Porsche; timeless, majestic, and performance driven. While it will be too exhaustive to
-list them all, it is not nearly such a fantastic task as to hit some favorites and hight points.
+list them all, it is not nearly such a fantastic task as to hit some favorites and high points.
 
 #### The Big Names
 
 * Debian/Ubuntu: "I run Ubuntu, although it is really just Debian unstable" distros.
 * Redhat/Fedora: "I still own an 8-Track player" distro.
 * Gentoo: "Compile the Kernel on Linux, before using linux" distro.
+* Slackware: "If it works well, don't fuck with it." distro.
 * Suse: Does anyone use this anymore?
-* Arch: Never tried it.
+* Arch: Not too shabby.
 
 #### Favorites
-* Alpine: Pretty Kickass.
+* Alpine: Pretty lean and mean.
 * Devian: Like Debian, without system-d.
-* Voidlinux: "Qwerky little bastard" distro.
+* Voidlinux: "Qwerky little bastard."
+* Slackware: "I have no complaints."
 * Kali: Because I must.
 
 -----
 
 ### Topic Pages
 
-| [iwd](iwd)                                | [iw](iw)                                    | [Service Managers](service-managers) | [Building Custom Kali Image](custom_kali) | [Fixing Apt Errors](fix_apt)     |
-| [Installing AMDGPU Drivers](amd-gpu-kali) | [Connecting to VNC to a Xdummy](vnc-xdummy) | [Network Config Kali](kali-net-conf) | [Iptables](firewall)                      | [wpa_supplicant](wpa_supplicant) |
+| [iwd](iwd)                                  | [iw](iw)                                    | [Service Managers](service-managers) | [Building Custom Kali Image](custom_kali) | [Fixing Apt Errors](fix_apt)     |
+| [Installing AMDGPU Drivers](amd-gpu-kali)   | [Connecting to VNC to a Xdummy](vnc-xdummy) | [Network Config Kali](kali-net-conf) | [Iptables](firewall)                      | [wpa_supplicant](wpa_supplicant) |
+| [failed to open render](failed_open_render) |                                             |                                      |                                           |                                  |
 
 #### General
 

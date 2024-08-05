@@ -31,6 +31,8 @@ MariaDB is the new standard, where mysql is yesterday's lunch.
 Since most databases take advantage of the SQL specification, this means those databases can be managed and
 queried using the same syntax.
 
+- [MariaDB](mariadb)
+
 ### NonTraditional Databases
 
 One of the more irritating things about modern computing is it's tendency to be utterly faddish and completely
@@ -39,6 +41,6 @@ frequency of which one might encounter one of the many NonTraditional Databases 
 of fad obsession. (Worded awkwardly, and redundant.) As of the time this was currently written, Redis and
 MongoDB were beginning to tedder in popularity, where InfluxDB was rising. 
 
-[InfluxDB](influxdb)
+- [InfluxDB](influxdb)
 
 

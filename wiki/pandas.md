@@ -8,44 +8,33 @@
 #
 ```
 
-## Working with Pandas
+## Working with Pandas is a gigantic pain in the ass!
 
-Libero.
-Mollis.
+Make no mistake about it, python pandas is a brilliant feat of programming genius. The pandas library provides
+a robust datastructure that allows processing massive amounts of data efficiently and with great speed. The
+Pandas library also allows programmers to convert massive amounts of data into nearly every datastructure
+available. It can read directly from csv files, json files, databases, and whatever other type of data storage
+you can thing of. It is without a doubt a zenith of modern pythonistic engineering.
 
-Lorem ipsum fames nisi scelerisque suspendisse interdum, lectus semper mauris curae fringilla. Velit aenean fringilla odio porta nulla eros gravida a dictumst sit eros, euismod aenean iaculis pulvinar euismod duis libero dapibus accumsan eros. Fringilla semper inceptos porttitor arcu bibendum placerat lectus potenti fermentum hendrerit, class condimentum sagittis aptent feugiat interdum tortor bibendum. Ut fusce metus lorem dapibus risus habitasse, phasellus proin ut lorem luctus fames ad, interdum aenean tincidunt dui faucibus.
+Unfortunately, due to it's abstract and robust nature, it's a tremendous pain in the ass to work with. There
+are simply too many methods and required parameters to keep up with unless you work with it on a daily basis.
+The Pandas library also has it's own way of doing things, which may or may not jive with how you do things.
+Then there are a number of informal "hacks" not mentioned in the docs, on how to get common tasks
+accomplished. It is brilliant, yes, but so was the first land mine.
 
-Quam neque nec arcu vulva quis neque vehicula facilisis shit, consectetur hendrerit donec magna eros a diam. Turpis placerat aliquet justo at dapibus cursus, netus interdum consectetur cras euismod, quisque a mi molestie gravida. Dapibus primis morbi tellus facilisis pulvinar sapien litora tempus, ultrices vestibulum pharetra fermentum etiam et. Pharetra litora habitasse purus congue ultricies, dictum euismod sodales libero curabitur aptent, lorem scelerisque ultricies elementum.
+### Cheat Sheet
 
-### Oneliners
+1. Create Dataframe: `dataframe = pd.DataFrame(record, columns = ['$COLUMN_NAMES'])`
+2. Select Row by Condition: `$DATAFRAME_NAME[$DATAFRAME_NAME['$COLUMN_NAME'] == $VALUE]` or `$DATAFRAME_NAME.loc[$DATAFRAME_NAME['$COLUMN_NAME'] == $VALUE]`
+3. Test for equality: `$DATAFRAME_NAME.$PROPERTY.equals($TEST_VALUE)`
+4. Add column headers to pre-existing dataframe: `$DATAFRAME_NAME.columns = ['$COLUMN_NAMES']`
+5. Find the most common occurring value in a column: 
+    ```python
+    df = pd.DataFrame({'care': 98, 'robert': 43, 'shit': 100}, columns=['word', 'score'])
+    grouped = df.groupby('word')
+    word_rep = grouped['word'].agg(lambda x: x.mode().iloc[0])
+    ```
+6. find the maximum value of a column: `df.loc[df['score'].idxmax()]`
+7. Get first item from series: '<$Series>.item()'
+8. Create series from dataframe: `df.<$COLUMN_LABEL>` or `df['<$COLUMN_LABEL>']`
 
-__Create Dataframe:__ 
-
-1. `dataframe = pd.DataFrame(record, columns = ['$COLUMN_NAMES'])`
-
-__Select Row by Condition:__
-
-1. `$DATAFRAME_NAME[$DATAFRAME_NAME['$COLUMN_NAME'] == $VALUE]`
-2. `$DATAFRAME_NAME.loc[$DATAFRAME_NAME['$COLUMN_NAME'] == $VALUE]`
-
-__Test for equality__
-
-1. `$DATAFRAME_NAME.$PROPERTY.equals($TEST_VALUE)`
-
-__Add column headers to pre-existing dataframe__
-
-1. `$DATAFRAME_NAME.columns = ['$COLUMN_NAMES']`
-
-__Find the most common occurring value in a column__
-
-```python
-df = pd.DataFrame({'care': 98, 'robert': 43, 'shit': 100}, columns=['word', 'score'])
-grouped = df.groupby('word')
-word_rep = grouped['word'].agg(lambda x: x.mode().iloc[0])
-```
-
-__find the maximum value of a column__
-
-```python
-df.loc[df['score'].idxmax()]
-```

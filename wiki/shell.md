@@ -6,8 +6,6 @@
 # |____/|_| |_|\___|_|_|
 #
 ```
-<a href>Dude</a>
-
 
 ## The comforts of shell
 
@@ -32,6 +30,19 @@ Here is where I take a stab at explaining what ZSH is, and why zsh differs from 
 Here is my page on zsh --> [zsh](zsh)
 
 * [zi](https://github.com/z-shell/zi)
+
+### Neat tricks
+
+This section is to cover neat tricks that are too cool to be tucked away in a section of their own.
+
+#### Using EOF to write a file in your shell
+
+```bash
+cat <<EOF> $FILE
+> #!/usr/bin/env bash
+> echo "Do something really cool!"
+> EOF
+```
 
 ### New Commands
 

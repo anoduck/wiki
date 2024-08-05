@@ -15,6 +15,8 @@ At one time or another almost every system admin has had to setup a VNC server. 
 means to accomplish this. For this example we will setup a vncserver that initiated by systemd on a debian
 derivitive using tigervnc.
 
+For information on how to setup the X-dummy driver for truly headless desktops, please see
+[vnc-xdummy](vnc-xdummy).
 
 ### Setting up tigervnc-scraping
 
