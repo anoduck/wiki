@@ -54,6 +54,26 @@ they follow the correct file format. All yasnippets start with the same header:
 
 Once written, simply save the file in the propert location and tell yasnippet to reload all snippets.
 
+#### Autobinding keys to snippets
+
+A cool feature of yasnippet is it's ability to automatically add keybinds directly to the insertion of
+snippets simply by adding them to the snippet file after the heading label `binding:`. Nothing else is needed
+after the label, which makes this step really convenient. To take the example provided above, adding a binding
+label would change our heading to below.
+
+```elisp
+# -*- mode: snippet -*-
+# name: snippet_name
+# key: some_key
+# binding: C-c C-z x
+# --
+
+;; Here is where you write your snippet.
+
+```
+
+This would allow us to insert the snippet simply by pressing `Ctrl-c Ctrl-z x` keys. Super cool.
+
 #### Adding place holders to your snippets.
 
 If a snippet contains a placeholder, then once the snippet is inserted into the file, the cursor will
@@ -64,7 +84,7 @@ order which the snippet was written.
 
 Placeholders with labels can be added to your snippets by use of the format `${N:LABEL}`. Where `N` is the
 number designating the order in which the labels should be replaced, and `LABEL` is the actually placeholder
-label that will be replaced by the user. A basic example is provided below:
+label that will be replaced by the user. [^1] A basic example is provided below:
 
 ```elisp
 # -*- mode: snippet -*-
@@ -77,3 +97,26 @@ label that will be replaced by the user. A basic example is provided below:
 When you insert this snippet it the fifth hash mark will be read exactly as you intended it, and the cursor
 will be moved automatically to the shell placeholder for you to designate your shell.
 
+#### Using Elisp in your snippets
+
+Once you understand how to create placeholders inside your snippet files, it will be very easy to pick up on
+how to include elisp in your snippet files as well. The only difference between the two, is instead of writing
+your placeholder label after your numeric designator [^2], you would write your elisp code inside of a pair of
+backticks "`(CODE)`". For example:
+
+```elisp
+${1:Label}
+
+;; would be
+
+${1:`(some elisp code here)`}
+
+```
+
+If you have not yet, you should visit yasnippets documentation. It is written very well, and to the point.
+(Unlike this wiki.)
+
+[^1]: https://joaotavora.github.io/yasnippet/
+[^2]: "Numeric Designator" is a poorly chosen descriptor for the article, this is because the number ascribes
+    what order in which the placeholder will processed. "Chronological descriptor" would have been more
+    accurate, but it doesn't feel correct at the moment.

@@ -31,7 +31,7 @@ MariaDB is the new standard, where mysql is yesterday's lunch.
 Since most databases take advantage of the SQL specification, this means those databases can be managed and
 queried using the same syntax.
 
-- [MariaDB](mariadb)
+| [MariaDB](mariadb) | [PostgreSQL](postgres) |
 
 ### NonTraditional Databases
 
