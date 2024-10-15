@@ -39,7 +39,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [Term](shell)                    | [GnuPlot](gnuplot)                                  | [Biblatex](biblatex)                               |
 | [Mermaid](mermaid)               | [Databases](databases)                              | [OpenBSD Wireguard](openbsd-wireguard)             |
 | [Hardware](hardware)             | [OSsec](ossec)                                      | [Zsh](zsh)                                         |
-| [Web Servers](web_servers)       |                                                     |                                                    |
+| [Web Servers](web_servers)       | [IRC](irc)                                          | [OpenSSL](openssl)                                 |
 
 [![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 

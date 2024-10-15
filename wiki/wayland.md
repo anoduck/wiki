@@ -25,14 +25,22 @@ possesses the lighter footprint and significantly lighter load.
 
 #### How do I implement it?
 
-Another good question. From what we have read so far the answer is not a fun one. Certain programs that you
-would use under X are going to be replaced with a Wayland equivolant. This means your login manager, and your
-vnc server will need to be replaced.
+Although, not necessarily a fun job to perform, it is very doable. Programs that are X specific will need to be replaced
+with a Wayland equivolant. This means your Desktop Environment manager, terminal, and your vnc server, if you have one, 
+will all need to be replaced with their wayland counterpart. Before you do, you need to have settled on which
+wayland implementation you plan on using. This is to to ensure uniformity and avoid conflicts in design. Once
+done, you will need to setup the desktop environment manager to start on system start, this in turn is what
+will start wayland for you after logging in. 
+
+The most crucial part is to ensure you have Xwayland installed and started by you wayland implementation after
+login. The Xwayland program provides the necessary libraries and support to allow you to run programs designed
+to run on X to be run on wayland. So, to put it simply, Xwayland acts as an adapter for your X programs.
 
 ### How do you get rid of it?
 
-Obviously, you perform the same steps you used to implement it in reverse, but if you had forgotten how you
-implemented it, then you would be in the same boat we find ourselves in. 
+Removing wayland is no biggie either, just install the necessary programs you desire, disable the wayland
+desktop environment manager from starting on system start, and instead enable xserver to run on startup. This
+should put you back on X.
 
 ### References
 

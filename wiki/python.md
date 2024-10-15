@@ -18,6 +18,7 @@ commonly used programming languages.
 10. [Writing modules](py-modules)
 11. [Creating Daemons](create_daemons)
 12. [Special Method Names](special_names)
+13. [partial](python_partial)
 
 ### Jupyter Lab
 

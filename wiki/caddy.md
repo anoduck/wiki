@@ -58,7 +58,7 @@ example {
 	php_fastcgi 127.0.0.1:9000 {
 		root /var/www/example
 		index off
-	}
+}
 
 	try_files {path} {path}/ =404
 
@@ -66,9 +66,27 @@ example {
 }
 ```
 
+###### Caddyfile Structure
+
+```ascii
+   ┌───────┐
+   │Globals│ 
+   └───────┘
+   ┌────────┐
+   │Snippets│
+   └────────┘
+   ┌──────────┐
+   │Site Block│
+   └──────────┘
+   ┌──────────────────┐
+   │Matcher Definition│
+   └──────────────────┘
+```
+
 ##### Two Formats Example: Json
 
-Now the exact same file, but in caddy's json format.
+<details>
+<summary>Now the exact same file, but in caddy's json format.</summary>
 
 ```json
 {
@@ -203,6 +221,7 @@ Now the exact same file, but in caddy's json format.
 	}
 }
 ```
+</details>
 
 ##### Conclusion: Caddyfile
 
@@ -229,4 +248,103 @@ There are primarily two parts to a caddy configuration file, or at least two par
 These parts are the global section and the site section. You can have numerous site sections, but only one
 global section.
 
+TBD
 
+### Caddy Reverse Proxy Configuration
+
+While at a forum it was overheard how another user had configured Caddy to act as a reverse proxy. Why he
+chose to do so can be a matter of some vicious debate. It is analogous to using a sledge hammer to open up a
+jar of peanut butter, but let us not digress. Anyone would have to admit, Caddy's auto ssl certificate
+functionality is probably the sweetest thing since creamed corn. So recently, after discovering our own ssl
+certificates were out of date, we began looking for where we placed that sledge hammer.
+
+```Caddyfile
+
+{
+	log default {
+		output file /var/log/caddy/caddy.log {
+			roll_size 10MiB
+			roll_keep 3
+		}
+		format json
+		level DEBUG
+	}
+}
+example.com {
+	header / {
+	    Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+	    X-Xss-Protection "1; mode=block"
+	    X-Content-Type-Options "nosniff"
+	    X-Frame-Options "DENY"
+	    Content-Security-Policy "upgrade-insecure-requests"
+	    Referrer-Policy "strict-origin-when-cross-origin"
+	    Cache-Control "public, max-age=15, must-revalidate"
+	    Feature-Policy "accelerometer 'none'; ambient-light-sensor 'none'; autoplay 'self'; camera 'none'; encrypted-media 'none'; fullscreen 'self'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; picture-in-picture *; speaker 'none'; sync-xhr 'none'; usb 'none'; vr 'none'"
+	} 
+```
+
+#### With internal SSL
+
+Our goal was to implement the reverse proxy with internal ssl, but it was the first thing to be yanked once
+the initial attempt did not work.
+
+```Caddyfile
+	reverse_proxy localhost:443 {
+		transport http {
+			tls_trusted_ca_certs /path/to/example.pem
+			tls_server_name example.com
+		}
+	}
+}
+```
+
+#### Without SSL
+
+As mentioned previously, our first attempt with internal ssl was not successful, which was abandoned for a
+simpler approach.
+
+```Caddyfile
+    reverse_proxy localhost:80
+```
+
+### Enable Gzip Compression
+
+Enabling gzip compression in Caddy is merely a matter of adding `encode gzip` to the list of directives within
+the site block.
+
+```Caddyfile
+    encode gzip
+```
+
+### Setting up redirections
+
+For various reasons, search engines actually prefer there to be one canonical address for your site, and
+desire for any other address to your site to be served with a `301 redirect` message. In Caddy, this means you
+will need to create an additional site block for those addresses and add a redirection directive to that site
+block. So for the example configuration we used above, configuring a redirection would look like so:
+
+```Caddyfile
+www.example.com {
+    redir https://example.com{uri} permanent
+}
+example.com {
+    root * /var/www/example
+	
+	header +X-Frame-Options "SAMEORIGIN"
+	header +X-Content-Type-Options "nosniff"
+
+	php_fastcgi 127.0.0.1:9000 {
+		root /var/www/example
+		index off
+}
+
+	try_files {path} {path}/ =404
+
+	file_server 
+}  
+```
+
+The first site block informs Caddy to respond to `www.example.com` and redirect requests to
+`https://example.com` making sure that the request uri `{uri}` remains the same for full compatibility. The
+addition of the word `permanent` informs Caddy to respond with a `302` because this redirection is to be
+permanent.

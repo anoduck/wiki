@@ -63,6 +63,24 @@ Using shell variables in AWK can be accomplished like so:
 awk -v var="$variable" '{print var}'
 ```
 
+### Strip whitespaces from line endings
+
+This one liner uses the awk function `gsub(str, rep)` to replace the string `str` with `rep` on every
+occurrence throughout the entire file. The function `gsub` is truly handy to know. 
+
+```bash
+awk '{gsub(/ +$/, ""); print}' $FILE.ext
+```
+
+### Remove duplicate lines
+
+Absolutely brilliant way of removing duplicate lines from a file. This example is a excellent way to
+demonstrate the power, simplicity, and flexibility of the AWK language.
+
+```bash
+ awk '!visited[$0]++' $FILE.ext
+```
+
 ### Minify a configuration file
 
 A standard configuration file for hostapd that possesses all the available options measures over 2000 lines of

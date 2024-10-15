@@ -56,44 +56,9 @@ EndSection
 4. At the bottom of the configuration file you will find the settings for lightdm to run as a vnc server.
 5. Simply uncomment each applicable setting, close the file, and restart the server.
 
-### Using xinetd to setup tigerXvnc
+#### Handling the `Failed to create IPV6 VNC socket` error
 
-Probably not the reccommended way to setup a vnc server, but with this method, one is allowed to run vnc on a
-truly headless host.
+The full error output is: `WARNING: Failed to create IPv6 VNC socket: Error binding to address 127.0.0.1:5900: Invalid argument`
 
-*This method was abandoned as it only opened a empty gray screen.*
-
-#### Xinetd Service
-
-We will use Xinetd to manage starting the xnvcserver, and so we will need to configure that service for
-xinetd.
-
-```config
-service xvncserver {
-	disable = no
-	protocol = tcp
-	socket_type = stream
-	wait = no
-	user = root
-	server = /usr/bin/Xtigervnc
-	server_args = -inetd -query localhost -once -geometry 1024x768 -depth 24 -fp /usr/share/X11/fonts/misc -securitytypes=none
-	}
-```
-
-#### Defining the service in `/etc/services`
-
-In order for xinetd to know which service it is to start, you will need to add it to the `/etc/services` file.
-Add it to the bottom of the file, where it notates `custom services`, or some reasonable facsimile thereof.
-
-```config
-xvncserver 	5950/tcp 	#for xvncserver
-```
-
-#### Configure xdm
-
-Both gdm and lightdm can be used for this as well, but gdm tends to be rather heavy and lightdm appears to
-require a head. So for this xdm was chosen.
-
-* In the file `/etc/X11/xdm/Xaccess` uncomment the line `*             #any host can get a login window`, this
-	will enable remote access
-* In the file `/etc/X11/xdm/xdm-config` comment the line `!DisplayManager.requestPort:    0` with a `!`.
+Right now, fuck if I know. For some reason lightdm is insisting on launching Xvnc on ipv6, which should not be
+a problem, but appears to be.
