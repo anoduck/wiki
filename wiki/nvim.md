@@ -9,11 +9,13 @@
 
 ## NeoVIM
 
-To be successful youâ€™ve got to work hard, to make history, simple, youâ€™ve got to make it. To be successful
-youâ€™ve got to work hard, to make history, simple, youâ€™ve got to make it. They will try to close the door on
-you, just open it. Cloth talk. Egg whites, turkey sausage, wheat toast, water. Of course they donâ€™t want us to
-eat our breakfast, so we are going to enjoy our breakfast. Find peace, life is like a water fall, youâ€™ve gotta
-flow.
+íåâîçáóæä¸ííûé.
+
+### Insert a Section symbol
+
+To insert a section symbol in either vim or neovim: `Ctrl+kâ‡§ Shift+Sâ‡§ Shift+E (a Vim digraph)`
+
+### Links
 
 *I reccommended everythin and anything written by Von Heikemen*
 
