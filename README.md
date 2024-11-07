@@ -40,6 +40,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [Mermaid](mermaid)               | [Databases](databases)                              | [OpenBSD Wireguard](openbsd-wireguard)             |
 | [Hardware](hardware)             | [OSsec](ossec)                                      | [Zsh](zsh)                                         |
 | [Web Servers](web_servers)       | [IRC](irc)                                          | [OpenSSL](openssl)                                 |
+| [Web Frameworks](webframeworks)  | [Encoding](encoding)                                |                                                    |
 
 [![pages-build-deployment](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 

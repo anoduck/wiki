@@ -1,14 +1,4 @@
 ```text
-  ____  _____
- |  _ \|  ___|
- | |_) | |_
- |  _ <|  _|
- |_| \_\_|
-                  _
-   __ _ _ __   __| |
-  / _` | '_ \ / _` |
- | (_| | | | | (_| |
-  \__,_|_| |_|\__,_|
   ____  ____  ____
  / ___||  _ \|  _ \
  \___ \| | | | |_) |
@@ -38,7 +28,7 @@ RTL = Represents a series of microchips manufactured by Realtek that enable soft
 | -------------                 | --------------       | -----------               |
 | [SDR Crash Course](sdr-crash) | [Cellular](cellular) | [Rtl Sdr App](rtlsdr-app) |
 | [rtl_433](rtl_433)            | [Cabling](cables)    | [Power Jacks](powerjacks) |
-
+| [usrp](usrp)                  |                      |                           |
 
 Links
 ------
@@ -90,6 +80,11 @@ age scare you in this endevour.
 
 - [Ultra-wideband Antenna](https://hexandflex.com/2017/12/03/making-an-ultrawideband-antenna-pt1/)
 - [Apollo-NG Antenna](https://apollo.open-resource.org/mission:log:2012:08:02:active-wideband-receiver-antenna-for-sdr)
+
+### GPS TXCO and/or GPS OXCO
+
+- https://www.paulvdiyblogs.net/2020/07/a-high-precision-10mhz-gps-disciplined.html
+- https://www.paulvdiyblogs.net/2023/01/a-high-resolution-reciprocal-counter.html
 
 ### Miscellaneous RF
 

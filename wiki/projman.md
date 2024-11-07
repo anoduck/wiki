@@ -25,6 +25,9 @@ further delay, lets dive in.
 __Warning:__ The subject of project management is very faddish, and employs the use of catch phrases.
 Understanding this and that it is all a game of labels, will help overcome any apprehension.
 
+| [gantt](gantt)     | [kanban](kanban)    | [Quadrants](Quadrants) |
+| [orgmode](orgmode) | [todo.txt](todotxt) | ---                    |
+
 Scrum
 -----
 

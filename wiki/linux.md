@@ -35,10 +35,10 @@ list them all, it is not nearly such a fantastic task as to hit some favorites a
 
 * Debian/Ubuntu: "I run Ubuntu, although it is really just Debian unstable" distros.
 * Redhat/Fedora: "I still own an 8-Track player" distro.
-* Gentoo: "Compile the Kernel on Linux, before using linux" distro.
-* Slackware: "If it works well, don't fuck with it." distro.
+* Gentoo: "Compile the Kernel on Linux, before actually using linux" distro.
+* Slackware: "If it works well, don't fuck with it" distro.
 * Suse: Does anyone use this anymore?
-* Arch: Not too shabby.
+* Arch: "Hi! My name is Bert, and I use Arch" distro. 
 
 #### Favorites
 * Alpine: Pretty lean and mean.
@@ -59,6 +59,7 @@ list them all, it is not nearly such a fantastic task as to hit some favorites a
 
 - [Entware: The Ultimate Repo for embedded devices](https://entware.net)
 - [ IpTables Essentials ](https://www.digitalocean.com/community/tutorials/iptables-essentials-common-firewall-rules-and-commands)
+- [ Tuning the Linux Network Stack for increased performance ](https://www.cyberciti.biz/faq/linux-tcp-tuning/)
 
 #### Void Linux
 

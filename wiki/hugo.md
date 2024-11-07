@@ -62,6 +62,10 @@ Here we have some templating tags:
 
 - [Go HTML Templating Cheatsheet](go_html_template_cheatsheet)
 
+### Hinode template
+
+- [Hinode](hinode)
+
 ### References
 
 - https://retrolog.io/blog/creating-a-hugo-theme-from-scratch/
