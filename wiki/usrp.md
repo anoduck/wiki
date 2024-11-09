@@ -16,16 +16,17 @@ would still be affordable to hobbiests and enthusiasts alike, which could provid
 a scale not normally available. Which is a fancy way of saying, before USRP arrived on scene, you had to either be government or corporate
 backed in order to afford the equipment. 
 
+### Be wary of imitations
 
+There are many products offered that user terms like "USRP Replacement", "USRP Compatible", or even "USRP
+comparable". Be wary, as this usually indicates neither of the above.
 
 
 ### References
 
 - [UHD](https://github.com/EttusResearch/uhd)
 - [Your First LTE](https://open5gs.org/open5gs/docs/tutorial/01-your-first-lte/)
-- https://kb.ettus.com/Building_and_Installing_the_USRP_Open-Source_Toolchain_(UHD_and_GNU_Radio)_on_Linux
-- https://kb.ettus.com/UHD
-- https://files.ettus.com/manual/index.html
-- https://github.com/osmocom/osmo-bts
-- https://files.ettus.com/manual/page_devices.html
-- https://files.ettus.com/manual/page_usrpctl.html
+- [PySDR](https://pysdr.org/content/usrp.html)
+- [UHD Knowledgebase](https://kb.ettus.com/UHD)
+- [Osmocom BTS](https://github.com/osmocom/osmo-bts)
+- [Ettus USRP KnowledgeBase](https://files.ettus.com/manual/index.html)

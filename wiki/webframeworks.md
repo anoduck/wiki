@@ -21,4 +21,4 @@ there will always be a place for them. There are a few of us, who remember openi
 a rocking website to host on [geocities](https://neocities.org). Well, those days have long been gone. People don't
 have time for that shit anymore, so now they use a webframework.
 
-| [hugo](hugo) |  |  |
+| [hugo](hugo) | [public-inbox](public_inbox) | [publicfile](publicfile) |

@@ -34,6 +34,29 @@ the website out. It is truly a write it and rip it solution.
 Our coverage of Hugo will include three topics. First are configuration values, then hugo templating syntax
 will be discussed, and the third topic is yet to be determined.
 
+### Usage
+
+Usage of Hugo is almost a brainless activity. Except for running `hugo` without any flags to perform the
+process of actually building your site, the other two primarily used commands are `hugo serve` and `hugo new`.
+Both of these deserve familiarity in their own right. 
+
+The command `hugo serve` generates the site and then acts as a development server hosting the freshley built
+site on `http://localhost:1313`. If by chance you are using hugo on a remote server, additional flags can be
+used such as the `-b` basename flag. The basename flag tells hugo where to serve the root of your website.
+Another often used flag is `--bind`, which tell hugo what address to bind the developement server to. These
+two flags might seem to be equivocal, but they are most certainly not. As the basename of the site can be
+`10.0.1.1/mysite`, which will place the site root at `/mysite`, but for this example the bind address will be
+`10.0.1.1`. Further options allow for changes to be more visible, such as `--noHTTPCache` and
+`--disableFastRender.`
+
+Running `hugo new site` creates a completely new structure for a new site to be built, and `hugo new page
+somepage.md` will create a new markdown file within the `content` folder that is based off of the archetypal
+template `page`.
+
+#### Hugo through NPM
+
+This is where things get really fun. 
+
 ### Configuration
 
 When it comes to configuring a site in Hugo, what is most important to distinguish are values that are
