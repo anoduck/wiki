@@ -41,6 +41,6 @@ frequency of which one might encounter one of the many NonTraditional Databases 
 of fad obsession. (Worded awkwardly, and redundant.) As of the time this was currently written, Redis and
 MongoDB were beginning to tedder in popularity, where InfluxDB was rising. 
 
-| [InfluxDB](influxdb) | [MongoDB](mongodb) |
+| [InfluxDB](influxdb) | [MongoDB](mongodb) | [Victoria Metrics](victoria_metrics) |
 
 
