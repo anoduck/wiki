@@ -12,18 +12,30 @@
 
 Here are discussions on this wiki that relate to programming:
 
-1. [Python](python)
-
-3. [Elisp](elisp)
-
-4. [Lua](lua)
-
-5. [Shell](shell)
-
-6. [Zig](zig)
-
-7. [Awk](awk)
-
 ### Sections
 
-| [Topic: Python Programming Language](python) | [Topic: Lua Programming](lua) |
+| [Python](python) | [Lua](lua) | [Elisp](elisp) | [Shell](shell) | [Awk](awk) |
+
+### General Observations
+
+All programming languages share a common metaphysical structure that occupies both the mind of man, and the
+memory banks in which those programming languages are exist. It is not unreasonable to find different
+languages possessing many characteristics in common, as they are all, in fact the same form of phenomena. 
+
+#### Method of ensuring path in hierarchy
+
+A unorthodox path was found while observing some code. What was werd about it, was it referenced a directory
+in the file system hierarchy, only to then re-reference the parental directory. Perhaps, observing this will
+make it more apparent. 
+
+```bash
+cd ../../js/../path/to/actual/target
+# This is, of course, equivocal to:
+cd ../../path/to/actual/target
+```
+
+This could be seen as wasteful or assumed to be garbage code, but in reality is quite brilliant, because it
+ensures the existence of a `/js/` directory. So, if `/js/` does not exist, it will return a `File not found`
+error message.
+
+

@@ -63,6 +63,31 @@ For our fucking fantastic table of Desktop Environments we will:
 | [xmonad](xmonad) | Does not compute   | WM         | Use at own risk!     | Ability to program Haskell well. | This WM hates you.   | lite, but not light | There are rumors    | Not unless your a masochist. |
 | AwesomeWM        | Not a trace        | WM         | Medium - Hard        | Create the config file           | Done it, didn't cry. | Reasonably Light    | Minimal             | Could be fun for pros        |
 
+#### FreeDesktop.org Spec Supported
+
+Here is a list of desktop environments that are recognized as to following the freedesktop.org specification:
+
+OnlyShowIn Value	Environment
+COSMIC	COSMIC Desktop
+GNOME	GNOME Desktop
+GNOME-Classic	GNOME Classic Desktop
+GNOME-Flashback	GNOME Flashback Desktop
+KDE	KDE Desktop
+LXDE	LXDE Desktop
+LXQt	LXQt Desktop
+MATE	MATÉ Desktop
+Razor	Razor-qt Desktop
+ROX	ROX Desktop
+TDE	Trinity Desktop
+Unity	Unity Shell
+XFCE	XFCE Desktop
+EDE	EDE Desktop
+Cinnamon	Cinnamon Desktop
+Pantheon	Pantheon Desktop
+DDE	Deepin Desktop
+Endless	Endless OS desktop
+Old	Legacy menu systems
+
 ### Xsettings Daemon
 
 Do not quote me on this, because I am no authority on the matter. After the occurrence of an issue with

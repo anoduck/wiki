@@ -24,9 +24,9 @@
 ### Org Mode
 
 It was only a matter of time until this wiki ventured into the realm of org. Org Mode is something that is unlike anything else, and is
-truly unique to the EMACS text editor. It begin it's existence primarily focused on lists of tasks, but has now expanded to anything
-that can be derived from a list. It has taken over a decade of development, and is still being expanded into further forms of
-application.
+truly unique to the EMACS text editor. It began it's existence primarily focused on lists of tasks, but has now expanded to become a means
+to organize anything that can be derived from a list. It has taken over a decade of development, and is still being expanded into further
+forms of application. 
 
 In a nut-shell, Org Mode is basically an outline of items, where items are referred to as nodes. Where each node falls in the outline
 effects the prioritization and/or chronology of the node. Nodes also have properties that further describe them and are reflected upon
