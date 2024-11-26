@@ -27,9 +27,9 @@
 
 ### Sections
 
-| [general info](general) | [org-mode](orgmode) | [emacs init](init)         | [completion](emacs-complete) |
-| [debug](emacs-debug)    | [keymaps](keymaps)  | [snippets](emacs-snippets) | [yasnippets](yasnippet)      |
-| [speedbar](speedbar)    |                     |                            |                              |
+| [general info](general) | [org-mode](orgmode)           | [emacs init](init)         | [completion](emacs-complete) |
+| [debug](emacs-debug)    | [keymaps](keymaps)            | [snippets](emacs-snippets) | [yasnippets](yasnippet)      |
+| [speedbar](speedbar)    | [Wikis for Emacs](wiki4emacs) |                            |                              |
 
 
 ### Links
