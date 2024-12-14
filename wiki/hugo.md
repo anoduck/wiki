@@ -100,3 +100,4 @@ __There was considerable difficulty getting the markdown processor to ignore the
 
 - https://retrolog.io/blog/creating-a-hugo-theme-from-scratch/
 - https://draft.dev/learn/creating-hugo-themes
+- https://gobyexample.com/text-templates

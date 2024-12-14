@@ -8,10 +8,14 @@
 #
 ```
 
-## Wayland: I still have not quite figured this thing out... that wayland...
+## Wayland: The replacement of X.
 
 For some reason or another, I always associate Wayland with some slick haired country music singer that smells
 of wiskey, cigarettes, and cologne. Not dissing it, just saying...
+
+### Sections
+
+| [Sway](sway) | [Hyprland](hyprland) | [launchers](launchers) |
 
 ### WTF, is it?
 
@@ -26,7 +30,7 @@ possesses the lighter footprint and significantly lighter load.
 #### How do I implement it?
 
 Although, not necessarily a fun job to perform, it is very doable. Programs that are X specific will need to be replaced
-with a Wayland equivolant. This means your Desktop Environment manager, terminal, and your vnc server, if you have one, 
+with a Wayland equivalents. This means your Desktop Environment, display manager, terminal, and your vnc server, if you have one, 
 will all need to be replaced with their wayland counterpart. Before you do, you need to have settled on which
 wayland implementation you plan on using. This is to to ensure uniformity and avoid conflicts in design. Once
 done, you will need to setup the desktop environment manager to start on system start, this in turn is what
@@ -38,9 +42,12 @@ to run on X to be run on wayland. So, to put it simply, Xwayland acts as an adap
 
 ### How do you get rid of it?
 
-Removing wayland is no biggie either, just install the necessary programs you desire, disable the wayland
-desktop environment manager from starting on system start, and instead enable xserver to run on startup. This
-should put you back on X.
+Removing wayland is no biggie either, but isn't necessarily fun either. You will need to reinstall whatever
+X11 Desktop environment you desire to run as well as X-server if required. If you are going to use a display
+manager, then you will need to enable it at some point. Before you do, discover how wayland is started on your
+system. Often this involves the inclusion of a script in your user profile or shell rc file. Which ever is in
+use, make sure to disable it. Only then should you use `systemctl enable $YOUR-DISPLAY-MANAGER`. Only begin
+to uninstall wayland's components when you have successfully finished the transition back to X.
 
 ### References
 

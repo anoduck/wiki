@@ -1,5 +1,4 @@
-## Courtesy of [ReneWerner87](https://github.com/ReneWerner87) and the maintainers of the GoFiber template
-engine middlware
+## Courtesy of [ReneWerner87](https://github.com/ReneWerner87) and the maintainers of the GoFiber template engine middlware
 
 
 # Golang Templates Cheatsheet

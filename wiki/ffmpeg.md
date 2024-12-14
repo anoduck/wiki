@@ -16,7 +16,7 @@ whole new functionality to the program, that simply rocks the bejeezus out of me
 do just about anything with video media that needs to be done. 
 
 Stating this, I have started this page to keep track of commands I have encountered using ffmpeg. For a full
-understanding of all that ffmpeg can do, either seek help within the man pages or phone a friend.
+understanding of all that ffmpeg can do, either seek help within the man pages, search the internet, phone a friend, or call in the Marines.
 
 1. Repairing a corrupt TS file: `ffmpeg –i corrupted_input.ts –map –ignore_unknown/-copy_unknown –c copy fixed.ts` (incorrect)
 2. Repairing a corrupt mp4 file: `ffmpeg -i input.mp4 -c copy output.mp4`
@@ -26,6 +26,18 @@ understanding of all that ffmpeg can do, either seek help within the man pages o
 6. Check video corruption: `ffmpeg –v error –i corrupted_input.ts -f null – &> corruptions.log`
 7. Convert video to images: `ffmpeg -i Video_36.wmv -an -f image2 filename%03d.jpg`
 8. Perform post-processing: `ffmpeg -i Video_of_something.mp4 -vf fspp=4:10 -c copy output.mp4`
+
+### Extracting Audio
+
+Not referring to anyone in particular, and under no circumstances is this an admission of guilt, but there are
+those times when you here a superb audio track and you desire to acquire your own copy. So, you go to a
+certain un named site, which just happens to be the largest collection of videos on the internet, and you
+download the music video of the track. You could stop here, but let's say you desire to remove the "video"
+part. This can easily be done in ffmpeg.
+
+1. Extracting audio and re-encoding it into mp3 like a boss: `ffmpeg -i somevideo.mp4 -map 0:a -acodec libmp3lame somevideo.mp3`
+
+Now, that works just fine.
 
 ### Converting files to more editing friendly codecs
 
