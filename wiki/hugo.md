@@ -55,7 +55,14 @@ template `page`.
 
 #### Hugo through NPM
 
-This is where things get really fun. 
+One of the cooler aspects of Hugo is the continual expansion of features and ways to use hugo. With the
+creation of the hugo-bin library for node.js, hugo can now integrate with node.js and the NPM package system.
+This allows hugo commands to be run as part of node.js scripts, and greatly expands the ability to customize
+website creation with hugo in a way never thought possible before.
+
+Running hugo is this manner is not necessarily an expansion of hugo's functionality, but an expansion of the
+functionality of npm. So, basic understanding of npm and the configuration file for npm, package.json, is
+required.
 
 ### Configuration
 
