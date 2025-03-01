@@ -1,4 +1,25 @@
-## File Managers
+```text
+#  _____ _ _        __  __                                            __
+# |  ___(_) | ___  |  \/  | __ _ _ __   __ _  __ _  ___ _ __ ___     / /
+# | |_  | | |/ _ \ | |\/| |/ _` | '_ \ / _` |/ _` |/ _ \ '__/ __|   / /
+# |  _| | | |  __/ | |  | | (_| | | | | (_| | (_| |  __/ |  \__ \  / /
+# |_|   |_|_|\___| |_|  |_|\__,_|_| |_|\__,_|\__, |\___|_|  |___/ /_/
+#                                            |___/
+#  _____ _ _        ____
+# |  ___(_) | ___  | __ ) _ __ _____      _____  ___ _ __ ___
+# | |_  | | |/ _ \ |  _ \| '__/ _ \ \ /\ / / __|/ _ \ '__/ __|
+# |  _| | | |  __/ | |_) | | | (_) \ V  V /\__ \  __/ |  \__ \
+# |_|   |_|_|\___| |____/|_|  \___/ \_/\_/ |___/\___|_|  |___/
+#
+```
+
+File Managers
+==============
+
+> File Managers & File Browsers are synonamous with one another. They are one of the most essential parts of
+> any Operating System. While you can do everything in the shell, File Managers just make it easy.
+
+## Overview of Options
 
 These days file managers are a dime a dozen, while some stand apart because of their incredible design and ease of use, others exist in
 popularity due to being a long standing staple of the genre, but several provide an interesting perspective to the commonly used

@@ -25,6 +25,7 @@ terminology they might not be familiar with.
 * Newb = Someone who is just learning. In reality, we are all just newbs.
 * Tard = "Nobody goes full retard, nobody."
 * Tater = A term of endearment used to refer to someone the speaker is fond of.
+* Taterhead = Similar to the above "tater", but with more endearment.
 * Repo = Short for software repository, or a place where software source is stored.
 * BSD = Short for The "Berkley Software Distribution", the first freely available unix.
 * Dennis Ritchie = An early forefather of modern computing, who earned a nobel prize for his work on c++.
@@ -45,3 +46,5 @@ terminology they might not be familiar with.
 * OSINT = Abbreviation for "Open Source Informational Technology".
 * Box = This term, in general, refers to a desktop computer or a server that is not already employed in a
 	dedicated use.
+* FFT = Fast Fourier Transform  - An algorithm that computers discrete fourier transform of a sequence. In
+  other words, it converts a signal from it's original domain to a representation in the frequency domain.

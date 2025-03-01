@@ -8,7 +8,10 @@
 #
 ```
 
-## Using argparse without be followed by an argparse statement to process the args.
+# Using argparse without be followed by an argparse statement to process the args.
+
+> [!WARNING]
+> There be junk code in these waters. Be careful before diving in.
 
 This may just be a "me" thing, but since I am a self taught programmer I have always used an `If-Then`
 statement behind my argparse statement to process the args with the appropriate functions and so on. Taking

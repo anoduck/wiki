@@ -13,7 +13,7 @@
 Here is where the intro for networking will be.
 
 | [Bridges](bridge)     | [Virtual Ethernet Devices](virt_eth) | [Domain Types](dom_types) |
-| [Firewalls](firewall) | [Interfaces](interfaces)             |                           |
+| [Firewalls](firewall) | [Interfaces](interfaces)             | [Canary](canary)          |
 
 
 ### Wi-fi Networking Frames
