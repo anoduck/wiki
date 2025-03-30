@@ -18,6 +18,41 @@ commonly used programming languages.
 
 * constructor - a special method used to initialize an object's attributes and setup the entry state.
 * generator - functions that return an iterator when the yield keyword is used.
+* assert - similar to it's use in the written word; an assumption or statement desired to be true. Serves as
+  debugging tool, where if the statement is false the program ceases to continue with the execution. 
+
+### Exceptions
+
+This a list all of some of the more common built-in exceptions found in python:
+- https://docs.python.org/3/library/exceptions.html
+
+* ValueError
+* TypeError
+* AssertionError
+* AttributeError
+* EOFError
+* FloatingPointError
+* GeneratorExit
+* ImportError
+* ModuleNotFoundError
+* IndexError
+* KeyError
+* KeyboardInterrupt
+* MemoryError
+* NameError
+* NotImplementedError
+* SystemError
+* RecursionError
+* ReferenceError
+* RuntimeError
+* StopInteruption
+* StopAsyncIteration
+* SyntaxError
+* IndentationError
+* TabError
+* SystemExit
+* TypeError
+* ValueError
 
 ### Jupyter Lab
 

@@ -35,11 +35,18 @@ used, and encouraged to include in your init file.
 * [DotEmacsChallenge](https://www.emacswiki.org/emacs/DotEmacsChallenge)
 * [EmacsCrashCode](https://www.emacswiki.org/emacs/EmacsCrashCode)
 
+### For the impatient
+
+For those of us who possess a propensity of impatience. Here is an example of an `init.el` file written by
+someone who knows what they are doing. (Not, me.) 
+
+[Exemplary Init](exemp_init)
+
 ### The most important snippet of code in your entire new life
 
 Don't ask me where I found this, probably from the [emacswiki](https://emacswiki.org), but it's value cannot
-be quantified by modern man, and it will save you days of painstaking labor. Add it to you init for instance
-relief, and calmness will flow through your body.
+be quantified by modern man, and it will save you days of painstaking labor. Add it to your init for instant
+relief, and calmness will flow through your body. (Boy, that was worded awkwardly...)
 
 ```elisp
 (setq

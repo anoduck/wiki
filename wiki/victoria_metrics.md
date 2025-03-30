@@ -31,7 +31,9 @@ languages. Which makes it unique all to it's own, and a pain in the ass due to h
 beginning in order to learn a new query language for a handful of applications.
 
 The developers of Victoria Metrics recommend user checkout [this blog entry](https://valyala.medium.com/promql-tutorial-for-beginners-9ab455142085) for
-an introduction to promql, and recommend the user then familiarize themselves with [Victoria Metric's QL here.](https://docs.victoriametrics.com/keyconcepts/#metricsql) 
+an introduction to promql, and recommend the user then familiarize themselves with [Victoria Metric's QL here.](https://docs.victoriametrics.com/keyconcepts/#metricsql)
+
+* [Cheat Sheet provided by jitendra-1217](promql-chtsh)
 
 ### Misc References
 

@@ -29,3 +29,4 @@ Glad you asked. Sounds like it's time for another one of our glorious tables.
 ### Sections
 
 * [Mobile Exploits](mobile_exploit)
+* [Hack The Box Certified Pentester Cheat Sheet](htb-cpts)
