@@ -19,30 +19,30 @@ can reach me in the [discussions of my GitHub profile repository.](https://githu
 
 Below is the index for our site. It is painfully, and I do mean painfully maintained by hand. So, I hope you enjoy it.
 
-| [Font Config](font_config)         | [Does not support OpenBSD](unsupported_for_OpenBSD) | [Programming](programming)               |
-| [Oddities](oddities)               | [File And Disk Recovery](file_disk-recovery)        | [datetime and time](datetime_timetime)   |
-| [General Links](links)             | [Web Development Tools](web_dev_tools)              | [Command Line Tools](command_line_tools) |
-| [Git Wiki](git-wiki-skeleton)      | [Alternative Web Browsers](web_browsers)            | [xprofile](xprofile)                     |
-| [Org Mode](orgmode)                | [Emacs](emacs)                                      | [vnc-configuration](vnc)                 |
-| [Public DNS Servers](dns)          | [UserAgents for Use](useragent)                     | [Firewall Systems](firewall)             |
-| [Shell](shell)                     | [User Service Managers](service_managers)           | [Color Tools](color_tools)               |
-| [OpenBSD](openbsd)                 | [Art](art)                                          | [Mounts and fstab](mount_fstab)          |
-| [Linux](linux)                     | [env-files](env-files)                              | [code Repositories](repos)               |
-| [Bash](bash)                       | [Osint](osint)                                      | [Jargon](jargon)                         |
-| [Version Control](versioning)      | [Zoneminder](zoneminder)                            | [Make](make)                             |
-| [Coral](google-coral)              | [Desktop Environments](Desktops)                    | [Wayland](wayland)                       |
-| [NeoVim](nvim)                     | [sdr](sdr)                                          | [Pulse Audio](pulse)                     |
-| [Python](python)                   | [Awesome!](awesome)                                 | [OpenBSD VPN](open-openvpn)              |
-| [GPSD](gpsd)                       | [WifiPumpkin3](wp3)                                 | [Spreadsheets](spreadsheet)              |
-| [Virtualization](virtualization)   | [FreeBSD](freebsd)                                  | [Networking](networking)                 |
-| [Hugo](hugo)                       | [unikernel](unikernel)                              | [Firefox](firefox)                       |
-| [ffmpeg](ffmpeg)                   | [bibtex](biblatex)                                  | [melt](melt)                             |
-| [Project Management](projman)      | [Plantuml](plantuml)                                | [Pipewire](pipewire)                     |
-| [Shell](shell)                      | [GnuPlot](gnuplot)                                  | [Biblatex](biblatex)                     |
-| [Mermaid](mermaid)                 | [Databases](databases)                              | [OpenBSD Wireguard](openbsd-wireguard)   |
-| [Hardware](hardware)               | [OSsec](ossec)                                      | [Zsh](zsh)                               |
-| [Web Servers](web_servers)         | [IRC](irc)                                          | [OpenSSL](openssl)                       |
-| [Web Frameworks](webframeworks)    | [Encoding](encoding)                                | [Content Security Policy](CSP)           |
+| [Font Config](font_config)       | [Does not support OpenBSD](unsupported_for_OpenBSD) | [Programming](programming)               |
+| [Oddities](oddities)             | [File And Disk Recovery](file_disk-recovery)        | [datetime and time](datetime_timetime)   |
+| [General Links](links)           | [Web Development Tools](web_dev_tools)              | [Command Line Tools](command_line_tools) |
+| [Git Wiki](git-wiki-skeleton)    | [Alternative Web Browsers](web_browsers)            | [xprofile](xprofile)                     |
+| [Org Mode](orgmode)              | [Emacs](emacs)                                      | [vnc-configuration](vnc)                 |
+| [Public DNS Servers](dns)        | [UserAgents for Use](useragent)                     | [Firewall Systems](firewall)             |
+| [Shell](shell)                   | [User Service Managers](service_managers)           | [Color Tools](color_tools)               |
+| [OpenBSD](openbsd)               | [Art](art)                                          | [Mounts and fstab](mount_fstab)          |
+| [Linux](linux)                   | [env-files](env-files)                              | [code Repositories](repos)               |
+| [Bash](bash)                     | [Osint](osint)                                      | [Jargon](jargon)                         |
+| [Version Control](versioning)    | [Zoneminder](zoneminder)                            | [Make](make)                             |
+| [Coral](google-coral)            | [Desktop Environments](Desktops)                    | [Wayland](wayland)                       |
+| [NeoVim](nvim)                   | [sdr](sdr)                                          | [Pulse Audio](pulse)                     |
+| [Python](python)                 | [Awesome!](awesome)                                 | [OpenBSD VPN](open-openvpn)              |
+| [GPSD](gpsd)                     | [WifiPumpkin3](wp3)                                 | [Spreadsheets](spreadsheet)              |
+| [Virtualization](virtualization) | [FreeBSD](freebsd)                                  | [Networking](networking)                 |
+| [Hugo](hugo)                     | [unikernel](unikernel)                              | [Firefox](firefox)                       |
+| [ffmpeg](ffmpeg)                 | [bibtex](biblatex)                                  | [melt](melt)                             |
+| [Project Management](projman)    | [Plantuml](plantuml)                                | [Pipewire](pipewire)                     |
+| [Shell](shell)                   | [GnuPlot](gnuplot)                                  | [Biblatex](biblatex)                     |
+| [Mermaid](mermaid)               | [Databases](databases)                              | [OpenBSD Wireguard](openbsd-wireguard)   |
+| [Hardware](hardware)             | [OSsec](ossec)                                      | [Zsh](zsh)                               |
+| [Web Servers](web_servers)       | [IRC](irc)                                          | [OpenSSL](openssl)                       |
+| [Web Frameworks](webframeworks)  | [Encoding](encoding)                                | [Content Security Policy](CSP)           |
 | [Search Engines](search_engines) | [File Systems](filesystem)                          | [Markup](markup)                         |
 
 [![pages-build-deployment]()](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
