@@ -44,6 +44,88 @@ cat <<EOF> $FILE
 > EOF
 ```
 
+#### Restart on configuration file change
+
+This script is worth taking notice, because parts of it have been used numerous times in other scripts to aid in launching
+applications, and ensuring those applications remain running. This particular script just comes with an
+additional feature, which is to continuously check configuration files for changes.
+
+```bash
+#!/usr/bin/env bash
+
+# Variables
+CONFIG="$HOME/.config/hypr/waybar"
+WAYCONFIG="$CONFIG/config"
+WAYSTYLE="$CONFIG/style.css"
+
+# start waybar if not started
+if ! pgrep -x "waybar" > /dev/null; then
+	hyprctl keyword exec waybar -b "bar" --config "$WAYCONFIG"
+fi
+
+# current checksums
+current_checksum_config=$(md5sum "$WAYCONFIG")
+current_checksum_style=$(md5sum "$WAYSTYLE")
+
+# loop forever
+while true; do
+	# new checksums
+	new_checksum_config=$(md5sum "$WAYCONFIG")
+	new_checksum_style=$(md5sum "$WAYSTYLE")
+
+	# if checksums are different
+	if [ "$current_checksum_config" != "$new_checksum_config" ] || [ "$current_checksum_style" != "$new_checksum_style" ]; then
+		# kill waybar
+		killall waybar
+
+		# start waybar
+		waybar &
+
+		# update checksums
+		current_checksum_config=$new_checksum_config
+		current_checksum_style=$new_checksum_style
+	fi
+done
+```
+
+#### Common case switch for bash
+
+Just a basic example of using case in bash.
+
+```bash
+case "$1" in
+  start | up)
+    vagrant up
+    ;;
+
+  *)
+    echo "Usage: $0 {start|stop|ssh}"
+    ;;
+esac
+
+```
+
+#### Download latest Github Release of a project
+
+This is a snippet of a script that will download the latest release of an application.
+
+```bash
+#!/usr/bin/env bash
+
+PROFILE=""
+PROJECT=""
+OUTFILE=""
+ENDFILE=""
+ 
+VERSION=$(curl -s "https://api.github.com/repos/$PROFILE/$PROJECT/releases/latest" | \grep -Po '"tag_name": *"v\K[^"]*')
+ 
+curl -Lo "$OUTFILE" "https://github.com/$PROFILE/$PROJECT/releases/download/v${VERSION}/$PROJECT_${VERSION}_Linux_x86_64.tar.gz"
+ 
+tar xf $OUTFILE $ENDFILE
+ 
+sudo install $ENDFILE -D -t /usr/local/bin/
+```
+
 ### New Commands
 
 Recently a few new commands have been encountered, that have never been seen before. Unsure if they are new arrivals
