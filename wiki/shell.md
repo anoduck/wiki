@@ -102,8 +102,38 @@ case "$1" in
     echo "Usage: $0 {start|stop|ssh}"
     ;;
 esac
-
 ```
+##### More Advanced Example of a case switch for bash
+
+This example was directly taken from a deprecated script once used to launch a
+remote desktop session using one of several methods.
+
+```bash
+while [[ "$1" =~ ^- && ! "$1" == "--" ]]; do case "$1" in
+	-a | --autossh )
+		run_autossh
+		;;
+	-s | --ssh )
+		RUN_HYPR=false
+		run_ssh
+		;;
+	-r | --hypr )
+		RUN_HYPR=true
+		run_ssh
+		;;
+	-k | --kill )
+		kill_all
+		;;
+	-v | --vnc )
+		"$VNC_CMD"
+		;;
+	_)
+		run_ssh
+		;;
+esac; shift; done
+if [[ "$1" == '--' ]]; then shift; fi
+```
+
 
 #### Download latest Github Release of a project
 
