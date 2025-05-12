@@ -44,6 +44,59 @@ cat <<EOF> $FILE
 > EOF
 ```
 
+### Require SuperUser Privileges
+
+While performing some server configuration work, this convenient script was written to make copying the
+configuration file over and restarting the server more convenient. It's importance is the simple conditional
+that requires a user to have SuperUser Privileges in order to run. Appropriate slang included for variety.
+
+```bash
+#!/usr/bin/env bash
+
+HTTPDIR="/etc/httpd.conf.d"
+REPODIR="/local/location/of/files"
+
+if [ "$EUID" -ne 0 ]; then
+  echo "Yo! You gotta be root to run this shit! Fool!"
+  echo "Try using sudo."
+  exit
+else
+  echo "Nice, Playa! Word to your momma."
+  sleep 1
+fi
+
+UFILE="$REPODIR/$1"
+SFILE="$HTTPDIR/$1"
+
+if ! [[ -f "$UFILE" ]]; then
+  echo "Argument must be a configuration file located in $REPODIR"
+  exit
+fi
+
+USUM=$(cat "$UFILE" | md5)
+SSUM=$(cat "$SFILE" | md5)
+
+if [[ "$USUM" == "$SSUM" ]]; then
+  echo "Both files are the same."
+  exit
+else
+  if [[ "$UFILE" -nt "$SFILE" ]]; then
+    echo "Replacing httpd configuration file and reloading server"
+    cp "$UFILE" "$SFILE"
+    rcctl restart httpd
+    echo "Done."
+  else
+    if [[ "$SFILE" -nt "$UFILE" ]]; then
+      echo "Replacing file in repository."
+      cp "$SFILE" "$UFILE"
+      chown "$USER" "$UFILE"
+      chmod 0755 "$UFILE"
+      echo "Done"
+    fi
+  fi
+fi
+```
+
 #### Restart on configuration file change
 
 This script is worth taking notice, because parts of it have been used numerous times in other scripts to aid in launching
@@ -134,7 +187,6 @@ esac; shift; done
 if [[ "$1" == '--' ]]; then shift; fi
 ```
 
-
 #### Download latest Github Release of a project
 
 This is a snippet of a script that will download the latest release of an application.
@@ -155,6 +207,14 @@ tar xf $OUTFILE $ENDFILE
  
 sudo install $ENDFILE -D -t /usr/local/bin/
 ```
+
+#### Upgrade godns
+
+This takes part of the snippet above and actually integrates it into a working example of upgrading godns. It
+first checks to see if the current version and the current release are the same, if so nothing is done, if not
+so it downloads and installs the newest release.
+
+<script src="https://gist.github.com/anoduck/e550043126876f2c7db0df2fb8588fae.js"></script>
 
 ### New Commands
 

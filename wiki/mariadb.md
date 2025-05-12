@@ -8,14 +8,20 @@
 ```
 
 Maria Database
----------------
+==============
 
 MariaDB is a fork of mysql created by the original developers of mysql. They were concerned over the future
 direction mysql was being taken since it was not fully open source and owned by a corporate entity. MariaDB is
 fully compatible with mysql, and can be used as a dropin replacement for it. MariaDB does include several
 performance enhancements over mysql, which makes it superior for use.
 
-### Basic MariaDB SQL syntax
+## Mycli as MariaDB Client
+
+For a number of years mycli has been the preferred client for interaction with MariaDB and Mysql databases.
+It can be either installed through a distrubution package repository, or through your preferred python package
+manager (uv or pipx).
+
+## Basic MariaDB SQL syntax
 
 Since MariaDB is a traditional SQL language compliant database, it's syntax shadows other SQL compliant
 databases, and should feel intuitive.
@@ -24,7 +30,7 @@ databases, and should feel intuitive.
 2. Create a Database: `CREATE DATABASE <%NAME> CHARACTER SET utf8`
 3. Delete Database: `DROP DATABASE <%NAME>`
 
-#### Basic Database Setup
+### Basic Database Setup
 
 Below are the set of commands performed to setup a mariadb instance up for use. More recently, the application
 using MariaDB will do this automatically, but it is still important to know how. 

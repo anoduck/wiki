@@ -5,7 +5,6 @@
 # |  _  | |_| | (_| | (_) |
 # |_| |_|\__,_|\__, |\___/
 #              |___/
-#
 ```
 
 Hugo: The blazing fast static site generator.
@@ -74,34 +73,29 @@ and if used or not used will cause the generation of a website to fail.
 
 ### Go Templating
 
-Here we have some templating tags:
+Here we have a quick reference of some go templating tags:
 
-__There was considerable difficulty getting the markdown processor to ignore the following block of text.__
-
-<pre>
-
--       - "." = Current Context
-        - "$." = refers to the current context in a range or code block.
-        - "|" = Is a pipe, and can be used to pipe values to functions or methods.
-        - "$" = Can be used to indicate a variable.
-        - ":=" = Is used to initialize a variable.
-        - "=" = Can be used to assign a variable a value.
-        - ".Page" = Refers to the given page.
-        - ".Site" = Refers to the site in it's entirety.
-        - ".Site.data" = Refers to the data folder of the site.
-        - "{{/* Comment */}}" = Is of course a comment.
-        - "{{- /* No whitespace comment */ -}}" = Is a comment without whitespaces.
-        - '{{ partial "footer.html" }}' = `Partial` is used to access the theme's partials
-        - '{{ partialCached "footer.html" }}' = will give you access to a cached partial
-        - '{{ template "_internal/pagination.html" . }}' = will allow you to access hugo's built in tempaltes.
-
-</pre>
-
-- [Go HTML Templating Cheatsheet](go_html_template_cheatsheet)
+```text
+- "." = Current Context
+- "$." = refers to the current context in a range or code block.
+- "|" = Is a pipe, and can be used to pipe values to functions or methods.
+- "$" = Can be used to indicate a variable.
+- ":=" = Is used to initialize a variable.
+- "=" = Can be used to assign a variable a value.
+- ".Page" = Refers to the given page.
+- ".Site" = Refers to the site in it's entirety.
+- ".Site.data" = Refers to the data folder of the site.
+- "{{/* Comment */}}" = Is of course a comment.
+- "{{- /* No whitespace comment */ -}}" = Is a comment without whitespaces.
+- '{{ partial "footer.html" }}' = `Partial` is used to access the theme's partials
+- '{{ partialCached "footer.html" }}' = will give you access to a cached partial
+- '{{ template "_internal/pagination.html" . }}' = will allow you to access hugo's built in tempaltes.
+```
 
 ### Hinode template
 
-| [Hinode](hinode) | [Blowfish](blowfish) |
+| [Hinode](hinode)                                             | [Blowfish](blowfish) | [Hugo Templating](hugo_templating) |
+| [Go HTML Templating Cheatsheet](go_html_template_cheatsheet) | ---                  | ---                                |
 
 ### References
 
