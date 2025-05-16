@@ -216,6 +216,14 @@ so it downloads and installs the newest release.
 
 <script src="https://gist.github.com/anoduck/e550043126876f2c7db0df2fb8588fae.js"></script>
 
+#### Recursively find and replace string
+
+Quite easily actually.
+
+```bash
+find /some/path \(-type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i 's/some_phrase/some_replacement/g'
+```
+
 ### New Commands
 
 Recently a few new commands have been encountered, that have never been seen before. Unsure if they are new arrivals

@@ -44,6 +44,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [Web Servers](web_servers)       | [IRC](irc)                                          | [OpenSSL](openssl)                       |
 | [Web Frameworks](webframeworks)  | [Encoding](encoding)                                | [Content Security Policy](CSP)           |
 | [Search Engines](search_engines) | [File Systems](filesystem)                          | [Markup](markup)                         |
+| [ADR and RFC](adr_rfc)           | ---                                                 | ---                                      |
 
 [![pages-build-deployment]()](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 

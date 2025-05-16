@@ -77,35 +77,36 @@ Below is the process followed for creating modules for the Hinode theme.
 6. Then perform another project wide find and replace, this time finding `mod-template` and replacing it with
    `mod-{$Your_MODULE}`.
 7. Make changes as desired or needed in the `README.md`, `package.json`, and `.gitignore`.
-8. Stage all files for commit `git add -a`, and use `npx git-cz` to generate a conventional commit message.
+8. Cd into the `examplesite` directory and run `hugo mod get -u ./... && hugo mod get -u`
+9. Stage all files for commit `git add -a`, and use `npx git-cz` to generate a conventional commit message.
    Then push everything in the develop branch to your remote repository. `git push --set-upstream origin
    develop`.
-9. Use NPM to install the dependencies for your module as development dependencies. Use `npm install
+10. Use NPM to install the dependencies for your module as development dependencies. Use `npm install
    --save-dev {$NPM_Package}` or `npm install -D {$NPM_Package}` or `npm i -D {$NPM_PACKAGE}` to accomplish
    this.
-10. Modify the `postinstall` script in `package.json`, copying required files from `dist` folder of the NPM
+11. Modify the `postinstall` script in `package.json`, copying required files from `dist` folder of the NPM
     Package to the `dist` folder at the base of the repository. This folder does not have to exist, and will
     be created. The `cpy` package has been installed previously for this purpose. Facilitation of the `--flat`
     flag is necessary in order to flatten the files in the destination directory. More information on the
     particulars of this step can be found in [the hinode module create guide.](https://gethinode.com/guides/modules/#step-3---exposing-the-katex-distribution-files)
-11. Critically, the next step is to actually install everything, which will most importantly run the
+12. Critically, the next step is to actually install everything, which will most importantly run the
     postinstall script, and copy the required files to the dist folder. If you happen by chance to skip this
     step, as I did at first, your module will fail consecutively to produce a valid result.
-12. Next modify where hugo is to mount the required files and folders of the module in the `config.toml` file.
+13. Next modify where hugo is to mount the required files and folders of the module in the `config.toml` file.
     Take note, the folders `layouts`, `assets`, and `static` are all previously assigned a mount point. This
     is to prevent file mount conflicts, and ensure local folders are not replaced by mount points during use
     of the module.
-13. Create the custom files needed to appropriately load and/or use the features provided by your module. This
+14. Create the custom files needed to appropriately load and/or use the features provided by your module. This
     can be through the addition of a shortcode, or through the additional loading of javascript in the site.
-14. Modify the `hugo.toml` file in the `examplesite` directory to mount the files located in the `dist` folder
+15. Modify the `hugo.toml` file in the `examplesite` directory to mount the files located in the `dist` folder
     to their correct place in the website build tree.
-15. Once complete, you will want to run the script `npm run mod:update` to install the hugo modules and check
+16. Once complete, you will want to run the script `npm run mod:update` to install the hugo modules and check
     for any needed updates.
-16. If you did not create a shortcode for your modules, modify the base template of the example site,
+17. If you did not create a shortcode for your modules, modify the base template of the example site,
     `examplesite/layouts/_default` to include the required dependencies of our module.
-17. Next, in order to test your module, you will need to add the required content to test it to the front page
+18. Next, in order to test your module, you will need to add the required content to test it to the front page
     of your website. This is done by editing `examplesite/content/_index.md`.
-18. When you have completed modifying the example site, start up the development server to test your module
+19. When you have completed modifying the example site, start up the development server to test your module
     out. `npm run start`
 
 Be aware that your module might respond differently when used in a full production site, than it did in the
@@ -115,3 +116,13 @@ example site.
 
 If you attempt to load a resource solely through adding it to a shortcode template this will not work. You
 will need to include it as part of the site layout, through creation of a module layout file.
+
+### Troubleshooting
+
+Somewhat similar to troubleshooting docker builds, troubleshooting failed mod builds is like flying blind.
+Since most of the transpilation occurs in the computer memory, it is difficult to spot exactly where things
+went wrong. 
+
+#### Error "head/styesheet.html not found"
+
+Make sure the folder is actually named "head" and not "header".
