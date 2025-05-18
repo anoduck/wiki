@@ -40,6 +40,13 @@ Here we have our quick reference of go template tags again:
 - '{{ template "_internal/pagination.html" . }}' = will allow you to access hugo's built in tempaltes.
 ```
 
+### Go Template Language Hangups
+
+Because Go template language is more functional than a markup language, but not expansive enough to be it's own programming language. A developer will run into situations where the usual method is nonexistent. We will call these hangups. 
+
+1. Concatenation of strings: Use print or printf to concat strings. 
+
+
 Hugo Template Lookup
 --------------------
 
