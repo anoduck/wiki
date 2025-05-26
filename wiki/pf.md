@@ -25,6 +25,13 @@ into consideration.
 The purpose of this wiki entry is to clarify the meaning of keywords in configuration of PF, and provide a
 "only slightly better than average" pf implementation. So without further ado, here is pf.
 
+### Section tasks
+
+- [ ] Break down the configuration over multiple sections.
+- [ ] Provide service based snippets.
+- [ ] Elaborate on hardening strategies.
+- [ ] Include a list of provided variables.
+
 ### Keywords
 
 | keyword   | type         | meaning                                                  | example |
@@ -40,61 +47,70 @@ The purpose of this wiki entry is to clarify the meaning of keywords in configur
 | interface | device       | Preceeded by "on" keyword.                               |         |
 | egress    | device       | Group of interfaces that possess a the default route     |         |
 
-### Example
+### An Example of a Basic Configuration
+
+```conf
+ext_if="vio0"
+
+allowed_tcp="{ 53, 2222, ssh, smtp, submission, smtps, imap, imaps, pop3, pop3s, www, https, 11335 }"
+icmp_types = "{ echoreq, unreach, timex }"
+# RFC 4890: Recommendations for Filtering ICMPv6 Messages in Firewalls
+icmp6_types = "{ echoreq, unreach, timex, toobig, paramprob, neighbrsol }"
+
+table <whitelist> persist file "/var/pf/whitelist.txt"
+table <pfbadhost> persist file "/var/pf/badhost.txt"
+table <sshguard> persist
+
+set ruleset-optimization basic
+set optimization normal
+set limit { states 200000, frags 200000, src-nodes 100000, table-entries 350000 }
+
+set reassemble yes
+
+set block-policy drop
+
+set loginterface $ext_if
+
+set skip on lo
+
+match in all scrub (no-df random-id)
+
+antispoof for $ext_if
+
+block in quick proto tcp from <sshguard>
+block drop in log quick on $ext_if from <pfbadhost>
+block return in log all
+
+pass quick inet proto icmp icmp-type $icmp_types max-pkt-rate 100/10
+pass quick proto ipv6-icmp from any to any max-pkt-rate 100/10
+
+# Whitelist
+pass quick from <whitelist> to any flags any keep state
+
+# allow SSH, SMTP, POP3, IMAP etc from allowed_tcp ports list
+pass in quick on $ext_if proto tcp from any to ($ext_if) port $allowed_tcp
+pass out quick on $ext_if proto udp from ($ext_if) to any port { ntp, domain }
+
+pass out quick on $ext_if proto tcp from ($ext_if) to any port { smtp, www, https }
+
+# Rspamd needs this
+pass out quick on $ext_if proto tcp from ($ext_if) to any port { www, https }
+```
+
+### An Example of A Working Configuration
 
 Until this moment, we have never shared any of our pf configurations with another living soul. This was due
 partly to concerns of maintaining security, and partly out of fear of being criticised for possessing a
 pathetic pf configuration. 
 
-```conf
+#### Macros
 
-#  ___ ___   ___   ___ _____    ___ ___  _  _ ___
-# | _ \ __| |   \ / _ \_   _|  / __/ _ \| \| | __|
-# |  _/ _|  | |) | (_) || |   | (_| (_) | .` | _|
-# |_| |_|   |___/ \___/ |_|    \___\___/|_|\_|_|
-# ===================================================
-#	$OpenBSD: pf.conf,v 1.4 2018/07/10 19:28:35 henning Exp $
-#
-# See pf.conf(5) for syntax and examples.
-# Remember to set net.inet.ip.forwarding=1 and/or net.inet6.ip6.forwarding=1
-# in /etc/sysctl.conf if packets are to be forwarded between interfaces.
-# ---------------------------------------------------------------------------
-# # Copyright (C) 2024 Anoduck, The Anonymous Duck
-#
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to deal
-# in the Software without restriction, including without limitation the rights
-# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-# copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-#
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-# THE SOFTWARE.
-#
-# See pf.conf(5) and /etc/examples/pf.conf
-# Remember to set net.inet.ip.forwarding=1 and/or net.inet6.ip6.forwarding=1
-# in /etc/sysctl.conf if packets are to be forwarded between interfaces.
-#
+First set up your macros. Jargon is important in computer science, so be sure to refer to these as "macros" and not variables.
+
+```conf
 # REMEMBER LAST MATCH WINS!
-#
-# -------------------------------------------------------------------------------
-# Ex. pass quick out 
-# --------------------------------------------------------------------------------
-# References
-# --------------------------------------------------------------------------------
-# https://man.openbsd.org/pf.conf.5
-# https://man.openbsd.org/pf
-# https://www.openbsd.org/faq/pf/config.html
-# https://calomel.org/pf_config.html
 # =================================================================================
-## Local Variables 
+## Local Macros
 # ---------------------------------------------------------------------------------
 int_if = "lo0"
 ext_if = "msk0"
@@ -120,7 +136,14 @@ martians = "{ 127.0.0.0/8, 192.168.0.0/16, 172.16.0.0/12, \
 	     255.255.255.255/32, 240.0.0.0/4 }"
 
 lan_net = "{ 192.168.1.0/24 }"
+```
 
+#### Default Rules
+
+Here is where you want to establish your "default" policy, because everything that follows, will override
+it.
+
+```conf
 # ---------------------------------------------------------------------------------
 # General Settings
 # ---------------------------------------------------------------------------------
@@ -156,8 +179,8 @@ pass		# establish keep-state <--- ??? What does this do?
 block quick inet6
 
 ## Block all incoming to ext_if
-#block return log on ext_if all
-block all
+# block return log on ext_if all # <-- This did not work.
+block all # <-- This did.
 ## =================================================================================
 # Kill off zombie packets
 ## =================================================================================
@@ -187,6 +210,7 @@ block in log quick on $ext_if from $martians to any
 ## =================================================================================
 # Block unroutable
 ## =================================================================================
+# Whether the following rules work, is suspect.
 # block in quick on egress from <rfc6890>
 # block return out quick on egress to <rfc6890>
 ## =================================================================================
@@ -199,7 +223,11 @@ pass on $ext_if inet proto icmp all icmp-type 8 code 0
 ## sshguard
 table <sshguard> persist
 block in proto tcp from <sshguard>
+```
 
+#### Base level Ruleset
+
+```conf
 # -----------------------------------------------------------------------------------
 # Beginning Regular Rules
 # -----------------------------------------------------------------------------------
@@ -230,12 +258,12 @@ block quick inet from any to any no state label "RULE 10000 -- DROP "
 # ----------------------------------------------------------------------------------
 
 # Moving up rule for virtualization in case it is blocked from anything below.
-#match out on egress inet from vport0:network to any nat-to (egress)
-#pass in proto { udp tcp } from vport0:network to any port domain rdr-to $dns_server port domain
+# match out on egress inet from vport0:network to any nat-to (egress)
+# pass in proto { udp tcp } from vport0:network to any port domain rdr-to $dns_server port domain
 
 # rules for vmd(8) - NAT and DNS forwarding for VMs (100.64.0.0/10 default)
-#pass out on egress from 100.64.0.0/10 to any nat-to (egress)
-#pass in proto udp from 100.64.0.0/10 to any port domain \
+# pass out on egress from 100.64.0.0/10 to any nat-to (egress)
+# pass in proto udp from 100.64.0.0/10 to any port domain \
 #    rdr-to $dns_server port domain
 
 ## I2P
@@ -247,6 +275,11 @@ block quick inet from any to any no state label "RULE 10000 -- DROP "
 
 ## allowing traceroute
 pass out quick on egress inet proto udp to port 33433:33626
+
+#### Commentary
+
+Include a commentary in your `pf.conf`, that way when you are exhausted and running on less than four hours of
+sleep, you won't have to remember anything to modify your pf file.
 
 # ==============================================================================
 # Port Macros
@@ -276,7 +309,14 @@ pass out quick on egress inet proto udp to port 33433:33626
 # Variable Definitions #
 ########################
 # Need to define each of these with a variable, so they can be disabled and enabled.
+```
 
+#### Setup services
+
+It is easiest if you setup your services as macros, and bundle them together. So, you only have to write one
+rule to manage numerous services.
+
+```conf
 ## ===============================================================================
 webserver = "{ 127.0.0.1 }"
 router = "{ 192.168.1.1 }"
@@ -292,7 +332,8 @@ p2p_services_tcp = "{ 6881:6889 }"
 
 ####################################################
 # Magical Mystery Configuration for Local Services #
-# I was not stoned writing this, just bored        #
+# I was not stoned writing this, just bored and    #
+# really really tired.                             #
 ####################################################
 
 pass quick proto { tcp, udp } from $intnet to port $udp_services
@@ -300,8 +341,8 @@ pass quick log inet proto icmp all icmp-type $icmp_types
 pass quick proto tcp from $intnet to port $client_out
 pass quick proto { tcp, udp } from $extnet to port $client_in
 ## Not running any webserver
-#pass quick proto { tcp, udp } to $nameservers port domain
-#pass proto tcp to $webserver port $webports
+# pass quick proto { tcp, udp } to $nameservers port domain
+# pass proto tcp to $webserver port $webports
 
 ## Enable and Allow p2p networking...I think
 pass quick proto tcp to port $p2p_services_tcp
@@ -312,7 +353,11 @@ pass quick proto tcp to port $p2p_services_tcp
 ## -----------------------------------------------------------
 block in on $ext_if proto tcp from any \
     os { "Windows 95", "Windows 98" } to any port smtp
+```
 
+#### Service specific rules.
+
+```conf
 ## ---------------------------------------------------------------
 # Tinc Rules
 ## ---------------------------------------------------------------
@@ -324,7 +369,13 @@ pass out on egress inet from $tincnet nat-to $ext_if
 
 # Allow all on WireGuard interface
 pass out on egress inet from $wgnet nat-to $ext_if
+```
 
+#### Close the gap
+
+Cut off services and daemons that can use the network, but REALLY shouldn't.
+
+```conf
 # ===========================================================
 # This goes last
 # -----------------------------------------------------------
@@ -336,6 +387,89 @@ block return in on ! lo0 proto tcp to port 6000:6010
 block return out log proto {tcp udp} user _pbuild
 ```
 
+### SpamD Snippet for SMTP
+
+Prerequisites for the following configuration would be the file `/etc/mail/nospamd`, which is a text file
+containing a list of hosts who require bypassing the spamd altogether.
+
+```conf
+table <spamd-white> persist
+table <nospamd> persist file "/etc/mail/nospamd"
+pass in on egress proto tcp to any port smtp divert-to 127.0.0.1 port spamd
+pass in on egress proto tcp from <nospamd> to any port smtp
+pass in log on egress proto tcp from <spamd-white> to any port smtp
+pass out log on egress proto tcp to any port smtp
+```
+
+### Mail server specific configuration rules
+
+An example of rules used in a pf configuration file in order to allow traffice from mail servers.
+
+```conf
+# Create a marco for the mail services
+mail_in = {smtp, submission, smtps, imap, imaps, pop3, pop3s}
+
+# Establish Log interface, missing from above.
+set loginterface $ext_if
+
+# Establish persistent tables
+table <spamd> persist
+table <spamd-allow> persist
+
+# Pass spamd allow list
+pass quick log on $ext_if inet proto tcp from <spamd-allow> to $ext_if port smtp -> 127.0.0.1 port 25
+
+# Pass webmail servers
+rdr pass quick log on $ext_if inet proto tcp from <gmail> to $ext_if port smtp -> 127.0.0.1 port 25
+
+# pass submission messages.
+pass quick log on $ext_if inet proto tcp from any to $ext_if port submission modulate state
+
+# Pass unknown mail to spamd
+rdr pass log on $ext_if inet proto tcp from {!<spamd-allow> <spamd>} to $ext_if port smtp -> 127.0.0.1 port 8025
+
+# Open up imap
+pass in quick on $ext_if proto tcp from any to ($ext_if) port $mail_in
+```
+
+### Mail Server Configuration with SpamD integration
+
+Now here is an example of combining the two previous examples together.
+
+> [!info] Outbound rule
+> Do not forget, no outbound rules are needed, because your server should already be configured to allow
+> outbound traffic.
+
+```conf
+# Define macros
+main_in_sec = {smtps, imaps}
+mail_in = {smtp, submission, smtps, imap, imaps}
+
+# Define Tables
+table <spamd-scan> persist
+table <spamd-noscan> persist file "/etc/mail/nospamd"
+
+# Divert to spamd is only needed for smtps, since we do not plan on offering smtp.
+pass in on egress proto tcp to any port smtps divert-to 127.0.0.1 port spamd
+
+# Allow noscan to directly talk to mail server
+pass in on egress proto tcp from <spamd-noscan> to any port smtps
+
+# Pass diverted traffic back to smtp
+pass in log on egress proto tcp from <spam-scan> to any port smtps
+
+# Pass that shit back out
+pass out log on egress proto tcp to any port smtp
+```
+
+-----
+
 ### Reference Material
 
-- https://calomel.org/pf_config.html
+- [Calomel pf configuration guide](https://calomel.org/pf_config.html)
+- [A Dummy's Sample pf.conf](https://gist.github.com/nathwill/9703175)
+- [Sample PF Configuration for OpenBSD Release](https://docs.ircnow.org/openbsd/pfstable/)
+- [IRCNow PF Guide](https://docs.ircnow.org/openbsd/pf/)
+- [tightening pf conf even further for my mail server](https://forums.freebsd.org/threads/tightening-pf-conf-even-further-for-my-mail-server.89515/)
+- [Setting up your own mail server on FreeBSD](https://cloudfrik.com/blog/server/setting-up-your-mail-server-on-freebsd/)
+- [Dan's PF Page](https://www.benzedrine.ch/pf.html)
