@@ -158,12 +158,11 @@ Then open up your text editor and change `/etc/exports` to where it reflects the
 
 Below are some NFS options used for this case:
 
->rw : allow read and write access for both NFS server and client to the volume/directory.
->sync: This option forces NFS to write changes to disk before replying. This results in a more stable and consistent 
-environment since the reply reflects the actual state of the remote volume. However, it also reduces the speed of file operations.
->no_subtree_check : disables subtree checking, which has mild security implications, but can improve reliability in some circumstances.
->no_root_sqash : disable root squashing. This option is mainly useful for disk-less clients.
->fsid=0 : for NFSv4, this parameter is used to inform the NFS server that this export is the root of all exported filesystems.
+- rw : allow read and write access for both NFS server and client to the volume/directory.
+- sync: This option forces NFS to write changes to disk before replying. This results in a more stable and consistent environment since the reply reflects the actual state of the remote volume. However, it also reduces the speed of file operations.
+- no_subtree_check : disables subtree checking, which has mild security implications, but can improve reliability in some circumstances.
+- no_root_sqash : disable root squashing. This option is mainly useful for disk-less clients.
+- fsid=0 : for NFSv4, this parameter is used to inform the NFS server that this export is the root of all exported filesystems.
 
 When done, and the server is running. You should be able to confirm these changes with `sudo showmount -e`
 
