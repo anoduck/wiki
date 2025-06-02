@@ -38,7 +38,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [OSsec](ossec)                               | [Zsh](zsh)                                          | [Web Servers](web_servers)               | [IRC](irc)                                |
 | [OpenSSL](openssl)                           | [Web Frameworks](webframeworks)                     | [Encoding](encoding)                     | [Content Security Policy](CSP)            |
 | [Search Engines](search_engines)             | [File Systems](filesystem)                          | [Markup](markup)                         | [ADR and RFC](adr_rfc)                    |
-| [Authentication](authentication)             | [Email Client](email_clients)                       | [Gopher](gopher)                         |                                           |
+| [Authentication](authentication)             | [Email Client](email_clients)                       | [Gopher](gopher)                         | [NFS](nfs-server)                         |
 
 [![pages-build-deployment]()](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 
