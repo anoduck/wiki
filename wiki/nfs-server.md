@@ -11,7 +11,10 @@ Setting up an NFS Server
 ========================
 
 NFS stands for Network File System, and it is a way to share a portion or the entire file system across
-multiple systems. In linux, NFS comes in two varieties, a kernel base variety and a user based one. As one
+multiple systems. For those interested, NFS is a product of the famed Sun Microsystems (RIP), and was
+developed in 1984. 
+
+In linux, NFS comes in two varieties, a kernel base variety and a user based one. As one
 could easily deduce, the kernel based server uses a kernel module to provide network accessiblility to the
 shared system. Where the user based system relies on a system service to provide the same functionality. Both
 have benefits and risks. While the kernel variety is faster, it also poses greater risks to security.
@@ -47,6 +50,10 @@ sudo apt install nfs-common nfs-kernel-server
 > [!note] Support for V3
 > More than likely your NFS client will support V4, and V3 support will not be required.
 
+> [!warning] OpenBSD Requires V3
+> For those badasses out there ruling the world with OpenBSD, V4 is not supported, so you will be required to
+> keep V3 enabled. Sorry about that, but success comes with many sacrifices.
+
 If you are planning to run version 3 of this protocol, then you will need to install an additional package
 `rpcbind`. and configure it for use.
 
@@ -59,9 +66,9 @@ local network you will be required to change this. Furthermore, you will need to
 file. Below demonstrates how to do this.
 
 ```bash
- $ perl -pi -e 's/^OPTIONS/#OPTIONS/' /etc/default/rpcbind
- $ echo "rpcbind: 192.168.1." >> /etc/hosts.allow
- $ systemctl restart rpcbind.service
+perl -pi -e 's/^OPTIONS/#OPTIONS/' /etc/default/rpcbind
+echo "rpcbind: 192.168.1." >> /etc/hosts.allow
+systemctl restart rpcbind.service
 ```
 
 ### Setup `/etc/exports`
@@ -116,6 +123,49 @@ sudo systemctl mask rpcbind.service
 sudo systemctl mask rpcbind.socket
 ```
 
+### Disable support for V2 and V4
+
+As mentioned above, OpenBSD does not yet support version 4 of nfs. So, if you only plan on connecting to the
+server on an OpenBSD system, it would be to your benefit to disable version 4 and version 2.
+
+#### Enable statd and disable idmapd
+
+Since version 3 requires statd and only version 4 uses idmapd, you should enable statd and disable idmapd. You
+can do that by editing `/etc/default/nfs-common`.
+
+```conf
+NEED_STATD="yes"
+NEED_IDMAPD="no"
+```
+
+#### Disable V2 and V4 on the kernel
+
+Now open up `/etc/default/nfs-kernel-server` and add the following lines. Be sure to replace `10.0.1.1` with
+the ip address the NFS server will be listening on. 
+
+```conf
+RPCNFSDOPTS="-N 2 -N 4 -H 10.0.1.1"
+RPCMOUNTDOPTS="--manage-gids -N 2 -N 4"
+```
+
+#### Start rpcbind service
+
+Now, if by mistake you masked the `rpcbind.service` then you can unmask the service like so:
+
+```bash
+sudo systemctl unmask rpcbind.service
+sudo systemctl unmask rpcbind.socket
+```
+
+Now, go ahead enable the rpcbind service and run it.
+
+```bash
+sudo systemctl enable rpcbind.service
+sudo systemctl start rpcbind.service
+```
+
+With that you should be able to run a NFS server solely in version 3.
+
 ### Creating facade mount points
 
 Nearly ever tutorial out there suggests one take the extra precautionary measure of setting up what is
@@ -166,6 +216,14 @@ Below are some NFS options used for this case:
 
 When done, and the server is running. You should be able to confirm these changes with `sudo showmount -e`
 
+#### Check to see which NFS versions are running
+
+You can check to ensure you are running the desired versions of nfs like so in linux:
+
+```bash
+cat /proc/fs/nfsd/versions
+```
+
 ### Setting up fstab for NFS client
 
 Once everything is up and running, you probably do not want to mount the nfs volume manually each time. So,
@@ -175,3 +233,9 @@ you can set up fstab to mount the NFS volume automatically on boot with the rest
 host_ip:/var/nfs/general    /nfs/general   nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0
 host_ip:/home               /nfs/home      nfs auto,nofail,noatime,nolock,intr,tcp,actimeo=1800 0 0
 ```
+
+## References
+
+- [How To Forge: NFS Server](https://www.howtoforge.com/tutorial/install-nfs-server-and-client-on-debian)
+- [Debian Wiki: NFS Server Setup](https://www.howtoforge.com/tutorial/install-nfs-server-and-client-on-debian)
+- [ArchLinux Wiki: NFS](https://www.howtoforge.com/tutorial/install-nfs-server-and-client-on-debian)
