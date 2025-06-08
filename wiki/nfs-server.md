@@ -252,7 +252,7 @@ port=32768
 udp-port=32768
 # Place new lines for provisioning below.
 [exports]  # <-- Here
-rootdir=/var/nfs  <-- And here.
+rootdir=/var/nfs  # <-- And here.
 [mountd]
 udp=no
 port=32767
