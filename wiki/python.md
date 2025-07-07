@@ -12,7 +12,7 @@ commonly used programming languages.
 | [OpenCV](opencv)                       | [argparse without "if then" operators](argparse-no-arg) | [Working with scapy](scapy) | [Writing modules](py-modules) |
 | [Creating Daemons](create_daemons)     | [Special Method Names](special_names)                   | [partial](python_partial)   | [build](python_build)         |
 | [Simple Parsing](simple_parsing)       | [Hatch](hatch)                                          | [Uv](py-uv)                 | [pyproject](pyproject)        |
-| [multiprocessing](pymultiprocess)      | ---                                                     | ---                         | ---                           |
+| [multiprocessing](pymultiprocess)      | [Variable_Cleaning](variable-cleaning)                  | ---                         | ---                           |
 
 ## Terminology
 
