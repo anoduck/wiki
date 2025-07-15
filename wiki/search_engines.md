@@ -56,6 +56,19 @@ wiki begins.
 
 * [Negotiating the turmoils of google page indexing](google_indexing)
 
+Dorking
+-------
+
+Most people are unaware all search engines possess a fundamental query language that allows users to refine
+the parameters of their search. This is because search engines perform queries based on rules on how it should
+treat natural language. These rules do not make up a query language, but rather specify the priority given to
+words based on their location and significance. Search engines also accept wildcard flags to provide a means
+to further refine search paramters.
+
+Dorking is the practice of using this fundamental query language in order to obtain very specific information.
+
+- [Dorking](dorking)
+
 Meta Search Engines
 --------------------
 
