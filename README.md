@@ -40,6 +40,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [Search Engines](search_engines)             | [File Systems](filesystem)                          | [Markup](markup)                         | [ADR and RFC](adr_rfc)                    |
 | [Authentication](authentication)             | [Email Client](email_clients)                       | [Gopher](gopher)                         | [NFS](nfs-server)                         |
 | [windows](windows)                           | [docker / podman](podman)                           | [USB IP](usbip)                          | [Dev Tooling](dev_tool)                   |
+| [info_doc](info-doc)                         | ---                                                 | ---                                      | ---                                       |
 
 [![pages-build-deployment]()](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 

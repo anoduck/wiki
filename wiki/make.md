@@ -28,6 +28,33 @@ The standard make system has three main parts.
 Sometimes, one must preconfigure before one can configuring, and often one wants to clean up after
 installation.
 
+#### Determine your compiler
+
+Some BSD systems include two different sets of compilers of "C" and "CPP". They are clang and gcc, while only
+one version of each can be installed on the same system, both can coexist without any conflicts. So before you
+begin to compile any code in "C" or "CPP", you need to determine which of the two or both are compatible with
+the code being compiled. This is easy to do, since often it is referred to in the documentation of the source
+code, or you simply apply the the time tested approach of trial by error.
+
+The default compiler for BSD systems is clang, although currently the most commonly compatible compiler for "C"
+is Gnu's "gcc", which is just the way it is. So if you are going to want to use "gcc" or "g++" to compile the
+code, you will need to declare it with an export statement first.
+
+> [!info] Not "gcc", but "egcc"
+> It is important to remember that in OpenBSD, GNU's "C" compiler has been renamed from "gcc" to "egcc" to
+> avoid confusion. (although, it clearly adds to the confusion.)
+
+```bash
+export CC=/usr/local/bin/egcc CXX=/usr/local/bin/eg++
+```
+
+If by chance you declared one, but want to use another, then you will need to export the variable again to
+your environment.
+
+```bash
+export CC=/usr/local/bin/clang CXX=/usr/local/bin/clang-cpp
+```
+
 #### Making with Make
 
 `make` and it's cousin, `gnu make`, both accept a ridiculously plentiful amount of different flags. Way too
