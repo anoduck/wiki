@@ -88,3 +88,51 @@ To remove a submodule you need to:
 See also: alternative steps below.
 
 --John Douthat
+
+### Undoing a commit
+
+You committed a change that you were not supposed to and need to undo the commit. In git this is referred to
+as "reverting", because you are returning to a previous state.
+
+Before you get over exuberent reverting shit, you need to discover the hash of the latest commit. This can be
+done using `git log`.
+
+```bash
+git log --all --decorate --oneline --graph 
+```
+
+Here is a hint: It is the one on the top line.
+
+Once you discovered your commit hash, you then can revert your commit.
+
+```bash
+git revert -m 1 $COMMIT_HASH
+```
+
+The addition of the `-m 1` flag tells git to favor changes from the first parent.
+
+> [!caution] Do not use `git reset`
+> `git reset` can be a destructive command if used incorrectly.
+
+Git revert will create a new commit reverting the repo to it's previous state.
+
+#### Undoing undoing a commit
+
+Undoing a previous revert is almost identitical to doing the revert. This is because `git revert` does not
+wipe the previous undesired commit from the history of the git log. Rather, it creates a new commit that then
+changes things back to how they were.
+
+So to undo a previous git revert, you follow the same steps.
+
+```bash
+git log --all --decorate --oneline --graph 
+```
+
+The commit that reverted the repo to it's previous state should be on the top line. So you will want to use
+that hash and run `git revert` again.
+
+```bash
+git revert -m 1 $COMMIT_HASH
+```
+
+You can also run `git cherry-pick $COMMIT_HASH` for a similar result.

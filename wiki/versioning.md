@@ -49,3 +49,4 @@ time goes by, I will add some lesser known commands for git below.
 4. Run BFG.jar to remove that data. `java -jar BFG.jar -rt $SENSITIVE_DATA_FILE.txt --private $REPO_NAME`
 5. Reflog the repo. `git reflog expire --expire=now --all && git gc --prune=now --aggressive`
 6. push your changes back. `git push`
+
