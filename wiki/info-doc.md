@@ -29,4 +29,5 @@ Commands that provide information
 1. TLDR - `tldr` = A set of community maintained informative "man"-like pages.
 2. CHEAT.SH - `cht.sh` = Community mantained and terminally accessible cheatsheets.
 3. CHEAT - `cheat` = Yet another community maintained set of cheatsheets, is overlapped by `cht.sh`.
+4. HOWDOI - `howdoi` = basically searches google on how to perform various actions.
 
