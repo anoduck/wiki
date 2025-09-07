@@ -19,7 +19,7 @@ _** This List is in no way, shape or form exhaustive or comprehensive. **_
 3. Egcc not gcc AND Eg++ not g++ -- In a similar fashion to gnumake, OpenBSD does not use the Gnu C or Gnu C++
    libraries. Rather, it uses Clang as it's default compiler. Gcc and g++ are still available for installation
    though, but they have been renamed to 'egcc' and 'gcc'. ALSO, for future reference, 'gdb' has been renamed
-   to 'egdb' as well. `export CC=/usr/local/bin/egcc CXX=/usr/local/bin/eg++`
+   to 'egdb' as well.
 4. Kernel File monitoring -- The OpenBSD kernel does not allow watching individual files for changes, rather
    it only allows monitoring directories for changes. Which is why it is not compatible with services such as
    the dropbox client. 
