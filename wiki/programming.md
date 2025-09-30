@@ -14,7 +14,8 @@ Here are discussions on this wiki that relate to programming:
 
 ### Sections
 
-| [Python](python) | [Lua](lua) | [Elisp](elisp) | [Shell](shell) | [Awk](awk) |
+| [Python](python)     | [Lua](lua) | [Elisp](elisp) | [Shell](shell) | [Awk](awk) |
+| [C_and_CPP](candcpp) | ---        | ---            | ---            | ---        |
 
 ### General Observations
 

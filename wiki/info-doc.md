@@ -1,20 +1,20 @@
 ```text
-#  ___ _   _ _____ ___
-# |_ _| \ | |  ___/ _ \
-#  | ||  \| | |_ | | | |
-#  | || |\  |  _|| |_| |
-# |___|_| \_|_|   \___/
-#   ___
-#  ( _ )
-#  / _ \/\
-# | (_>  <
-#  \___/\/
-#  ____   ___   ____
-# |  _ \ / _ \ / ___|
-# | | | | | | | |
-# | |_| | |_| | |___
-# |____/ \___/ \____|
-#
+  ___ _   _ _____ ___
+ |_ _| \ | |  ___/ _ \
+  | ||  \| | |_ | | | |
+  | || |\  |  _|| |_| |
+ |___|_| \_|_|   \___/
+   ___
+  ( _ )
+  / _ \/\
+ | (_>  <
+  \___/\/
+  ____   ___   ____
+ |  _ \ / _ \ / ___|
+ | | | | | | | |
+ | |_| | |_| | |___
+ |____/ \___/ \____|
+
 ```
 
 Info and Doc
@@ -30,4 +30,5 @@ Commands that provide information
 2. CHEAT.SH - `cht.sh` = Community mantained and terminally accessible cheatsheets.
 3. CHEAT - `cheat` = Yet another community maintained set of cheatsheets, is overlapped by `cht.sh`.
 4. HOWDOI - `howdoi` = basically searches google on how to perform various actions.
+5. NAVI - `navi` = more robust than any other client listed, with possibly a larger documentation library.
 

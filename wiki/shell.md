@@ -224,10 +224,10 @@ Quite easily actually.
 find /some/path \(-type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i 's/some_phrase/some_replacement/g'
 ```
 
-### New Commands
+### Newly Discovered Commands
 
-Recently a few new commands have been encountered, that have never been seen before. Unsure if they are new arrivals
-or if they are older commands which were unknown of. Either way, they listed below.
+Recently a few new commands have been encountered, that have never been seen before, or I have seen and didn't care to
+investigate. Either way, they listed below to help me remember them for later.
 
 #### newgrp
 
@@ -240,3 +240,21 @@ Pushd comes from perl, and appears to be part of the standard perl package. The 
 functionality of pushd is to think of it as a temporary change directory command. As it allows the user to designate a
 directory to change into, and when ready, executing the command again without any arguements then will return the
 user back to the directory he started out in. 
+
+#### Test
+
+I have seen this command thousands of times, but never considered including it in my own scripts until now,
+and it really is incredible. Test simplifies and reduces the complexity of scripts by handling the "if...then" clause for you.
+So, instead of having to write the entire block to test an expression, you can simply run `test $EXPRESSION`
+and if it is true it will return not return anything, but if it is false it will return "1". Examine the
+example below.
+
+```bash
+# Long format
+if [[ -e "/var/www/htdocs" ]]; then 
+    echo "Geronimo!!!"
+fi
+
+# Now with test
+test -e /var/www/htdocs
+```
