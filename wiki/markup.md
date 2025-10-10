@@ -22,6 +22,6 @@ Textual Markup Language, and MSDocs.
 
 Links to pages on markup languages.
 
-* [Markdown](Markdown)
+| [Markdown](Markdown) | [Latex](latex) |
 
-<small>There will never be a page on Latex in the wiki, that is promised.</small>
+<small>~~There will never be a page on Latex in the wiki, that is promised.~~</small>
