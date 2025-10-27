@@ -38,8 +38,7 @@ time goes by, I will add some lesser known commands for git below.
 
 ### VC Pages
 
-- [git](git)
-- [cvs](cvs)
+| [git](git) | [cvs](cvs) | [radicle](radicle) | [git-annex](git-annex)
 
 #### Removing sensitive data from git repos.
 

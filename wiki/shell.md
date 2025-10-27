@@ -224,6 +224,32 @@ Quite easily actually.
 find /some/path \(-type d -name .git -prune \) -o -type f -print0 | xargs -0 sed -i 's/some_phrase/some_replacement/g'
 ```
 
+#### Use SSH to run a series of commands on a remote machine.
+
+```bash
+ssh otherhost << EOF
+  ls some_folder; 
+  ./someaction.sh 'some params'
+  pwd
+  ./some_other_action 'other params'
+EOF
+```
+
+#### Use SFTP in a shell script to upload or download a file.
+
+``` bash
+HOST='your_sftp_server'
+USER='your_username'
+PASSWORD='your_password'
+LOCAL_FILE='/path/to/local/file.txt'
+REMOTE_DIR='/path/to/remote/directory/'
+
+sftp $USER@$HOST <<EOF
+put $LOCAL_FILE $REMOTE_DIR
+bye
+EOF
+```
+
 ### Newly Discovered Commands
 
 Recently a few new commands have been encountered, that have never been seen before, or I have seen and didn't care to

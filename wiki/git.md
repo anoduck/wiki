@@ -16,6 +16,10 @@ allows anyone to host and share software source code for free.
 
 Below are a few examples on how to use git that are not often encountered. 
 
+### Git Specific Topics
+
+| --- | [git-crypt](git-crypt) |---|
+
 ### Basic guide to making a pull request
 
 A pull request is how another user can contribute code to a repository they are not the creator

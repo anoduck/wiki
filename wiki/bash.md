@@ -7,9 +7,12 @@
 #
 ```
 
-## Bash
+Bash: The Bourne Again Shell
+=============================
 
-### Bash conditional operators 
+Link to the Shell reference page --> [shell](shell)
+
+## Bash conditional operators 
 
 Conditional operators are used in "if" statements and allow testing for many diffierent modes:
 
@@ -34,12 +37,12 @@ Conditional operators are used in "if" statements and allow testing for many dif
 
 -----
 
-### Anoduck Approved CheatSheet
+## Anoduck Approved CheatSheet
 
 - [Bash Scripting CheatSheat](https://devhints.io/bash)
 - [A Complete Guide to Bash Arrays](https://shell-tips.com/bash/arrays/#gsc.tab=0)
 
-### Bash Tutorials
+## Bash Tutorials
 
 [Bash Hackers](https://web.archive.org/web/20230406205817/https://wiki.bash-hackers.org/)
 
@@ -47,25 +50,25 @@ Conditional operators are used in "if" statements and allow testing for many dif
 
 [Pure Bash Bible](https://github.com/dylanaraps/pure-bash-bible)
 
-### Bash Package Managers
+## Bash Package Managers
 
-#### Basher
+### Basher
 
 Basher is a package manager for bash shell scripts. Particularly shell scripts that within themselves
 constitute a package.
 
 [Basher](https://www.basher.it/)
 
-#### Basalt
+### Basalt
 
 A new alternative to Basher is basalt, which is still in it’s early stages of development, but
 appears to have generated quite a large following. 
 
 [Basalt](https://github.com/bash-bastion/basalt)
 
-### Bash Frameworks
+## Bash Frameworks
 
-#### Bash-it
+### Bash-it
 
 The most popular shell customizatio
 simple to use, provides powerful customization, and little overhead. It alos provides a set of ready
@@ -73,7 +76,7 @@ to be enabled custom bash prompts.
 
 [Bash-IT](https://github.com/Bash-it/bash-it)
 
-### Bash CLI Frameworks
+## Bash CLI Frameworks
 
 A good CLI framework provides developers with a ready made library for use in creation of bash
 terminal user interfaces. This removes a good of amount of work, as it provides basic references to
@@ -84,7 +87,7 @@ to help create CLI’s.
 * [Skeleton-Bash](https://github.com/jazzschmidt/skeleton-bash)
 * [bashmuiltitool](https://github.com/gavinlyonsrepo/bashmultitool)
 
-### Bash Utilities
+## Bash Utilities
 
 * [latest-releases](https://github.com/nickjj/latest-releases)
 * [chest](https://github.com/lukechilds/chest)
