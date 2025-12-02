@@ -260,12 +260,67 @@ investigate. Either way, they listed below to help me remember them for later.
 Newgroup allows a user to initiate and finalize changes to group membership without having to log out and in again.
 This feature becomes handy when the user does not need to lose any established environment variables.
 
-#### Pushd
+#### Directory Stack
 
-Pushd comes from perl, and appears to be part of the standard perl package. The best way to describe the
-functionality of pushd is to think of it as a temporary change directory command. As it allows the user to designate a
-directory to change into, and when ready, executing the command again without any arguements then will return the
-user back to the directory he started out in. 
+Both Bash and Zsh provide a virtual directory stack used to aid navigation through complex paths. The utilization of this stack
+is performed with the `pushd` command, the removal of entries from this stack is performed with the `popd` command, and the viewing of this
+stack is performed with the `dirs` command. Each are discussed more fully below.
+
+##### Pushd and dirs
+
+Pushd is a built in shell command that is known to come with both bash and zsh, Perl also has an implementation
+for convenience. Pushd is designed to ease navigation of complex paths by adding those paths to an internal virtual stack.
+Adding a path to the network stack places the path on top of the stack, meaning it will be positioned first, and first used
+when pushd is used again. At anytime the user can view this stack by executing the `dirs -l -v` command. Which will provide
+the user with a numbered list of paths which represents the virtual directory stack.
+
+```bash
+>~ dirs -l -v
+0	/home/user
+1	/
+2	/home/user
+3	/home/user/.emacs.d/init.d
+4	/home/user/Projects
+5	/home/user/Projects/clifm
+6	/home/user/Downloads
+7	/home/user/Projects/The_Duck
+8	/home/user/Projects/vnc
+9	/home/user/Projects/Scripts
+10	/home/user/Projects/texstudio/build
+11	/home/user/Projects/texstudio
+12	/home/user/Projects/Wireguard
+13	/home/user/Projects/GameBoy
+14	/home/user/Projects/latex-work
+15	/home/user/Documents/Risc-V/docs
+```
+
+Using `pushd ${SOME-DIRECTORY}` will change directory to `${SOME-DIRECTORY}` AND add that directory to the top of the virtual
+directory stack. If you issue `pushd -n ${SOME-DIRECTORY}` pushd with the `-n` flag, the directory will only be "pushed" to
+the top of the directory stack, and your current directory will remain the same.
+
+As it's purpose would suggest, the user can fully utilize this virtual directory stack and navigate to any path in the stack by
+issuing a `pushd +{SOME-NUMBER}` or `pushd -{SOME-NUMBER}`, where `{SOME-NUMBER}` is the "Nth" path in the stack. Using a "+" 
+(plus or positive symbol) will count upward from the bottom of the stack to the "Nth" entry, and using a "-" (minus or negative
+symbol) prefix will count downward from the top of the stack. Thus, referencing the example stack above, `pushd +3` will change
+directory to `/home/user/.emacs.d/init.d`, and `pushd -3` will change directory to `/home/user/projects/GameBoy`.
+
+##### Popd
+
+Popd operates in much the same manner as pushd does, except rather than add paths to the directory stack, popd removes them. So,
+similar to pushd, `popd ${SOME-DIRECTORY}` changes directory to `${SOME-DIRECTORY}`, and then removes that directory from the directory
+stack. Use of the `-n` flag will only remove the directory from stack, and use of "+/-" will allow the user to remove the "Nth"
+directory, and not change directory as well.
+
+#### Compgen
+
+Compgen can be used to list every command available within a shell. As expected, the output of this command can be manipulated with flags,
+which is discussed below.
+
+- `compgen -c` outputs all available commands.
+- `compgen -a` outputs all available aliases.
+- `compgen -b` outputs all available shell builtin commands.
+- `compgen -k` will output all keywords.
+- `compgen -A` for all functions.
 
 #### Test
 
