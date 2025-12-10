@@ -72,9 +72,13 @@ python -m pip install -r dotdrop/requirements.txt
 
 Vcsh is another dotfile manager which is extremely popular. It does things.
 
+- https://github.com/RichiH/vcsh/blob/main/doc/README.md
+
 #### Myrepos 
 
 Myrepos is a dependency required to run vcsh, and it does something fancy.
+
+- https://myrepos.branchable.com/
 
 #### Vcsh Usage
 
