@@ -12,28 +12,30 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 
 |                                              |                                                     |                                          |                                           |
 |:--------------------------------------------:|:---------------------------------------------------:|:----------------------------------------:|:-----------------------------------------:|
-| [Font Config](font_config)                   | [Does not support OpenBSD](unsupported_for_OpenBSD) | [Programming](programming)               | [Oddities](oddities)                      |
-| [File And Disk Recovery](file_disk-recovery) | [datetime and time](datetime_timetime)              | [General Links](links)                   | [Web Development Tools](web_dev_tools)    |
-| [Command Line Tools](command_line_tools)     | [Git Wiki](git-wiki-skeleton)                       | [Alternative Web Browsers](web_browsers) | [xprofile](xprofile)                      |
-| [Org Mode](orgmode)                          | [Emacs](emacs)                                      | [vnc-configuration](vnc)                 | [Public DNS Servers](dns)                 |
-| [UserAgents for Use](useragent)              | [Firewall Systems](firewall)                        | [Shell](shell)                           | [User Service Managers](service_managers) |
-| [Color Tools](color_tools)                   | [OpenBSD](openbsd)                                  | [Art](art)                               | [Mounts and fstab](mount_fstab)           |
-| [Linux](linux)                               | [env-files](env-files)                              | [code Repositories](repos)               | [Bash](bash)                              |
-| [Osint](osint)                               | [Jargon](jargon)                                    | [Version Control](versioning)            | [Zoneminder](zoneminder)                  |
-| [Make](make)                                 | [Coral](google-coral)                               | [Desktop Environments](Desktops)         | [Wayland](wayland)                        |
-| [NeoVim](nvim)                               | [sdr](sdr)                                          | [Pulse Audio](pulse)                     | [Python](python)                          |
-| [Awesome!](awesome)                          | [OpenBSD VPN](open-openvpn)                         | [GPSD](gpsd)                             | [WifiPumpkin3](wp3)                       |
-| [Spreadsheets](spreadsheet)                  | [Virtualization](virtualization)                    | [FreeBSD](freebsd)                       | [Networking](networking)                  |
-| [Hugo](hugo)                                 | [unikernel](unikernel)                              | [Firefox](firefox)                       | [ffmpeg](ffmpeg)                          |
-| [bibtex](biblatex)                           | [melt](melt)                                        | [Project Management](projman)            | [Plantuml](plantuml)                      |
-| [Pipewire](pipewire)                         | [File Managers](file_managers)                      | [GnuPlot](gnuplot)                       | [Biblatex](biblatex)                      |
-| [Mermaid](mermaid)                           | [Databases](databases)                              | [OpenBSD Wireguard](openbsd-wireguard)   | [Hardware](hardware)                      |
-| [OSsec](ossec)                               | [Zsh](zsh)                                          | [Web Servers](web_servers)               | [IRC](irc)                                |
-| [OpenSSL](openssl)                           | [Web Frameworks](webframeworks)                     | [Encoding](encoding)                     | [Content Security Policy](CSP)            |
-| [Search Engines](search_engines)             | [File Systems](filesystem)                          | [Markup](markup)                         | [ADR and RFC](adr_rfc)                    |
-| [Authentication](authentication)             | [Email Client](email_clients)                       | [Gopher](gopher)                         | [NFS](nfs-server)                         |
-| [windows](windows)                           | [docker / podman](podman)                           | [USB IP](usbip)                          | [Dev Tooling](dev_tool)                   |
-| [info_doc](info-doc)                         | [u-boot](u-boot)                                    | [dotfiles](dotfiles)                     | [cachedir](cachedir)                      |
+|          [Font Config](font_config)          | [Does not support OpenBSD](unsupported_for_OpenBSD) |        [Programming](programming)        |           [Oddities](oddities)            |
+| [File And Disk Recovery](file_disk-recovery) |       [datetime and time](datetime_timetime)        |          [General Links](links)          |  [Web Development Tools](web_dev_tools)   |
+|   [Command Line Tools](command_line_tools)   |            [Git Wiki](git-wiki-skeleton)            | [Alternative Web Browsers](web_browsers) |           [xprofile](xprofile)            |
+|             [Org Mode](orgmode)              |                   [Emacs](emacs)                    |         [vnc-configuration](vnc)         |         [Public DNS Servers](dns)         |
+|       [UserAgents for Use](useragent)        |            [Firewall Systems](firewall)             |              [Shell](shell)              | [User Service Managers](service_managers) |
+|          [Color Tools](color_tools)          |                 [OpenBSD](openbsd)                  |                [Art](art)                |      [Mounts and fstab](mount_fstab)      |
+|                [Linux](linux)                |               [env-files](env-files)                |        [code Repositories](repos)        |               [Bash](bash)                |
+|                [Osint](osint)                |                  [Jargon](jargon)                   |      [Version Control](versioning)       |         [Zoneminder](zoneminder)          |
+|                 [Make](make)                 |                [Coral](google-coral)                |     [Desktop Environments](Desktops)     |            [Wayland](wayland)             |
+|                [NeoVim](nvim)                |                     [sdr](sdr)                      |           [Pulse Audio](pulse)           |             [Python](python)              |
+|             [Awesome!](awesome)              |             [OpenBSD VPN](open-openvpn)             |               [GPSD](gpsd)               |            [WifiPumpkin3](wp3)            |
+|         [Spreadsheets](spreadsheet)          |          [Virtualization](virtualization)           |            [FreeBSD](freebsd)            |         [Networking](networking)          |
+|                 [Hugo](hugo)                 |               [unikernel](unikernel)                |            [Firefox](firefox)            |             [ffmpeg](ffmpeg)              |
+|              [bibtex](biblatex)              |                    [melt](melt)                     |      [Project Management](projman)       |           [Plantuml](plantuml)            |
+|             [Pipewire](pipewire)             |           [File Managers](file_managers)            |            [GnuPlot](gnuplot)            |           [Biblatex](biblatex)            |
+|              [Mermaid](mermaid)              |               [Databases](databases)                |  [OpenBSD Wireguard](openbsd-wireguard)  |           [Hardware](hardware)            |
+|                [OSsec](ossec)                |                     [Zsh](zsh)                      |        [Web Servers](web_servers)        |                [IRC](irc)                 |
+|              [OpenSSL](openssl)              |           [Web Frameworks](webframeworks)           |           [Encoding](encoding)           |      [Content Security Policy](CSP)       |
+|       [Search Engines](search_engines)       |             [File Systems](filesystem)              |             [Markup](markup)             |          [ADR and RFC](adr_rfc)           |
+|       [Authentication](authentication)       |            [Email Client](email_clients)            |             [Gopher](gopher)             |             [NFS](nfs-server)             |
+|              [windows](windows)              |              [docker / podman](podman)              |             [USB IP](usbip)              |          [Dev Tooling](dev_tool)          |
+|             [info_doc](info-doc)             |                  [u-boot](u-boot)                   |           [dotfiles](dotfiles)           |           [cachedir](cachedir)            |
+|            [buildroot](buildroot)            |                                                     |                                          |                                           |
+
 
 [![pages-build-deployment]()](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 
@@ -44,7 +46,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 Just made the mistake of pushing personal information to your public repository? Forgot to remove your own
 credentials before making a commit? [**Never fear The BFG Repo Cleaner is
 here!**](https://rtyley.github.io/bfg-repo-cleaner)
-
+	
 ## Links
 
 I have begun to run out of room for links in my sidebar. I will need to add some here.

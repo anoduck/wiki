@@ -339,3 +339,51 @@ fi
 # Now with test
 test -e /var/www/htdocs
 ```
+
+#### Random Selection from array
+
+Below is a script which was written to demonstrate two different ways to make a random selection from an array in bash.
+The first function uses `printf` and selects three items at random. The last uses the special variable
+`$RANDOM` and selects only one item.
+
+```bash
+function select_3 () {
+	for dir in $2; do
+		DIR_CONTENT=("$(ls ./"$dir"/*.jpg)")
+		RANDOM_IMAGES=$(printf "%s\n" "${DIR_CONTENT[@]}" | shuf -n 3)
+		for IMG in $RANDOM_IMAGES; do
+			cp "$IMG" "$PWD/Previews"
+		done
+	done
+}
+
+function select_1 () {
+	for dir in $2; do
+		DIR_CONTENT=("$(ls ./"$dir"/*.jpg)")
+		CHOSEN=${DIR_CONTENT[ $RANDOM % ${#DIR_CONTENT[@]} ]}
+		cp "$CHOSEN" "$PWD/Previews"
+	done
+}
+
+case "$1" in
+	one)
+		select_1 "$@"
+		;;
+	three)
+		select_3 "$@"
+		;;
+	*)
+		echo "Usage: $0 {one|three} {Dir}"
+		;;
+esac
+```
+
+#### Write scripts that work across both unix and linux systems.
+
+More of a personal peeve than anything, but to be frank, Linux users forget that there is this whole other
+thing called "UNIX", and in "UNIX" bash is not always located at `/bin/bash`. What can be consistently relied
+on is `/usr/local/env` which through experience seems to be available across both systems.
+
+```bash
+#/usr/bin/env bash
+```
