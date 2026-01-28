@@ -38,3 +38,26 @@ accomplished. It is brilliant, yes, but so was the first land mine.
 7. Get first item from series: '<$Series>.item()'
 8. Create series from dataframe: `df.<$COLUMN_LABEL>` or `df['<$COLUMN_LABEL>']`
 
+#### Adding a row to a dataframe
+
+Instead of adding a single row to a dataframe, it is best to add your data in bulk. Often, the common way to
+do this would be to structure your data into a `dict()` if not already so, and then `lst.append()` your data
+    to a `lst()`. Once you have run all iterations, you would then simply create a dataframe containing all
+    your data, and if so desired, concat your new dataframe with the dataframe of your choosing.
+
+#### Concat dataframes
+
+Concatenation of dataframes is fairly easy, and solely dependent on how you desire the concatenation to be
+performed.
+
+##### Row Concatenation
+
+```python
+pd.concat([df1, df2])
+```
+
+##### Column Concatenation
+
+```python
+pd.concat([df1, df2], axis=1)
+```

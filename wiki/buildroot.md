@@ -111,9 +111,10 @@ linux system, you will more than likely want to select devtmpfs and eudev.
 ##### Init Systems
 
 Regardless of the literal plethora of available init systems for both linux and unix, buildroot only supports
-the tiny wonder busybox, the old favorite Sys-V, and and the dark knight SystemD. 
+the tiny wonder busybox, the old favorite Sys-V, the dark knight SystemD, and the retrowave OpenRC.
 
 While the buildroot team recommend keeping the system small and confined by selecting the busybox option, most
-of us who desire of full featured linux system will select SystemD for compatibility purposes.
+of us who desire of full featured linux system will select SystemD for compatibility purposes, but OpenRC is
+a highly reccommended alternative.
 
 

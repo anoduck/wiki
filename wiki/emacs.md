@@ -29,7 +29,7 @@
 
 | [general info](general) | [org-mode](orgmode)           | [emacs init](init)         | [completion](emacs-complete) |
 | [debug](emacs-debug)    | [keymaps](keymaps)            | [snippets](emacs-snippets) | [yasnippets](yasnippet)      |
-| [speedbar](speedbar)    | [Wikis for Emacs](wiki4emacs) |                            |                              |
+| [speedbar](speedbar)    | [Wikis for Emacs](wiki4emacs) | [ebib](ebib)               |                              |
 
 
 ### Links
