@@ -23,7 +23,7 @@ mentions text templating in the go manual. Which for the most part, has been cop
 
 Here we have our quick reference of go template tags again:
 
-```text
+<pre>
 - "." = Current Context
 - "$." = refers to the current context in a range or code block.
 - "|" = Is a pipe, and can be used to pipe values to functions or methods.
@@ -38,7 +38,7 @@ Here we have our quick reference of go template tags again:
 - '{{ partial "footer.html" }}' = `Partial` is used to access the theme's partials
 - '{{ partialCached "footer.html" }}' = will give you access to a cached partial
 - '{{ template "_internal/pagination.html" . }}' = will allow you to access hugo's built in tempaltes.
-```
+</pre>
 
 ### Go Template Language Hangups
 
