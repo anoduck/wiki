@@ -14,6 +14,7 @@ Here is where the intro for networking will be.
 
 | [Bridges](bridge)     | [Virtual Ethernet Devices](virt_eth) | [Domain Types](dom_types) |
 | [Firewalls](firewall) | [Interfaces](interfaces)             | [Canary](canary)          |
+| [HTTP](http)          | ---                                  | ---                       |
 
 
 ### Wi-fi Networking Frames
