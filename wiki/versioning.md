@@ -38,9 +38,10 @@ time goes by, I will add some lesser known commands for git below.
 
 ### VC Pages
 
-|            |            |                    |                        |
-|:----------:|:----------:|:------------------:|:----------------------:|
-| [git](git) | [cvs](cvs) | [radicle](radicle) | [git-annex](git-annex) |
+|                        |              |                      |                          |
+|      :----------:      | :----------: | :------------------: | :----------------------: |
+|       [git](git)       |  [cvs](cvs)  |  [radicle](radicle)  |  [git-annex](git-annex)  |
+| [git-crypt](git-crypt) |              |                      |                          |
 
 #### Removing sensitive data from git repos.
 

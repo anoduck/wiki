@@ -18,7 +18,7 @@ Below are a few examples on how to use git that are not often encountered.
 
 ### Git Specific Topics
 
-| --- | [git-crypt](git-crypt) |---|
+| [git-annex](git-annex) | [git-crypt](git-crypt) |---|
 
 ### Basic guide to making a pull request
 
