@@ -299,10 +299,25 @@ directory stack. If you issue `pushd -n ${SOME-DIRECTORY}` pushd with the `-n` f
 the top of the directory stack, and your current directory will remain the same.
 
 As it's purpose would suggest, the user can fully utilize this virtual directory stack and navigate to any path in the stack by
-issuing a `pushd +{SOME-NUMBER}` or `pushd -{SOME-NUMBER}`, where `{SOME-NUMBER}` is the "Nth" path in the stack. Using a "+" 
-(plus or positive symbol) will count upward from the bottom of the stack to the "Nth" entry, and using a "-" (minus or negative
-symbol) prefix will count downward from the top of the stack. Thus, referencing the example stack above, `pushd +3` will change
-directory to `/home/user/.emacs.d/init.d`, and `pushd -3` will change directory to `/home/user/projects/GameBoy`.
+issuing a `pushd +{SOME-NUMBER}` or `pushd -{SOME-NUMBER}`, where `{SOME-NUMBER}` is the "Nth" path in the stack. Using a "-" 
+(minus or negative symbol) will count downward from the top of the stack (most recent entries) to the "Nth" entry, changes directory to
+that entry, and then will add the current directory to the top of the stack for it to be used later for a return trip.
+
+Using a "+" (plus or positive symbol) prefix will count upward from the bottom of the stack (least recent entries) to the "Nth entry,
+changes directory to that entry, and then will add the current directory to the bottom of the stack, just in
+case you want to return to it at some point in time.
+
+> [!tip] Using `pushd -1` will place you in the most recent directory in the directory stack.
+
+> [!tip] Using `pushd +1` will place you in the least recent directory in the directory stack.
+
+So, if you are in `/home/user` and you want to visit `/home/user/Projects/GameBoy` you can execute `pushd +3` to change directory there
+and when your ready to return back to `/home/user` all you need to do is execute `pushd -1`, and your back in your home folder. Then if you
+forgot to do something in `/home/user/Projects/GameBoy`, you can return to it by simply using `pushd +1`. You
+could cycle these two perpetually.
+
+Another example using the example stack above, `pushd +3` will change directory to `/home/user/.emacs.d/init.d`, and `pushd -3`
+will change directory to `/home/user/projects/GameBoy`.
 
 ##### Popd
 
