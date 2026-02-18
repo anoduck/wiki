@@ -14,8 +14,10 @@ ass and start to learn how to write them.
 
 A superiorly commentated makefile is [Isaac's](https://gist.github.com/isaacs/62a2d1825d04437c6f08)
 
-> [!info] Whatever you do, if you notice a grammatical error in Isaac's tutorial, do not offer any suggestions
-> toward making a correction. Isaac will get really pissed.
+> [!info] Isaac gets really pissed when you correct his grammar.
+
+A different approach to makefile creation is [David's](https://tech.davis-hansson.com/p/make/)
+
 
 ## What are Makefiles?
 
