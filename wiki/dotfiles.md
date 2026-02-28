@@ -84,6 +84,21 @@ Myrepos is a dependency required to run vcsh, and it does something fancy.
 
 You can use it.
 
+### RCM
+
+Yet another suite of tools to manage your dotfiles. This one is a little simpler and easier to use.
+
+There are four basic commands to use:
+1. mkrc = Adds your dotfiles to the system, uses flags to designate host, tags, dir, etc...
+2. lsrc = Lists the dotfiles in the system.
+4. rcup = Performs the synchronization between your dotfile repo and actual dotfiles
+5. rcdn = Removes dotfiles from the management system.
+
+Once you have added a file to the RCM system, the only way to add a tag, designate a host, or modify what
+directory to use, is to remove it from the system, and then re-add it.
+
+More information can be found here: https://thoughtbot.github.io/rcm/
+
 ### Honorable Mentions
 
 Here are some dotfile managers worth mentioning.

@@ -12,6 +12,8 @@
 Got is a new version control system built on top of git, which is focused on making
 git a little more easier to use.
 
+Got will always be compatible with git.
+
 ## Setup and config
 
 TBD
