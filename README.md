@@ -35,7 +35,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 |               [windows](windows)               |               [docker / podman](podman)               |              [USB IP](usbip)               |           [Dev Tooling](dev_tool)           |
 |              [info_doc](info-doc)              |                   [u-boot](u-boot)                    |            [dotfiles](dotfiles)            |            [cachedir](cachedir)             |
 |             [buildroot](buildroot)             |                 [makefile](makefile)                  |                 [gpg](gpg)                 |              [regexp](regexp)               |
-
+|            [LanguageTool](langtool)            |                                                       |                                            |                                             |
 
 [![pages-build-deployment]()](https://github.com/anoduck/wiki/actions/workflows/pages/pages-build-deployment)
 
