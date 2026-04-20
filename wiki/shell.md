@@ -393,6 +393,24 @@ case "$1" in
 esac
 ```
 
+#### Function with two positional args, first contains value, second is returned with result
+
+```bash
+myfunc() {
+    local input="$1"
+    local outvar="$2"
+    local result
+    result="$(printf '%s' "$input" | rev)"
+    printf '%s\n' "$result"
+    # Assigns output to $outvar
+    if [[ -n $outvar ]]; then
+        printf -v "$outvar" '%s' "$result"
+    fi
+}
+
+myfunc "pool" "$RESULT"
+```
+
 #### Write scripts that work across both unix and linux systems.
 
 More of a personal peeve than anything, but to be frank, Linux users forget that there is this whole other

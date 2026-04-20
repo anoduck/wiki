@@ -43,6 +43,12 @@ still with us today. File systems are for the most part dependent on which type 
 to. Other factors that determine the file system are things such as ram availability, on board memory, and
 operating system.
 
+> [!info] Undoubtedly you will be disappointed with this page. Simply because it does not even begin to
+> scratch the surface of the topic at hand.
+
+The purpose of this post is to provide a general overview of different file systems. It is in no way
+comprehensive, and is not even a good effort towards including the high points.
+
 File System Variety
 -------------------
 
@@ -55,4 +61,15 @@ ones.
   checking, datascrubbing, and multidevice spanning in linux systems. It was originally designed by Ohad
   Rodeh, and has slowly grown in popularity.
 * Ext4/Ext3/Ext2 - The staple journaling filesystem for Linux for many years. Still default for many OSs.
-* 
+* UFS & FFS - OpenBSD's native file system, and it's derivative the Free File System, used in OpenBSD.
+* XFS - Is the original file system of Silicon Graphics IRIX OS, and it still holds it's own. Known for it's
+  incredibly fast IO. 
+* FAT - The File Allocation Table is the default file system for DOS, and still is ridiculously
+  popular today. It is often used for removable media such as USB flash drives and sdcards. FAT has seen a
+  resurgence in use due to being implemented as an internal part of the EFI system partition.
+* exFAT - Is loosely based on FAT, but is incompatible with FAT. It's benefit over fat is it allows exceeding
+  the 4GB file size limitation of FAT. 
+* NTFS - NTFS was the default file system for microsoft products for several years. Frankly, I have seen cold
+  chills run through computational engineers when someone mentioned NTFS. So, we try not to discuss it.
+* ZFS - ZFS was the default file system for the Solaris Operating system, and opinionatedly it was way ahead
+  of it's time. 
