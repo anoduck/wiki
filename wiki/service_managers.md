@@ -1,9 +1,9 @@
 ```text
-#  _   _                 ____                  _
-# | | | |___  ___ _ __  / ___|  ___ _ ____   _(_) ___ ___
-# | | | / __|/ _ \ '__| \___ \ / _ \ '__\ \ / / |/ __/ _ \
-# | |_| \__ \  __/ |     ___) |  __/ |   \ V /| | (_|  __/
-#  \___/|___/\___|_|    |____/ \___|_|    \_/ |_|\___\___|
+#  ____                  _
+# / ___|  ___ _ ____   _(_) ___ ___
+# \___ \ / _ \ '__\ \ / / |/ __/ _ \
+#  ___) |  __/ |   \ V /| | (_|  __/
+# |____/ \___|_|    \_/ |_|\___\___|
 #
 #  __  __
 # |  \/  | __ _ _ __   __ _  __ _  ___ _ __ ___
@@ -14,13 +14,20 @@
 #
 ```
 
-## User Level Service Managers
+# Service Managers
 
-We are not talking about systemd, openrc, rc.d, or sysv. Those are system level service/daemon management
-systems. Here we are talking about user level service managers, that is, services that are started and run by
-a user of the system, or a service that does not interface well with a system service manager.
+> [!note] Previously this section was titled "User Service Managers", but has been renamed to "Service
+> Managers" to accomodate all service managers.
 
-As far as user level service managers goes, there are two options one should keep in mind.
+A service manager is a piece of software that controls, supervises, and "manages" the lifecycle of various system services
+and daemons. Typically, service managers manage software on two different levels of a system, The User Level
+and the System Level. The user level, being services and daemons which can be controled per user, and the
+system level, being services and daemons controled globally.
+
+Below is a list of service managers for which we possess a page for:
 
 1. [supervisord](supervisord)
 2. [pm2](pm2)
+3. [Systemd](Systemd)
+4. [rc](rcd)
+

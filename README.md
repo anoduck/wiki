@@ -16,7 +16,7 @@ Below is the index for our site. It is painfully, and I do mean painfully mainta
 | [File And Disk Recovery](file_disk-recovery) |       [datetime and time](datetime_timetime)        |          [General Links](links)          |  [Web Development Tools](web_dev_tools)   |
 |   [Command Line Tools](command_line_tools)   |            [Git Wiki](git-wiki-skeleton)            | [Alternative Web Browsers](web_browsers) |           [xprofile](xprofile)            |
 |             [Org Mode](orgmode)              |                   [Emacs](emacs)                    |         [vnc-configuration](vnc)         |         [Public DNS Servers](dns)         |
-|       [UserAgents for Use](useragent)        |            [Firewall Systems](firewall)             |              [Shell](shell)              | [User Service Managers](service_managers) |
+|       [UserAgents for Use](useragent)        |            [Firewall Systems](firewall)             |              [Shell](shell)              |   [Service Managers](service_managers)    |
 |          [Color Tools](color_tools)          |                 [OpenBSD](openbsd)                  |                [Art](art)                |      [Mounts and fstab](mount_fstab)      |
 |                [Linux](linux)                |               [env-files](env-files)                |        [code Repositories](repos)        |               [Bash](bash)                |
 |                [Osint](osint)                |                  [Jargon](jargon)                   |      [Version Control](versioning)       |         [Zoneminder](zoneminder)          |
