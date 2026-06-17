@@ -13,10 +13,14 @@ OpenBSD Specific Topics
 
 These are Topics that are specific to the OpenBSD operating system.
 
-| [Partitioning in OpenBSD](OpenBSD_Partitioning) | [Virtualization in OpenBSD](vmm)    | [Working with ISOs](openbsd-iso)     | [restoring ldconfig](ldconfig) |
-| [OpenVPN on OpenBSD](open-openvpn)              | [Common Build Issues](build-issues) | [Networking on OpenBSD](openbsd-net) | [Configuring pfstatd](pfstatd) |
-| [Wireguard on OpenBSD](openbsd-wireguard)       | [OpenBSD net routes](openbsd-route) | [OpenBSD HTTPD](openbsd-httpd)       | [PF](pf)                       |
-| [Kernel Tweaks](kern-tweaks)                    | [Fetching Src](obsd_fetch_src)      |                                      |                                |
+| [Partitioning in OpenBSD](OpenBSD_Partitioning) | [Virtualization in OpenBSD](vmm)    | [Working with ISOs](openbsd-iso)         | [restoring ldconfig](ldconfig) |
+| [OpenVPN on OpenBSD](open-openvpn)              | [Common Build Issues](build-issues) | [Networking on OpenBSD](openbsd-net)     | [Configuring pfstatd](pfstatd) |
+| [Wireguard on OpenBSD](openbsd-wireguard)       | [OpenBSD net routes](openbsd-route) | [OpenBSD HTTPD](openbsd-httpd)           | [PF](pf)                       |
+| [Kernel Tweaks](kern-tweaks)                    | [Fetching Src](obsd_fetch_src)      | [Upgrading and Downgrading](up-and-down) | ---                            |
+
+## Important URLS
+
+| [OpenBSD Handbook](https://www.openbsdhandbook.com/) | [OpenBSD FAQ](https://www.openbsd.org/faq/) |
 
 ### Tips
 
@@ -54,6 +58,10 @@ ln -sf /usr/lib/libz.so.7.0 /usr/lib/libz.so.7.1
 ```
 
 Once performed, retry the installation.
+
+> [!IMPORTANT] ON UPDATE OF YOUR SYSTEM, YOU NEED TO CHECK AND SEE IF THE LINK STILL EXISTS OR IF IT HAS BEEN REPLACED.
+> IF IT IS STILL PRESENT, REMOVE THE SYMBOLIC LINK! This is to prevent your system from continually trying to link to it
+> rather than linking to a newer and more up to date version.
 
 ### Links
 

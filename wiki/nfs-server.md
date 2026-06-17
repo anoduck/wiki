@@ -318,6 +318,10 @@ the root of your filesystem. So, you only need to add the path after `/var/nfs`.
 /mount2    10.0.0.1/255.255.255.255(sync,wdelay,crossmnt,no_subtree_check,sec=sys,rw,insecure,no_root_squash,no_all_squash)
 ```
 
+##### Mount Options
+
+
+
 #### restart services and mount on client
 
 Restart both rpcbind and nfs-server on the host.
