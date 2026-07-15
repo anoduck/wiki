@@ -60,5 +60,6 @@ EndSection
 
 The full error output is: `WARNING: Failed to create IPv6 VNC socket: Error binding to address 127.0.0.1:5900: Invalid argument`
 
-Right now, fuck if I know. For some reason lightdm is insisting on launching Xvnc on ipv6, which should not be
-a problem, but appears to be.
+This error is specific to running lightdm and is a long standing bug. Lightdm appears to have fallen into disrepair and
+is no longer being maintained. Serveral distros have dropped support for it altogether. So, the best solution is to move
+onto something else.
